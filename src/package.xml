@@ -20,6 +20,27 @@
         <members>*</members>
         <name>GlobalValueSet</name>
     </types>
+    <types> 
+		<members>Retail_Quote_History__c.Indicative</members> 
+		<members>Retail_Quote_History__c.Executable</members> 
+		<members>Retail_Quote__c.Indicative</members>
+		<members>Retail_Quote__c.Executable</members> 
+		<members>Tickets__c.IT_Support</members> 
+		<members>Tickets__c.Billing_Support</members> 
+		<members>Tickets__c.PA_Expansion</members> 
+		<members>Account_Supplement__c.GRT</members> 
+		<members>Account_Supplement__c.Tax_Exemption</members> 
+		<members>Account.CnI</members> 
+		<members>PersonAccount.Mass_Market_Individual_Customer</members> 
+		<members>Account.Small_Business</members> 
+		<members>Account.Muni_Agg</members> 
+		<members>Account.Mass_Market_Offer</members> 
+		<members>PersonAccount.Muni_Agg_Individual_Customer</members> 
+		<members>Account.ABC</members> 
+		<members>Opportunity.Standard_Opportunity</members> 
+		<members>Opportunity.Amendment</members> 
+		<name>RecordType</name>
+	</types>
     <types>
         <members>Dynegy_Email_Templates</members>
         <members>Dynegy_Email_Templates/Email_for_Credit_Check</members>
