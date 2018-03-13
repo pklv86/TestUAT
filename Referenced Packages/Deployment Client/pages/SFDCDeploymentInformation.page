@@ -1,0 +1,323 @@
+<apex:page standardController="OFSClient__PackageInformation__c" extensions="OFSClient.clsMetadataInformation" action="{!fetchOrganizations}" showChat="true" sidebar="false"  id="dpPage">
+     
+    <script>        
+        // determine new sort field and order
+        function sortColumn(column_name) {
+            var fieldobj = document.getElementById('{!$Component.myPage.form.block.sortField}');
+            var orderobj = document.getElementById('{!$Component.myPage.form.block.sortAscending}');
+            var new_sort_order = 'true';
+            if(column_name == fieldobj.value) {
+                // if previously same column sorted, reverse the sort order
+                new_sort_order = (orderobj.value=='false'?'true':'false');
+            }
+            fieldobj.value = column_name;
+            orderobj.value = new_sort_order; 
+        }   
+                
+        function checkAll(cb){           
+            var num = 0;            
+            var chkInput = document.getElementById('{!$Component.dpForm.pb.pbProducts.product_ChkBox1}');
+            
+            while(document.getElementById('{!$Component.dpForm.pb.pbProducts}' +':'+num+':product_ChkBox') != null)
+            {
+                var inputElem = document.getElementById('{!$Component.dpForm.pb.pbProducts}' +':' +num+':product_ChkBox');
+                if( chkInput.checked){
+                    inputElem.checked = true;
+                }else{              
+                    inputElem.checked = false;
+                }
+                num++;
+            }
+        }
+        
+        function doSelectStatus(cp) {
+            changePackStatus();
+        }
+        function checkAllSearch(cb){           
+            var num = 0;            
+            var chkInput = document.getElementById('{!$Component.dpForm.pbSearchBlock.pbSearch.pbSearchProducts.product_ChkBox1}');
+            
+            while(document.getElementById('{!$Component.dpForm.pbSearchBlock.pbSearch.pbSearchProducts}' +':'+num+':searchproduct_ChkBox') != null)
+            {
+                var inputElem = document.getElementById('{!$Component.dpForm.pbSearchBlock.pbSearch.pbSearchProducts}' +':' +num+':searchproduct_ChkBox');
+                if( chkInput.checked){
+                    inputElem.checked = true;
+                }else{              
+                    inputElem.checked = false;
+                }
+                num++;
+            }
+        }
+        
+        function checkAllSelected(cb){          
+            var num = 0;
+            var checkFlag = true;           
+            var chkInput = document.getElementById('{!$Component.form.block.results.pbProducts.product_ChkBox1}');
+            //alert('chkInput  ' + chkInput );
+            while(document.getElementById('{!$Component.form.block.results.pbProducts}' +':'+num+':product_ChkBox') != null)
+            {
+                var inputElem = document.getElementById('{!$Component.form.block.results.pbProducts}' +':' +num+':product_ChkBox');
+                //alert('inputElem  ' + inputElem );
+                //alert('inputElem.checked' + inputElem.checked);
+                if( ! inputElem.checked){
+                    checkFlag = false;
+                    break;
+                }
+                num++;
+            }           
+            
+            if( checkFlag ){
+                chkInput.checked = true;
+            }else{
+                chkInput.checked = false;
+            }
+        }       
+    </script>
+        <apex:form id="dpForm">
+           <!-- --> 
+            <apex:actionFunction name="changePackStatus" action="{!updatePackageStatus}" reRender="pb,pb1,results,serchresults,pnlRefresh" status="statusSearchClient" />
+             
+            <apex:pageBlock id="pb1" title="Package Detail" mode="maindetail" rendered="{!NOT(blnDisplaySearch)}"> 
+                
+                <apex:pageBlockButtons id="pbbInforemove" location="top">
+                    <apex:commandButton id="btnEditButton" value="Edit"  action="{!Edit}" 
+                        rerender="AccountTabPanel,results1,Components,SearchResults,tabSearchResults,pnlEnvironments,Environments" rendered="{!NOT(blnDisplayEnvironments)}" />
+                    <apex:commandButton id="btnDeleteButton" value="Delete"  action="{!Delete}" 
+                        rerender="AccountTabPanel,results1,Components,SearchResults,tabSearchResults,pnlEnvironments,Environments" rendered="{!NOT(blnDisplayEnvironments)}" />
+                    <!--<apex:commandButton id="btnCommitButton" value="Commit"  action="{!commitMetadata}" status="statusSearchClient"
+                        rerender="AccountTabPanel,results1,Components,SearchResults,tabSearchResults,pnlEnvironments,Environments,pb1" rendered="{!(PackageInformation__c.Status__c !='In-Progress')}" /> -->
+                    <apex:commandButton id="btnCommitButton" value="Commit"  action="{!commitMetadata}" status="statusSearchClient"
+                        rerender="AccountTabPanel,results1,Components,SearchResults,tabSearchResults,pnlEnvironments,Environments,pb1" rendered="{!NOT(OFSClient__PackageInformation__c.OFSClient__Status__c =='In-Progress')}" /> 
+                </apex:pageBlockButtons>                       
+                <apex:pageBlockSection columns="2">
+                    <apex:outPutField value="{!OFSClient__PackageInformation__c.Name}"/>              
+                    <!-- <apex:outPutField value="{!OFSClient__PackageInformation__c.OFSClient__Status__c}"/>  -->
+                    <apex:outPutPanel rendered="{!(blnDisplayEnvironments)}">
+                        <apex:outPutText styleClass="labelCol vfLabelColTextWrap first" value="Status  "  />
+                        <apex:outPutText value="{!strDeployStatus}"  />
+                    </apex:outPutPanel>                    
+                    <apex:outPutField value="{!OFSClient__PackageInformation__c.OFSClient__Description__c}" />
+                    <apex:outPutField value="{!OFSClient__PackageInformation__c.OFSClient__Release__c}"/>                    
+                    <apex:outPutField value="{!OFSClient__PackageInformation__c.OFSClient__Repository__c}"/>
+                    <apex:outPutField value="{!OFSClient__PackageInformation__c.OFSClient__Enviroment__c}" />
+                    <apex:outPutText value="{!OFSClient__PackageInformation__c.OFSClient__Status__c}"  />
+                    <apex:inPutField value="{!OFSClient__PackageInformation__c.OFSClient__Override__c}" />
+                    <apex:outPutField value="{!OFSClient__PackageInformation__c.OFSClient__Last_Committed_At__c}" />
+                    
+                    <!-- <apex:inPutField value="{!PackageInformation__c.ReadyForDeployment__c}" onchange="doSelectStatus(this)" />
+                       
+                    <apex:inPutField value="{!PackageInformation__c.ReadyForDeployment__c}" onchange="doSelectStatus(this)"
+                        rendered="{!ISBLANK(PackageInformation__c.Package_Retrieved_Time__c)}"/>
+                    <apex:outPutField value="{!PackageInformation__c.ReadyForDeployment__c}" rendered="{!NOT(ISBLANK(PackageInformation__c.Package_Retrieved_Time__c))}"/>
+                    -->
+                    
+                    <!--<apex:outPutField value="{!PackageInformation__c.Package_Retrieved_Time__c}" /> 
+                    
+                    <apex:outPutText value=""  /> -->
+                    <apex:actionStatus id="statusSearchClient">
+                        <apex:facet name="start"><apex:image url="{!$Resource.OFSClient__AjaxLoader}" /></apex:facet>
+                    </apex:actionStatus>        
+                    <apex:outPutPanel rendered="false">
+                        <apex:outPutText styleClass="labelCol vfLabelColTextWrap first" value="Environment  "/>               
+                        <apex:selectList value="{!strSelectedOrgId}" multiselect="false" size="1" id="sObj">
+                        <apex:selectOptions value="{!optionOrg}"/>
+                        <apex:actionSupport event="onchange" action="{!retriveMetadata}" reRender="pb1,results,serchresults,pnlRefresh"  />
+                        </apex:selectList>
+                    </apex:outPutPanel>
+                </apex:pageBlockSection>
+                <!--
+                <apex:pageBlockSection columns="2" title="Version Control Details">
+                    <apex:inPutField value="{!OFSClient__PackageInformation__c.OFSClient__Repository__c}"/>
+                    <apex:inPutField value="{!PackageInformation__c.Repository_URL__c}"/>
+                </apex:pageBlockSection>
+                -->
+                <apex:pageMessages />
+            </apex:pageBlock>            
+
+            
+            <apex:tabPanel selectedTab="Components" id="AccountTabPanel" tabClass="activeTab" inactiveTabClass="inactiveTab" immediate="true"> 
+                <apex:tab label="Components" name="Components" id="Components"  switchType="" rendered="{!AND(NOT(blnDisplaySearch), NOT(blnDisplayEnvironments))}">
+                    <apex:outputPanel id="results1">
+                    <apex:outputText value="" styleClass="labelCol vfLabelColTextWrap  first"></apex:outputText>    
+                    <apex:pageBlock id="pb" title="Selected components - Total Count :{!SelectedMetadataDetails.size}" mode="detail">                        
+                        <apex:pageBlockButtons id="pbbInforemove" location="top">
+                            <apex:commandButton id="btnDeploymentAdd" value="Add Components"  action="{!openSearch}" 
+                               
+                                rendered="{!NOT(OFSClient__PackageInformation__c.OFSClient__Status__c =='In-Progress')}"
+                                rerender="dpForm,pb1,AccountTabPanel,results1,Components,SearchResults,tabSearchResults" /> 
+                            <apex:commandButton id="btnDeploymentDelete" value="Remove"  action="{!RemoveMetadataComponents}" 
+                                rendered="{!NOT(OFSClient__PackageInformation__c.OFSClient__Status__c =='In-Progress')}"
+                                
+                                rerender="dpForm,pb1,AccountTabPanel,results1,Components,SearchResults,tabSearchResults" /> 
+                             <!--rendered="{!NOT(PackageInformation__c.ReadyForDeployment__c)}" -->
+                            <!--
+                            <apex:commandButton id="btnDeploymentAdd" value="Add Components"  action="{!openSearch}" 
+                                rendered="{!AND((ISBLANK(PackageInformation__c.Package_Retrieved_Time__c)), (PackageInformation__c.Status__c !='In-Progress'))}"
+                                rerender="dpForm,pb1,AccountTabPanel,results1,Components,SearchResults,tabSearchResults" /> 
+                            <apex:commandButton id="btnDeploymentDelete" value="Remove"  action="{!RemoveMetadataComponents}" 
+                                rendered="{!AND((ISBLANK(PackageInformation__c.Package_Retrieved_Time__c)), (PackageInformation__c.Status__c !='In-Progress'))}"
+                                rerender="dpForm,pb1,AccountTabPanel,results1,Components,SearchResults,tabSearchResults" /> -->
+                            <!--<apex:commandButton id="btnDeploymentDelete" value="Remove"  action="{!RemoveMetadataComponents}"
+                            rerender="results,results1" rendered="{!strDeployStatus =='Open'}"/> -->
+                        </apex:pageBlockButtons>
+                        <apex:outputPanel id="results">
+                            <apex:outputText rendered="{!SelectedMetadataDetails.size < 1}" value="No component selected, please click on Add Components to select components."  style="text-align:right;font-size: 16px;" ></apex:outputText>
+                            <!--<apex:pageBlockTable id="pbProducts" value="{!SelectedMetadataDetails}" var="l" rendered="{!SelectedMetadataDetails.size > 0}" > -->
+                            <apex:pageBlockTable id="pbProducts" value="{!lstSelectedMetadata}" var="l" rendered="{!lstSelectedMetadata.size > 0}" > 
+                                <apex:column width="70px">
+                                    <apex:facet name="header">
+                                        
+                                        <apex:outputPanel >
+                                        <apex:inputCheckbox value="{!l.selected}" id="product_ChkBox1"  onclick="checkAll(this)" />
+                                        <apex:outputText value="  Check All" />
+                                        </apex:outputPanel>
+                                    </apex:facet>
+                                    <apex:inputCheckbox value="{!l.selected}" id="product_ChkBox" />
+                                </apex:column>                          
+                                <apex:column value="{!l.objDMTBDName.OFSClient__Name__c}"/>
+                               <!-- <apex:column value="{!l.objDMTBDName.SourceOrganizationId__c}"/> -->
+                                <apex:column value="{!l.objDMTBDName.OFSClient__Type__c}"/> 
+                                <apex:column value="{!l.objDMTBDName.OFSClient__Environment__c}" />
+                                <apex:column headerValue="Commit Details"  >
+                                    <apex:outputText value="{!l.objEnvName}" style="color:red;"/>
+                                </apex:column>
+                                <!--<apex:column value="{!l.objDMTBDName.LastModifiedDate}"/> -->
+                            </apex:pageBlockTable>
+                            <!--
+                            <c:paginatorClient reRenderComponent="pbProducts, results" pageManagerClient="{!objSelectedPageManager}" rendered="{!SelectedMetadataDetails.size > 0}" statusComponent="statusSearch" id="bottom_paginator"/> 
+                            -->
+                        </apex:outputPanel>
+                    </apex:pageBlock> 
+            <apex:pageBlock id="pbDeployDetails" title="Deployment Details" mode="detail" rendered="false">                       
+ 
+                <apex:pageBlockTable id="pbTDeTetails" value="{!lstDeployDetails}" var="l" rendered="{!lstDeployDetails.size > 0}" >
+                
+                <apex:column value="{!l.Name}"/>
+                <apex:column value="{!l.OFSClient__Name__c}"/> 
+                
+                <apex:column value="{!l.OFSClient__Error_Message__c}"/> 
+                <apex:column value="{!l.LastModifiedDate}"/> 
+                </apex:pageBlockTable>
+
+                    </apex:pageBlock> 
+                    </apex:outputPanel>
+                </apex:tab> 
+                <apex:tab label="Search Results" name="SearchResults" id="tabSearchResults" rendered="{!AND(blnDisplaySearch,NOT(blnDisplayEnvironments))}" >
+                    <apex:pageBlock mode="detail" id="pbSearchBlock">
+            
+                        <script type="text/javascript">
+                        function doSearch() {
+                            searchServer(
+                            document.getElementById("Name").value,
+                            document.getElementById("Type").value,
+                            document.getElementById("LastModifiedByName").value,
+                            document.getElementById("LastModifyDate").value
+                            
+                            );
+                        }
+                        </script> 
+                        <apex:actionStatus id="statusSearch">
+                        <apex:facet name="start"><apex:image url="{!$Resource.OFSClient__AjaxLoader}" /></apex:facet>
+                        </apex:actionStatus>            
+                        <apex:actionFunction name="searchServer" action="{!retriveMetadata}" rerender="pbk,pbSearch,results,serchresults,pnlRefresh,pbSearchProducts" status="statusSearch">
+                          <apex:param name="Name" value="" />
+                          <apex:param name="Type" value="" />  
+                          <apex:param name="LastModifiedByName" value="" />
+                          <apex:param name="LastModifyDate" value="" />     
+                        </apex:actionFunction>
+                            <apex:pageBlockButtons id="pbbInfo" location="top">
+                            <apex:commandButton id="btnDeploymentSave" value="Save"  action="{!saveMetadata}" rerender="AccountTabPanel" rendered="{!MetadataDetails.size > 0}" />
+                            <apex:commandButton id="btnDeploymentCancel" value="Back" action="{!cancel}" onclick="copadoApp.cancel();return false;"/>
+                            <apex:commandButton id="btnDeploymentRefresh" value="Refresh"  action="{!redirectToRefresh}"  rendered="{!NOT(AND(objMetadataLogDetails != null, OR(objMetadataLogDetails.OFSClient__Status__c =='In-Progress',objMetadataLogDetails.OFSClient__Status__c =='Open')))}" />
+                            <!-- rerender="pbSearchBlock,AccountTabPanel" <apex:commandButton id="btnDeploymentDelete" action="{!openSearch}" value="Add Components" 
+                                reRender="tabSearchResults" oncomplete="alert('Saved Selected Records');"/>
+                            <apex:commandButton id="btnDeploymentClone" action="{!save}" value="Clone" rerender="pbInformation"/>
+                            -->
+                            </apex:pageBlockButtons>
+                            
+                            <table width="100%">
+                                <tr width="100%">
+                                    <td valign="top" width="80%" align="center">
+                                        <apex:outputText value="Please click refresh button if you cant find your components"  style="text-align:center;font-size: 16px; text-font:bold;color:black" >                 
+                                        </apex:outputText>
+                                        <apex:outputText rendered="{!AND(objMetadataLogDetails != null, OR(objMetadataLogDetails.OFSClient__Status__c =='In-Progress', objMetadataLogDetails.OFSClient__Status__c =='Open'))}"  
+                                            value="Please wait, component refresh is in progress"  style="text-align:right;font-size: 16px; text-font:bold;color:red" >                 
+                                        </apex:outputText>
+                                        <apex:actionPoller action="{!retriveMetadata}" reRender="pbSearchBlock" interval="15" rendered="{!MetadataDetails.size < 1}"/> 
+                                    </td>
+                                    <td valign="top" width="80%">
+                                        <apex:image url="{!$Resource.OFSClient__AjaxLoader}" rendered="{!AND(objMetadataLogDetails != null, OR(objMetadataLogDetails.OFSClient__Status__c =='In-Progress', objMetadataLogDetails.OFSClient__Status__c =='Open'))}" />
+                                    </td>
+                                </tr>
+                            </table>               
+                            
+                            <apex:outputText rendered="{!OR(objMetadataLogDetails == null ,AND(objMetadataLogDetails!= null, objMetadataLogDetails.OFSClient__Status__c =='Completed', MetadataDetails.size < 1))}" value="Please click refresh button if you cant find your components"  style="text-align:right;font-size: 16px; text-font:bold;color:red" ></apex:outputText>
+                            <apex:outputPanel id="pnlSearch" rendered="{!MetadataDetails.size > 0}" >
+                            <table width="100%">
+                            <tr width="100%">
+                            <td valign="top" width="10%">
+                                <apex:outputPanel rendered="false">
+                                
+                                <apex:outputText value="Source Org" styleClass="labelCol vfLabelColTextWrap  first"></apex:outputText><br/>
+                                
+                                <apex:selectList value="{!strSelectedOrgId}" multiselect="false" size="1" id="sObj">
+                                    <apex:selectOptions value="{!optionOrg}"/>
+                                    <apex:actionSupport event="onchange" action="{!retriveMetadata}" status="statusSearch" reRender="pbk,results,serchresults,pnlRefresh"  />
+                                </apex:selectList>
+                                <!---->
+                                </apex:outputPanel>
+                            </td>
+                    
+                            <td valign="top" width="10%">Name<br/><input type="text" id="Name" onkeyup="doSearch();"/></td>
+                            <td valign="top" width="10%">Type<br/><input type="text" id="Type" onkeyup="doSearch();"/></td>
+                            <td valign="top" width="10%">Last Modified By<br/><input type="text" id="LastModifiedByName" onkeyup="doSearch();"/></td>
+                            <td valign="top" width="30%">Last Modified Date<br/><input type="date" id="LastModifyDate" onchange="doSearch();"/>               
+                                
+                                <apex:outputPanel id="pnlRefresh" rendered="false">
+                                <apex:outputText rendered="{!AND(objMetadataLogDetails!= null)}"  value="Please click refresh button if you cant find your components." 
+                                    style="text-align:right;font-size: 16px; text-font:bold;color:black" >
+                                </apex:outputText>
+                                <apex:commandLink rendered="{!AND(objMetadataLogDetails!= null, objMetadataLogDetails.OFSClient__Status__c =='Completed')}" reRender="pnlRefresh" action="{!fetchMetadata}" value="Refresh cache(Last refresh:{!objMetadataLogDetails.LastModifiedDate})"  style="text-align:right" ></apex:commandLink>
+                                <apex:commandLink rendered="{!(objMetadataLogDetails= null)}" action="{!fetchMetadata}" value="No component present, please click here to retrieve components." reRender="pnlRefresh" style="text-align:right;color:blue" ></apex:commandLink>
+                                
+                                <apex:commandLink rendered="{!AND(objMetadataLogDetails!= null, objMetadataLogDetails.OFSClient__Status__c =='Error')}" reRender="pnlRefresh" action="{!fetchMetadata}" value="Error during refresh, please validate environment details." 
+                                    style="text-align:right;font-size: 16px; text-font:bold;color:red" >
+                                </apex:commandLink>
+                                <apex:outputText rendered="{!AND(objMetadataLogDetails!= null)}"  value="Please click refresh button if you cant find your components." 
+                                    style="text-align:right;font-size: 16px; text-font:bold;color:black" >
+                                </apex:outputText>
+                                </apex:outputPanel>
+                            </td>
+                            </tr>
+                            <tr width="100%" >
+                            <td width="100%" valign="top" colspan="7" id="tdSearch">
+                                <apex:pageBlock mode="detail" id="pbSearch" >               
+                                <apex:outputPanel id="serchresults">
+                                    <apex:pageBlockTable id="pbSearchProducts" value="{!lstDisplayMetadata}" var="l"  rendered="{!MetadataDetails.size > 0}">
+                                    <apex:column width="70px">
+                                        <apex:facet name="header">
+                                            <apex:outputPanel >
+                                            <apex:inputCheckbox value="{!l.selected}" id="product_ChkBox1"  onclick="checkAllSearch(this)" />
+                                            <apex:outputText value="  Check All" />
+                                            </apex:outputPanel>
+                                        </apex:facet>
+                                        <apex:inputCheckbox value="{!l.selected}" id="searchproduct_ChkBox" onclick="checkAllSelected(this)" />
+                                    </apex:column>
+                                    <apex:column value="{!l.objMTBDName.OFSClient__Name__c}"/>
+                                    <!--<apex:column value="{!l.objMTBDName.OrganizationId__c}"/>  -->
+                                    <apex:column value="{!l.objMTBDName.OFSClient__Type__c}"/> 
+                                    <apex:column value="{!l.objMTBDName.OFSClient__LastModifiedByName__c}"/> 
+                                    <apex:column value="{!l.objMTBDName.OFSClient__LastModifiedDate__c}"/>
+                                    </apex:pageBlockTable>
+                                    <c:paginatorClient reRenderComponent="pbSearch, serchresults" pageManagerClient="{!objPageManager}" rendered="{!MetadataDetails.size > 0}" statusComponent="statusSearch" id="bottom_paginator"/> 
+                                </apex:outputPanel>                 
+                                </apex:pageBlock>       
+                            </td>
+                            </tr>
+                        </table>
+                        </apex:outputPanel> 
+                    </apex:pageBlock>   
+                </apex:tab>         
+               </apex:tabPanel>
+            </apex:form>
+    </apex:page>

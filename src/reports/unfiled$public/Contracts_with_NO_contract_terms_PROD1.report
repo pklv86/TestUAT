@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contract$Opportunity__c</field>
+    </columns>
+    <columns>
+        <field>Contract$Name</field>
+    </columns>
+    <columns>
+        <field>Contract$Contract_Type__c</field>
+    </columns>
+    <columns>
+        <field>Contract$ContractNumber</field>
+    </columns>
+    <columns>
+        <field>Contract$ContractTerm</field>
+    </columns>
+    <columns>
+        <field>Contract$Id</field>
+    </columns>
+    <columns>
+        <field>Contract$Enrollment_Stage__c</field>
+    </columns>
+    <description>These contracts have no terms</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contract.Contract_Terms__r$Id</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Contracts with NO contract terms-PROD</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contracts_With_No_Contract_Terms_PROD__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Contract$ContractNumber</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contract$CreatedDate</dateColumn>
+        <endDate>2016-06-07</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-05-01</startDate>
+    </timeFrameFilter>
+</Report>

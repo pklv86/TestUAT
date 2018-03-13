@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Bill_Cycle_Date__c$Bill_Cycle_Key__c</field>
+    </columns>
+    <columns>
+        <field>Bill_Cycle_Date__c$Meter_Read_Date__c</field>
+    </columns>
+    <description>Shows the Bill Cycles by a specific month</description>
+    <filter>
+        <criteriaItems>
+            <column>Bill_Cycle_Date__c$LDC_Vendor__c.Service_Territory__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>AEPOHIO,DAYTON,DEOHIO,FEOHIO</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Bill_Cycle_Specific Month</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Bill_Cycle_Date__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Bill_Cycle_Date__c$Bill_Cycle_Key__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Bill_Cycle_Date__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

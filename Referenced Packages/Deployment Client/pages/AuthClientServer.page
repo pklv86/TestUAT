@@ -1,0 +1,19 @@
+<apex:page action="{!validateOAuthBase}" standardController="OFSClient__EnviromentInformation__c" extensions="OFSClient.AuthClient">
+    <apex:form >
+        <apex:outputPanel >
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:commandButton action="{!returnPageURL}" value="Back" style="align:center"/>
+        </apex:outputPanel>
+        
+        
+        <apex:inputField value="{!OFSClient__EnviromentInformation__c.OFSClient__Auth_Type__c}" rendered="false"/>
+        <apex:inputField value="{!OFSClient__EnviromentInformation__c.OFSClient__Type__c}" rendered="false" />
+        <!--
+        <apex:outputLabel >Please select environment type</apex:outputLabel>
+        <apex:inputField value="{!OFSClient__EnviromentInformation__c.OFSClient__Auth_Type__c}" />
+        <apex:inputField value="{!OFSClient__EnviromentInformation__c.OFSClient__Type__c}" />
+        
+        <apex:commandButton value="OAuth" action="{!validateOAuthBase}"></apex:commandButton>
+        -->
+    </apex:form>
+</apex:page>

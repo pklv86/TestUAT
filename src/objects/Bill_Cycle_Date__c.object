@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used for storing meter read date, month and year</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Bill_Cycle_Key__c</fullName>
+        <externalId>false</externalId>
+        <formula>LDC_Vendor__r.Utility_Code__c &amp; &quot;_&quot; &amp; Text(Bill_Cycle__c) &amp; &quot;_&quot; &amp; Meter_Read_Month__c &amp; &quot;_&quot; &amp; Meter_Read_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bill Cycle Key</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bill_Cycle__c</fullName>
+        <externalId>false</externalId>
+        <label>Bill Cycle</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LDC_Vendor__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Lookup to LDC Vendors</description>
+        <externalId>false</externalId>
+        <label>LDC Vendor</label>
+        <referenceTo>LDC_Vendor__c</referenceTo>
+        <relationshipLabel>Bill Cycle Date</relationshipLabel>
+        <relationshipName>Bill_Cycle_Date</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Meter_Read_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Meter Read Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Meter_Read_Month__c</fullName>
+        <externalId>false</externalId>
+        <label>Meter Read Month</label>
+        <length>3</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_Read_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Meter Read Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Bill Cycle Date</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Cleveland_Electric_Illuminating_Company</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Cleveland Electric Illuminating Company</value>
+        </filters>
+        <label>Cleveland Electric Illuminating Company</label>
+    </listViews>
+    <listViews>
+        <fullName>Cleveland_Electric_Illuminating_Company_2017</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Cleveland Electric Illuminating Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2017</value>
+        </filters>
+        <label>CEI Company 2017</label>
+    </listViews>
+    <listViews>
+        <fullName>Cleveland_Electric_Illuminating_Company_2018</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Cleveland Electric Illuminating Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2018</value>
+        </filters>
+        <label>CEI Company 2018</label>
+    </listViews>
+    <listViews>
+        <fullName>Cleveland_Electric_Illuminating_Company_2019</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Cleveland Electric Illuminating Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2019</value>
+        </filters>
+        <label>CEI Company 2019</label>
+    </listViews>
+    <listViews>
+        <fullName>Cleveland_Electric_Illuminating_Company_2020</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Cleveland Electric Illuminating Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2020</value>
+        </filters>
+        <label>CEI Company 2020</label>
+    </listViews>
+    <listViews>
+        <fullName>Cleveland_Electric_Illuminating_Company_2021</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Cleveland Electric Illuminating Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2021</value>
+        </filters>
+        <label>CEI Company 2021</label>
+    </listViews>
+    <listViews>
+        <fullName>Columbus_Southern_Power_Company</fullName>
+        <columns>NAME</columns>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Columbus Southern Power Company</value>
+        </filters>
+        <label>Columbus Southern Power Company</label>
+    </listViews>
+    <listViews>
+        <fullName>Columbus_Southern_Power_Company_2016</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Columbus Southern Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2016</value>
+        </filters>
+        <label>Columbus Southern Power Company 2016</label>
+    </listViews>
+    <listViews>
+        <fullName>Columbus_Southern_Power_Company_2017</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Columbus Southern Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2017</value>
+        </filters>
+        <label>Columbus Southern Power Company 2017</label>
+    </listViews>
+    <listViews>
+        <fullName>Columbus_Southern_Power_Company_2018</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Columbus Southern Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2018</value>
+        </filters>
+        <label>Columbus Southern Power Company 2018</label>
+    </listViews>
+    <listViews>
+        <fullName>Columbus_Southern_Power_Company_2019</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Columbus Southern Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2019</value>
+        </filters>
+        <label>Columbus Southern Power Company 2019</label>
+    </listViews>
+    <listViews>
+        <fullName>Columbus_Southern_Power_Company_2020</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Columbus Southern Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2020</value>
+        </filters>
+        <label>Columbus Southern Power Company 2020</label>
+    </listViews>
+    <listViews>
+        <fullName>Columbus_Southern_Power_Company_2021</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Columbus Southern Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2021</value>
+        </filters>
+        <label>Columbus Southern Power Company 2021</label>
+    </listViews>
+    <listViews>
+        <fullName>Dayton_Power_and_Light_Company</fullName>
+        <columns>NAME</columns>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Dayton Power and Light Company</value>
+        </filters>
+        <label>Dayton Power and Light Company</label>
+    </listViews>
+    <listViews>
+        <fullName>Dayton_Power_and_Light_Company_2016</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Dayton Power and Light Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2016</value>
+        </filters>
+        <label>Dayton Power and Light Company 2016</label>
+    </listViews>
+    <listViews>
+        <fullName>Dayton_Power_and_Light_Company_2017</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Dayton Power and Light Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2017</value>
+        </filters>
+        <label>Dayton Power and Light Company 2017</label>
+    </listViews>
+    <listViews>
+        <fullName>Dayton_Power_and_Light_Company_2018</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Dayton Power and Light Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2018</value>
+        </filters>
+        <label>Dayton Power and Light Company 2018</label>
+    </listViews>
+    <listViews>
+        <fullName>Dayton_Power_and_Light_Company_2019</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Dayton Power and Light Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2019</value>
+        </filters>
+        <label>Dayton Power and Light Company 2019</label>
+    </listViews>
+    <listViews>
+        <fullName>Dayton_Power_and_Light_Company_2020</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Dayton Power and Light Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2020</value>
+        </filters>
+        <label>Dayton Power and Light Company 2020</label>
+    </listViews>
+    <listViews>
+        <fullName>Dayton_Power_and_Light_Company_2021</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Dayton Power and Light Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2021</value>
+        </filters>
+        <label>Dayton Power and Light Company 2021</label>
+    </listViews>
+    <listViews>
+        <fullName>Duke_Energy_Ohio</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Duke Energy Ohio</value>
+        </filters>
+        <label>Duke Energy Ohio</label>
+    </listViews>
+    <listViews>
+        <fullName>Duke_Energy_Ohio_2016</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Duke Energy Ohio</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2016</value>
+        </filters>
+        <label>Duke Energy Ohio 2016</label>
+    </listViews>
+    <listViews>
+        <fullName>Duke_Energy_Ohio_2017</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Duke Energy Ohio</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2017</value>
+        </filters>
+        <label>Duke Energy Ohio 2017</label>
+    </listViews>
+    <listViews>
+        <fullName>Duke_Energy_Ohio_2018</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Duke Energy Ohio</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2018</value>
+        </filters>
+        <label>Duke Energy Ohio 2018</label>
+    </listViews>
+    <listViews>
+        <fullName>Duke_Energy_Ohio_2019</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Duke Energy Ohio</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2019</value>
+        </filters>
+        <label>Duke Energy Ohio 2019</label>
+    </listViews>
+    <listViews>
+        <fullName>Duke_Energy_Ohio_2020</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Duke Energy Ohio</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2020</value>
+        </filters>
+        <label>Duke Energy Ohio 2020</label>
+    </listViews>
+    <listViews>
+        <fullName>Duke_Energy_Ohio_2021</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Duke Energy Ohio</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2021</value>
+        </filters>
+        <label>Duke Energy Ohio 2021</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Edison_Company</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Edison Company</value>
+        </filters>
+        <label>Ohio Edison Company</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Edison_Company_2016</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Edison Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2016</value>
+        </filters>
+        <label>Ohio Edison Company 2016</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Edison_Company_2017</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Edison Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2017</value>
+        </filters>
+        <label>Ohio Edison Company 2017</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Edison_Company_2018</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Edison Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2018</value>
+        </filters>
+        <label>Ohio Edison Company 2018</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Edison_Company_2019</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Edison Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2019</value>
+        </filters>
+        <label>Ohio Edison Company 2019</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Edison_Company_2020</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Edison Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2020</value>
+        </filters>
+        <label>Ohio Edison Company 2020</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Edison_Company_2021</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Edison Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2021</value>
+        </filters>
+        <label>Ohio Edison Company 2021</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Power_Company</fullName>
+        <columns>NAME</columns>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Power Company</value>
+        </filters>
+        <label>Ohio Power Company</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Power_Company_2016</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2016</value>
+        </filters>
+        <label>Ohio Power Company 2016</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Power_Company_2017</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2017</value>
+        </filters>
+        <label>Ohio Power Company 2017</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Power_Company_2018</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2018</value>
+        </filters>
+        <label>Ohio Power Company 2018</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Power_Company_2019</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2019</value>
+        </filters>
+        <label>Ohio Power Company 2019</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Power_Company_2020</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2020</value>
+        </filters>
+        <label>Ohio Power Company 2020</label>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Power_Company_2021</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Ohio Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2021</value>
+        </filters>
+        <label>Ohio Power Company 2021</label>
+    </listViews>
+    <listViews>
+        <fullName>Test</fullName>
+        <columns>NAME</columns>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Dayton Power and Light Company</value>
+        </filters>
+        <filters>
+            <field>Bill_Cycle__c</field>
+            <operation>equals</operation>
+            <value>2</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2019</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Month__c</field>
+            <operation>equals</operation>
+            <value>JAN,FEB,MAR,APR</value>
+        </filters>
+        <label>Test</label>
+    </listViews>
+    <listViews>
+        <fullName>Toledo_Edison_Company</fullName>
+        <columns>NAME</columns>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Toledo Edison Company</value>
+        </filters>
+        <label>Toledo Edison Company</label>
+    </listViews>
+    <listViews>
+        <fullName>Toledo_Edison_Company_2016</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Toledo Edison Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2016</value>
+        </filters>
+        <label>Toledo Edison Company 2016</label>
+    </listViews>
+    <listViews>
+        <fullName>Toledo_Edison_Company_2017</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Toledo Edison Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2017</value>
+        </filters>
+        <label>Toledo Edison Company 2017</label>
+    </listViews>
+    <listViews>
+        <fullName>Toledo_Edison_Company_2018</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Toledo Edison Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2018</value>
+        </filters>
+        <label>Toledo Edison Company 2018</label>
+    </listViews>
+    <listViews>
+        <fullName>Toledo_Edison_Company_2019</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Toledo Edison Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2019</value>
+        </filters>
+        <label>Toledo Edison Company 2019</label>
+    </listViews>
+    <listViews>
+        <fullName>Toledo_Edison_Company_2020</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Toledo Edison Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2020</value>
+        </filters>
+        <label>Toledo Edison Company 2020</label>
+    </listViews>
+    <listViews>
+        <fullName>Toledo_Edison_Company_2021</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>Toledo Edison Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2021</value>
+        </filters>
+        <label>Toledo Edison Company 2021</label>
+    </listViews>
+    <listViews>
+        <fullName>West_Penn_Power_Company</fullName>
+        <columns>NAME</columns>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>West Penn Power Company</value>
+        </filters>
+        <label>West Penn Power Company</label>
+    </listViews>
+    <listViews>
+        <fullName>West_Penn_Power_Company_2016</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>West Penn Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2016</value>
+        </filters>
+        <label>West Penn Power Company 2016</label>
+    </listViews>
+    <listViews>
+        <fullName>West_Penn_Power_Company_2017</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>West Penn Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2017</value>
+        </filters>
+        <label>West Penn Power Company 2017</label>
+    </listViews>
+    <listViews>
+        <fullName>West_Penn_Power_Company_2018</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>West Penn Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2018</value>
+        </filters>
+        <label>West Penn Power Company 2018</label>
+    </listViews>
+    <listViews>
+        <fullName>West_Penn_Power_Company_2019</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>West Penn Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2019</value>
+        </filters>
+        <label>West Penn Power Company 2019</label>
+    </listViews>
+    <listViews>
+        <fullName>West_Penn_Power_Company_2020</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>West Penn Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2020</value>
+        </filters>
+        <label>West Penn Power Company 2020</label>
+    </listViews>
+    <listViews>
+        <fullName>West_Penn_Power_Company_2021</fullName>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Bill_Cycle__c</columns>
+        <columns>Meter_Read_Date__c</columns>
+        <columns>Meter_Read_Month__c</columns>
+        <columns>Meter_Read_Year__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LDC_Vendor__c</field>
+            <operation>equals</operation>
+            <value>West Penn Power Company</value>
+        </filters>
+        <filters>
+            <field>Meter_Read_Year__c</field>
+            <operation>equals</operation>
+            <value>2021</value>
+        </filters>
+        <label>West Penn Power Company 2021</label>
+    </listViews>
+    <nameField>
+        <displayFormat>BCD-{0000}</displayFormat>
+        <label>Bill Cycle Date Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Bill Cycle Date</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Bill_Cycle__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LDC_Vendor__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Meter_Read_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Meter_Read_Month__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Meter_Read_Year__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Bill_Cycle__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LDC_Vendor__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Meter_Read_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Meter_Read_Month__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Meter_Read_Year__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>LDC_Vendor__c</searchFilterFields>
+        <searchFilterFields>Meter_Read_Date__c</searchFilterFields>
+        <searchFilterFields>Meter_Read_Month__c</searchFilterFields>
+        <searchFilterFields>Meter_Read_Year__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

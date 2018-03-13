@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CONTRACT_NUMBER</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <columns>
+        <field>END_DATE</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_OWNER</field>
+    </columns>
+    <description>Shows contracts that expire by using the date in the name</description>
+    <filter>
+        <booleanFilter>(1 AND 2)</booleanFilter>
+        <criteriaItems>
+            <column>Contract.Customer_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Mass Market Offer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>AUTOREN DEO 6.22 DEC16,AUTOREN DEO 5.62 DEC16,AUTOREN DEO 5.89 DEC16,FE RS 7.79 DEC16 25TF,DPL RS 6.69 DEC16 25TF,DPL RS 6.39 DEC16 25TF,AEP RS 7.39 DEC16 25TF,DEO 5.89 JAN17 0TF,DEO 5.79 JAN17 0TF,DEO TOWNE 5.79 JAN17 0TF,DPL 5.99 JAN17 0TF,FE 6.19 JAN17 0TF,AEP 5.99 JAN17 0TF,AEP 6.19 JAN17 0TF,DPL 5.59 FEB17 0TF,AEP 5.79 FEB17 0TF,DPL 5.49 FEB17 0TF,FE 6.59 FEB17 0TF,DPL 5.39 FEB17 0TF,DEO TOWNE 5.49 FEB17 0TF,FE 5.79 FEB17 0TF,AEP 5.49 MAR17 0TF,FE 6.19 MAR17 0TF,DEO 5.29 MAR17 0TF,DPL 5.29 MAR17 0TF,DEO 5.19 MAR17 0TF,AEP 5.39 MAR17 0TF,DEO 5.59 FEB17 0TF,DPL 5.19 MAR17 0TF,FE 6.09 MAR17 0TF,FE 5.59 MAR17 0TF,DEO TOWNE 5.19 MAR17 0TF,AUTOREN DEO 5.69 APR17,AUTOREN DEO 5.1 APR17,AUTOREN DPL 5.19 APR17,AUTOREN FE 6.19 APR17,AUTOREN AEP 5.49 APR17,FE 6.89 JAN17 0TF</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>AR Contracts UsingName</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContractList</reportType>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

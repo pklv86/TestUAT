@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This is a matrix of Contract Type selections based on Service Territory and Bill Method
+Defining Below As Name field Length is limited to 40
+CT1 - Small Stable Contract - Evergreen
+CT2 - Small Stable Contract - MTM Renewal
+CT3 - Large Stable Contract
+CT4 - Large Stable PT-C Contract
+CT5 - Hybrid
+CT6 - Block and Index</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Bill_Method__c</fullName>
+        <externalId>false</externalId>
+        <label>Bill Method</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Code</label>
+        <length>5</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Contract_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>New Contract Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Territory__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Territory</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Contract Type Setting</label>
+    <visibility>Public</visibility>
+</CustomObject>

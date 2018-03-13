@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This custom setting controls which entities to be purged and the history of records to be saved while purging.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Enable_Purge__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked only then the corresponding entry will be picked for Purging.</description>
+        <externalId>false</externalId>
+        <label>Enable Purge</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Save_History__c</fullName>
+        <description>Number of days of data to be saved when the purge batch runs. If set to 10, last 10 days of data will be saved and rest deleted. If set to 0, all data will be deleted.</description>
+        <externalId>false</externalId>
+        <label>Save_History</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Where_Clause__c</fullName>
+        <description>Provides optional where clause for building the SOQL to fetch qualified records for purging.</description>
+        <externalId>false</externalId>
+        <label>Where_Clause</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>order__c</fullName>
+        <externalId>false</externalId>
+        <label>order</label>
+        <precision>2</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <label>PurgeSobjectSettings</label>
+    <visibility>Public</visibility>
+</CustomObject>

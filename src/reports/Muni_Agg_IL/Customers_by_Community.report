@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Business_Account__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$LDC_Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$BillingAddress</field>
+    </columns>
+    <columns>
+        <field>Account$Phone</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$Opt_out__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$LDC_Account_Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Term_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Term_Stop_Date__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account$Business_Account__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>MA Village of Glen Carbon</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Customers by Community</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customer_LDC_ContractLDC__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

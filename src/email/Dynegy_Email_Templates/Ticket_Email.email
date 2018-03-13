@@ -1,0 +1,21 @@
+{!Today}
+Hello,
+
+The status of the ticket [{!Tickets__c.Name}] has been updated. Please find the URL and details below.
+
+New Status: {!Tickets__c.Status__c}
+
+Ticket URL :  {!Tickets__c.Link}
+Rank : {!Tickets__c.Rank__c}
+Created By : {!Tickets__c.CreatedBy}
+Owner : {!Tickets__c.OwnerFullName}
+Affected User : {!Tickets__c.Affected_User__c}
+Assigned To : {!Tickets__c.Assigned_Developer__c}
+Last modified By : {!Tickets__c.LastModifiedBy}
+
+
+Summary : {!Tickets__c.Summary__c}
+
+Description : {!Tickets__c.Description__c}
+
+Resolution : {!Tickets__c.Resolution__c}

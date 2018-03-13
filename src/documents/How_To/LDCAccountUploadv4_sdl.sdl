@@ -1,0 +1,13 @@
+#Mapping values
+#Tue Aug 01 16:16:10 EDT 2017
+LDC\ Account\ Number=LDC_Account_Number__c
+Service\ Postal\ Code=Service_Postal_Code__c
+Vendor\ Id=LDC_Vendor__c
+Alias\ Name=Alias_Name__c
+LDC\ Account\ Name=Name
+Service\ Territory=Service_Territory__c
+Service\ Street\ 1=Service_Street_1__c
+Customer\ Id=Account__c
+Service\ City=Service_City__c
+Service\ State=Service_State__c
+LDC\ Type=LDC_Type__c

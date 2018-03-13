@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Id</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.LDCOPPS__r$Id</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$LDC_Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$Id</field>
+    </columns>
+    <crossFilters>
+        <operation>without</operation>
+        <primaryTableColumn>Account$Id</primaryTableColumn>
+        <relatedTable>Opportunity</relatedTable>
+        <relatedTableJoinColumn>Account</relatedTableJoinColumn>
+    </crossFilters>
+    <description>Accounts without Opps with LDC Acct T-000547</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$Customer_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>C&amp;I,Small Business</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Contracting_Entity__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>DES,Homefield Energy</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Legacy_ID__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Accounts without Opps with LDC Acct</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customers_w_o_LDC_w_o_Opportunity__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account.LDC_Accounts__r$Id</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$Competitive_End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

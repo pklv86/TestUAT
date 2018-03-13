@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_53678605</developerName>
+        <masterLabel>Stage</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>STAGE_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed Won</sourceValue>
+            </sourceValues>
+            <value>Win</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed Lost</sourceValue>
+            </sourceValues>
+            <value>Loss</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Renewal Sent</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Contract Sent</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Indicative Pricing Sent</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Credit Review</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Quote Requested</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Negotiating Contract</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hold</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Prospecting</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>New</sourceValue>
+            </sourceValues>
+            <value>Open</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed NA</sourceValue>
+            </sourceValues>
+            <value>Closed-Other</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_8075800</developerName>
+        <masterLabel>Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>STAGE_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed Won</sourceValue>
+            </sourceValues>
+            <value>Won</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed Lost</sourceValue>
+            </sourceValues>
+            <value>Lost</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed NA</sourceValue>
+            </sourceValues>
+            <value>Closed (Other)</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Renewal Sent</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Contract Sent</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Indicative Pricing Sent</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Credit Review</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Quote Requested</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Prospecting</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>New</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hold</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Negotiating Contract</sourceValue>
+            </sourceValues>
+            <value>Open</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Retail_Quote__c.Total_Quote_MWh__c</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <description>Report for Metric Report</description>
+    <filter>
+        <criteriaItems>
+            <column>TYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Muni-Agg</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Service_Territory__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>AEPOHIO,DAYTON,DEOHIO,FEOHIO</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>CLOSE_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_8075800</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>MA Wins Loss OHIO</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityCustomEntity$Retail_Quote__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

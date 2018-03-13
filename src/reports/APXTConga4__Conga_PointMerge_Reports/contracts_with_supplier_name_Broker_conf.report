@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Supplier__c.Accounts__r$Supplier__c</field>
+    </columns>
+    <columns>
+        <field>Supplier__c.Accounts__r$Legal_Entity_Name__c</field>
+    </columns>
+    <columns>
+        <field>Supplier__c$Alias_Name__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Supplier__c.Accounts__r.Contracts$Id</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>contracts with supplier name Broker conf</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>contracts_with_supplier_name__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Supplier__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

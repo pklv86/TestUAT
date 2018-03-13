@@ -1,0 +1,2672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Enter issues for resolution</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Affected_Non_SF_User__c</fullName>
+        <externalId>false</externalId>
+        <label>Affected Non SF User</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Affected_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Name of the affected Salesforce user.  This is important if someone enters the ticket on behalf of someone else.</inlineHelpText>
+        <label>Affected User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Tickets</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_Developer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Assign to a developer if it requires code or data update.</inlineHelpText>
+        <label>Assigned To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Tickets1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bug__c</fullName>
+        <externalId>false</externalId>
+        <label>Ticket Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Defect</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Enhancement</fullName>
+                    <color>#009900</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EDI</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Interface</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Report</fullName>
+                    <color>#009900</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Conga Template</fullName>
+                    <color>#009900</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Support</fullName>
+                    <color>#009900</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Security</fullName>
+                    <color>#009900</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IT Initiative</fullName>
+                    <color>#419249</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Training</fullName>
+                    <color>#009900</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Data-Customer</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Data-Contract</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Data-Contract LDC</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Data-LDC Account</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Data-DASR</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tax</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>POR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Accelerated Switching</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Test Case</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UAT Issues</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bug</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Data</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Data-Lodestar</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Lodestar</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>On-Site Support</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Project</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Business_Approved_Date__c</fullName>
+        <description>Date Approved by Business</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date Approved by the Business.  See Notes for approval.</inlineHelpText>
+        <label>Business Approved Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Business_Process__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Process</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 - Request Pricing (Sales function)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 - Pricing (Risk)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 - Contract Creation (Sales)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 - Accept Contract (Account Management)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5 - Account Set Up (Account Management)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 - DASR (Account Management)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>7 - Validation (Account Management)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>8 - Integration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>9 - EDI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10 - Billing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>11 - Settlements</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>12 - Settlements UCB</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>13 - A/R</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>14 - Cash</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>15 - Reporting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>16 - Brokers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>17 - Billing Workflow</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Accept Contract (Account Management)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Account Set Up (Account Management)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Contract Creation (Sales)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>DASR (Account Management)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Pricing (Risk)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Request Pricing (Sales)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Validation (Account Management)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_Number__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field is created to related a ticket to contract</description>
+        <externalId>false</externalId>
+        <label>Contract Number</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Tickets</relationshipLabel>
+        <relationshipName>Tickets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <description>Department that the user belongs to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Department that the user belongs to</inlineHelpText>
+        <label>Department</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sales</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pricing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Account Setup</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Acc Mgt- residential</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Biz Ops.</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Settlements</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Account Management</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Business Operations</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>IT</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Due_In_UAT__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the ticket is due in UAT for testing.</inlineHelpText>
+        <label>Due In UAT</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Hours_Actual__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of hours actually spent</inlineHelpText>
+        <label>Hours Actual</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_Definitive_Est__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Hours Definitive Estimate.  It can be changed</inlineHelpText>
+        <label>Hours Definitive Est</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_ROM__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Initial rough order of magnitude</inlineHelpText>
+        <label>Hours ROM</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>Hours_Definitive_Est__c  -  Hours_Actual__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Hours remaining for the task</inlineHelpText>
+        <label>Hours Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IT_Documentation__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is intended for IT to track documentation for a deliverable.</inlineHelpText>
+        <label>IT Documentation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Required</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Required</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Produced</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Impact__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The business defines the impact.  This means the impact of this ticket in regards to the number of users or the number of customers affected.  It usually drives the priority and the rank.</inlineHelpText>
+        <label>Impact</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 - Critical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 - High</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 - Medium</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 - Low</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Object__c</fullName>
+        <externalId>false</externalId>
+        <label>Object</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Contact</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Contract</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Contract LDC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Contract Terms</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DASR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LDC Account</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LDC Vendors</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Opportunity</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Report</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Security</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Validation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Conract LDC</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>LDC Vendor</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Outage_Duration__c</fullName>
+        <externalId>false</externalId>
+        <label>Outage Duration</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Outage_Point__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the location where the outage is expected, if any.</inlineHelpText>
+        <label>Outage Point</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>814 EDI Inbound</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>814 EDI Outbound</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF to LS Interface</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Conga Template</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Planned_Dev_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The date planned to start development.</inlineHelpText>
+        <label>Planned Dev Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The priority established by the business.  There can be many top priority tickets, but not all can be resolved at once.  Please use the rank to distinguish which tickets need to be worked on first in the rank field.</inlineHelpText>
+        <label>Priority</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 - Critical</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 - High</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 - Medium</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 - Low</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Rank__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The rank defined by the business.  These are tickets to be worked on by IT according to the rank.  Other quick-win tickets will also be worked on.</inlineHelpText>
+        <label>Rank</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SCR_Target_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>SCR Target Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SCR__c</fullName>
+        <externalId>false</externalId>
+        <label>SCR</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SharePoint_Number__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This task was logged in the SharePoint site during UAT and not resolved before Production go-live.</inlineHelpText>
+        <label>SharePoint Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of the last status.</inlineHelpText>
+        <label>Status Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Status set by IT, indicates were in the life cycle the ticket is.</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Queued</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Requires More Information</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pending Retail Review</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Assigned Developer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ready for Unit Testing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Unit Test Passed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ready to Test</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UAT passed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UAT Failed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Scheduled for Prod</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ready to Bill</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer Call</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Data Waiting for Contract</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Need Bridge Contract</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Returned to Account Set Up</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Duplicate</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Resolved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pending LS Readiness</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Summary__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a brief description of the issue.</inlineHelpText>
+        <label>Summary</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>System__c</fullName>
+        <description>Application the Ticket pertains to</description>
+        <externalId>false</externalId>
+        <label>System</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Billing Workflow</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salesforce</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lodestar</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pricing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>iAvenue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Integration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CES BLUE</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TESTNUM__c</fullName>
+        <externalId>false</externalId>
+        <label>TESTNUM</label>
+        <precision>13</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Target_Delivery_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The data IT expects to deliver.</inlineHelpText>
+        <label>Target Delivery Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ticket_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Ticket Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Triage_Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Business Triage Team enters comments for IT</inlineHelpText>
+        <label>Triage Comments</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Urgency__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The user specifies the urgency to resolve the ticket.  Please specify why a ticket is considered &quot;1-Critical&quot;.  1-Critical means all other work needs to stop in order to resolve this ticket.</inlineHelpText>
+        <label>Urgency</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 - Critical</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2 - High</fullName>
+                    <color>#FF9900</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3 - Medium</fullName>
+                    <color>#F3D904</color>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4 - Low</fullName>
+                    <color>#0B6FCE</color>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Vendor_Ticket_Number__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to track the ticket opened in the vendor&apos;s issue tracking system.  This number should be provided to the vendor when calling and working on an issue.</inlineHelpText>
+        <label>Vendor Ticket Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Items__c</fullName>
+        <description>This field is created to store the work items related to description of the ticket</description>
+        <externalId>false</externalId>
+        <label>Work Items</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Work_Stream__c</fullName>
+        <description>IT completes this section.  It helps group the tasks into work streams.</description>
+        <externalId>false</externalId>
+        <label>Work Stream</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Production Support</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Pennsylvania</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Broker Portal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Budget Billing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IT Initiatives</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Operational</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Phase I</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Phase II</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Ticket</label>
+    <listViews>
+        <fullName>Billing_Workflow</fullName>
+        <columns>NAME</columns>
+        <columns>Summary__c</columns>
+        <columns>Description__c</columns>
+        <columns>Affected_User__c</columns>
+        <columns>Assigned_Developer__c</columns>
+        <columns>Status__c</columns>
+        <columns>Urgency__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Account Setup</value>
+        </filters>
+        <filters>
+            <field>System__c</field>
+            <operation>equals</operation>
+            <value>Billing Workflow</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Cancelled,Duplicate,Resolved</value>
+        </filters>
+        <label>Billing Workflow</label>
+    </listViews>
+    <listViews>
+        <fullName>Billing_Workflow_ALL</fullName>
+        <columns>NAME</columns>
+        <columns>Summary__c</columns>
+        <columns>Description__c</columns>
+        <columns>Affected_User__c</columns>
+        <columns>Assigned_Developer__c</columns>
+        <columns>Status__c</columns>
+        <columns>Urgency__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Account Setup</value>
+        </filters>
+        <filters>
+            <field>System__c</field>
+            <operation>equals</operation>
+            <value>Billing Workflow</value>
+        </filters>
+        <label>Billing Workflow - ALL</label>
+    </listViews>
+    <listViews>
+        <fullName>Billing_Workflow_data</fullName>
+        <columns>NAME</columns>
+        <columns>Summary__c</columns>
+        <columns>Description__c</columns>
+        <columns>Affected_User__c</columns>
+        <columns>Assigned_Developer__c</columns>
+        <columns>Status__c</columns>
+        <columns>Urgency__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Account Setup</value>
+        </filters>
+        <filters>
+            <field>System__c</field>
+            <operation>equals</operation>
+            <value>Billing Workflow</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Data Waiting for Contract</value>
+        </filters>
+        <label>Billing Workflow - data</label>
+    </listViews>
+    <listViews>
+        <fullName>Customer_Call_Tickets</fullName>
+        <columns>NAME</columns>
+        <columns>Summary__c</columns>
+        <columns>Description__c</columns>
+        <columns>Affected_User__c</columns>
+        <columns>Assigned_Developer__c</columns>
+        <columns>Urgency__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Account Setup</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Customer Call</value>
+        </filters>
+        <label>Customer Call Tickets</label>
+    </listViews>
+    <listViews>
+        <fullName>PA_ALL</fullName>
+        <columns>NAME</columns>
+        <columns>Target_Delivery_Date__c</columns>
+        <columns>Planned_Dev_Start_Date__c</columns>
+        <columns>Due_In_UAT__c</columns>
+        <columns>Assigned_Developer__c</columns>
+        <columns>Summary__c</columns>
+        <columns>Status__c</columns>
+        <columns>Bug__c</columns>
+        <columns>Hours_ROM__c</columns>
+        <columns>Hours_Definitive_Est__c</columns>
+        <columns>Hours_Actual__c</columns>
+        <columns>Hours_Remaining__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Tickets__c.PA_Expansion</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Cancelled,Duplicate,Resolved</value>
+        </filters>
+        <label>PA ALL</label>
+    </listViews>
+    <listViews>
+        <fullName>PA_Due_Nov_1</fullName>
+        <columns>NAME</columns>
+        <columns>Target_Delivery_Date__c</columns>
+        <columns>Planned_Dev_Start_Date__c</columns>
+        <columns>Due_In_UAT__c</columns>
+        <columns>Assigned_Developer__c</columns>
+        <columns>Status__c</columns>
+        <columns>Bug__c</columns>
+        <columns>Description__c</columns>
+        <columns>Hours_ROM__c</columns>
+        <columns>Hours_Definitive_Est__c</columns>
+        <columns>Hours_Actual__c</columns>
+        <columns>Hours_Remaining__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Tickets__c.PA_Expansion</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Cancelled,Duplicate</value>
+        </filters>
+        <filters>
+            <field>Target_Delivery_Date__c</field>
+            <operation>equals</operation>
+            <value>11/1/2017</value>
+        </filters>
+        <label>PA Due Nov 1</label>
+    </listViews>
+    <listViews>
+        <fullName>PA_Due_Nov_13</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Bug__c</columns>
+        <columns>Description__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Scheduled for Prod</value>
+        </filters>
+        <label>PA Due Nov 13</label>
+    </listViews>
+    <listViews>
+        <fullName>PA_UAT_TIX</fullName>
+        <columns>NAME</columns>
+        <columns>Target_Delivery_Date__c</columns>
+        <columns>Planned_Dev_Start_Date__c</columns>
+        <columns>Due_In_UAT__c</columns>
+        <columns>Assigned_Developer__c</columns>
+        <columns>Summary__c</columns>
+        <columns>Status__c</columns>
+        <columns>Bug__c</columns>
+        <columns>Hours_ROM__c</columns>
+        <columns>Hours_Definitive_Est__c</columns>
+        <columns>Hours_Actual__c</columns>
+        <columns>Hours_Remaining__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Tickets__c.PA_Expansion</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Cancelled,Duplicate,Resolved</value>
+        </filters>
+        <filters>
+            <field>Bug__c</field>
+            <operation>equals</operation>
+            <value>UAT Issues</value>
+        </filters>
+        <label>PA UAT Tix</label>
+    </listViews>
+    <listViews>
+        <fullName>Ranked_Items</fullName>
+        <columns>NAME</columns>
+        <columns>Summary__c</columns>
+        <columns>Rank__c</columns>
+        <columns>Assigned_Developer__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Affected_User__c</columns>
+        <columns>Status__c</columns>
+        <columns>SCR__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Rank__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>,Cancelled,Duplicate,Resolved,Requires More Information,Pending Retail Review</value>
+        </filters>
+        <filters>
+            <field>Assigned_Developer__c</field>
+            <operation>notEqual</operation>
+            <value>Sherry L Minter,Matt G. McDonald,Siva Sennimalai</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Pending Retail Review,In Progress,Ready to Bill,Customer Call,Queued</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Data Waiting for Contract,Need Bridge Contract,Returned to Account Set Up</value>
+        </filters>
+        <label>Ranked Items</label>
+    </listViews>
+    <listViews>
+        <fullName>Resolved</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Summary__c</columns>
+        <columns>Affected_User__c</columns>
+        <columns>Resolution__c</columns>
+        <columns>Status_Date__c</columns>
+        <columns>Bug__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Resolved,Cancelled,Duplicate</value>
+        </filters>
+        <label>3 - Resolved</label>
+    </listViews>
+    <listViews>
+        <fullName>Returned_to_Account_Set_Up</fullName>
+        <columns>NAME</columns>
+        <columns>Affected_User__c</columns>
+        <columns>Assigned_Developer__c</columns>
+        <columns>Resolution__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Date__c</columns>
+        <columns>Bug__c</columns>
+        <columns>Urgency__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Returned to Account Set Up</value>
+        </filters>
+        <label>Returned to Account Set Up</label>
+    </listViews>
+    <listViews>
+        <fullName>UAT_PASSED</fullName>
+        <columns>NAME</columns>
+        <columns>System__c</columns>
+        <columns>Status__c</columns>
+        <columns>Summary__c</columns>
+        <columns>Business_Process__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Description__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>UAT passed</value>
+        </filters>
+        <label>UAT Passed</label>
+    </listViews>
+    <nameField>
+        <displayFormat>T-{000000}</displayFormat>
+        <label>Ticket Summary</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Tickets</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Billing_Support</fullName>
+        <active>true</active>
+        <description>This Record type is created for tickets related to Billing Workflow</description>
+        <label>Billing Support</label>
+        <picklistValues>
+            <picklist>Bug__c</picklist>
+            <values>
+                <fullName>Conga Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-Contract LDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-DASR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-LDC Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Defect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EDI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Initiative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interface</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT Issues</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Business_Process__c</picklist>
+            <values>
+                <fullName>1 - Request Pricing %28Sales function%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10 - Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11 - Settlements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12 - Settlements UCB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13 - A%2FR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14 - Cash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15 - Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16 - Brokers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Pricing %28Risk%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Contract Creation %28Sales%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Accept Contract %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Account Set Up %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 - DASR %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 - Validation %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 - Integration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 - EDI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>Acc Mgt- residential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Setup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biz Ops%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settlements</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>IT_Documentation__c</picklist>
+            <values>
+                <fullName>Not Required</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Produced</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Required</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Impact__c</picklist>
+            <values>
+                <fullName>1 - Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Object__c</picklist>
+            <values>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract LDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DASR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LDC Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LDC Vendors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Validation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Outage_Point__c</picklist>
+            <values>
+                <fullName>814 EDI Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>814 EDI Outbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF to LS Interface</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1 - Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Waiting for Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Need Bridge Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending Retail Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Queued</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready to Bill</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requires More Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Returned to Account Set Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>System__c</picklist>
+            <values>
+                <fullName>Billing Workflow</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Urgency__c</picklist>
+            <values>
+                <fullName>1 - Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Work_Stream__c</picklist>
+            <values>
+                <fullName>Broker Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Budget Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pennsylvania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Support</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>IT_Support</fullName>
+        <active>true</active>
+        <description>This Record type is created for tickets related to IT[Salesforce,Lodestar,EDI,Pricing]</description>
+        <label>IT Support</label>
+        <picklistValues>
+            <picklist>Bug__c</picklist>
+            <values>
+                <fullName>Conga Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-Contract LDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-DASR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-LDC Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Defect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EDI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Initiative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interface</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT Issues</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Business_Process__c</picklist>
+            <values>
+                <fullName>1 - Request Pricing %28Sales function%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10 - Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11 - Settlements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12 - Settlements UCB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13 - A%2FR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14 - Cash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15 - Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16 - Brokers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Pricing %28Risk%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Contract Creation %28Sales%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Accept Contract %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Account Set Up %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 - DASR %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 - Validation %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 - Integration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 - EDI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>Acc Mgt- residential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Setup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biz Ops%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settlements</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>IT_Documentation__c</picklist>
+            <values>
+                <fullName>Not Required</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Produced</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Required</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Impact__c</picklist>
+            <values>
+                <fullName>1 - Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Object__c</picklist>
+            <values>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract LDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DASR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LDC Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LDC Vendors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Validation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Outage_Point__c</picklist>
+            <values>
+                <fullName>814 EDI Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>814 EDI Outbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF to LS Interface</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1 - Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Assigned Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending Retail Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Queued</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready for Unit Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready to Test in UAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requires More Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled for Prod</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT Passed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unit Test Passed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>System__c</picklist>
+            <values>
+                <fullName>Billing Workflow</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CES BLUE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lodestar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>iAvenue</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Urgency__c</picklist>
+            <values>
+                <fullName>1 - Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Work_Stream__c</picklist>
+            <values>
+                <fullName>Broker Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Budget Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pennsylvania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Support</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>PA_Expansion</fullName>
+        <active>true</active>
+        <description>This record type is created for tickets related to PA</description>
+        <label>PA Expansion</label>
+        <picklistValues>
+            <picklist>Bug__c</picklist>
+            <values>
+                <fullName>Accelerated Switching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-Contract LDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-DASR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data-LDC Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EDI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interface</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>POR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT Issues</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Business_Process__c</picklist>
+            <values>
+                <fullName>1 - Request Pricing %28Sales function%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10 - Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11 - Settlements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12 - Settlements UCB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13 - A%2FR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14 - Cash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15 - Reporting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16 - Brokers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Pricing %28Risk%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Contract Creation %28Sales%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Accept Contract %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Account Set Up %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 - DASR %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 - Validation %28Account Management%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 - Integration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 - EDI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>Acc Mgt- residential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Account Setup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biz Ops%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Settlements</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>IT_Documentation__c</picklist>
+            <values>
+                <fullName>Not Required</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Produced</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Required</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Impact__c</picklist>
+            <values>
+                <fullName>1 - Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Object__c</picklist>
+            <values>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract LDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DASR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LDC Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LDC Vendors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Validation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Outage_Point__c</picklist>
+            <values>
+                <fullName>814 EDI Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>814 EDI Outbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conga Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF to LS Interface</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>1 - Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Assigned Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending LS Readiness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Retail Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Queued</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready for Unit Testing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready to Test in UAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requires More Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled for Prod</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT Passed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unit Test Passed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>System__c</picklist>
+            <values>
+                <fullName>Billing Workflow</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CES BLUE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lodestar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>iAvenue</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Urgency__c</picklist>
+            <values>
+                <fullName>1 - Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Medium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Work_Stream__c</picklist>
+            <values>
+                <fullName>Broker Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Budget Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pennsylvania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Production Support</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Ticket_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Bug__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Affected_User__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

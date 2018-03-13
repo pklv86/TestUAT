@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.DASRs__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.DASRs__r$Contract__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.DASRs__r$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.DASRs__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.DASRs__r$DASR_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.DASRs__r$Id</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$Opt_out__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$LDC_Account_Number__c</field>
+    </columns>
+    <description>delete DASRs</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$Business_Account__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>MA Ela Township,MA Village of Lake Zurich,MA Village of South Elgin,MA Village of Winslow</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.LDC_Accounts__r.DASRs__r$CreatedBy</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Kate Muckensturm</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.LDC_Accounts__r.DASRs__r$CreatedDate</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>7/12/2017 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Mass Delete of DASRs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customer_LDC_DASR__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$Competitive_End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

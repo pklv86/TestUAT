@@ -1,0 +1,1920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Activate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Terminate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ALL_IN_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Total All-In Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ANCILLARY_SERVICES_CONTRACT_PRICE__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Product_Name__c = &apos;FP-MULT&apos;|| Product_Name__c =&apos;FP-MULT-PT-C&apos;|| Product_Name__c =&apos;FP-MULT-PT-L&apos;|| Product_Name__c =&apos;FP-MULT-PT-T&apos;|| Product_Name__c = &apos;FP-MULT-PT-CL&apos;|| Product_Name__c = &apos;FP-MULT-PT-CLT&apos;|| Product_Name__c =&apos;FP-MULT-PT-LT&apos;|| Product_Name__c = &apos;FP-MULT-PT-CT&apos;|| Product_Name__c =&apos;FP-ONOFF&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-C&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CL&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CLT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-L&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-T&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-LT&apos; 
+,TEXT((ISO_Other_Trans__c+ISO_ARR__c+ ISO_Ancillaries__c+ISO_Losses__c+ ISO_Op_Reserve_RSG__c+ISO_Cost_Recovery__c+ISO_Inadvertant__c+ISO_SSR_RMR__c+ISO_Admin__c+ISO_FTR__c)/1000),&apos;N/A&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ANCILLARY SERVICES CONTRACT PRICE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_Setup_Audit_Sheet__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Account Setup Audit Sheet is in Place.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Setup Audit Sheet is in Place.</inlineHelpText>
+        <label>Account Setup Audit Sheet</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Account_Setup_Complete__c</fullName>
+        <description>Account Setup will indicate the date the contract was validated and it was successfully received in Lodestar.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Setup will indicate the date the contract was validated and it was successfully received in Lodestar.</inlineHelpText>
+        <label>Account Setup Complete</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Account_Setup_Legacy__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This contract was being tracked on the Excel spreadsheet.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This contract was being tracked on the Excel spreadsheet.</inlineHelpText>
+        <label>Account Setup Legacy</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Account_Setup_Legal_Notice__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Date the Legal Notice was Completed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the Legal Notice was Completed</inlineHelpText>
+        <label>Account Setup Legal Notice</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Account_Setup_Notes__c</fullName>
+        <description>Account Setup Notes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Setup Notes</inlineHelpText>
+        <label>Account Setup Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Account_Setup_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Person in Account Setup validating the contract</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Person in Account Setup validating the contract</inlineHelpText>
+        <label>Account Setup Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_Setup_Support_Doc__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Supporting Document Added to Folder</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Supporting Document Added to Folder</inlineHelpText>
+        <label>Account Setup Support Doc</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ActivatedById</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ActivatedDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Activity__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No Action</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Resigned</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Renewal Sent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Renewal Rejected</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lost</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Addtl_Vol_REC_Charge_CONTRACT_PRICE__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Product_Name__c =&apos;FP-ONE-PT-C&apos;|| Product_Name__c = &apos;FP-MULT&apos;|| Product_Name__c =&apos;FP-MULT-PT-C&apos;|| Product_Name__c = &apos;FP-MULT-PT-L&apos;|| Product_Name__c = &apos;FP-MULT-PT-T&apos;|| Product_Name__c = &apos;FP-MULT-PT-CL&apos;|| Product_Name__c = &apos;FP-MULT-PT-CLT&apos;|| Product_Name__c = &apos;FP-MULT-PT-LT&apos;|| Product_Name__c = &apos;FP-MULT-PT-CT&apos;|| Product_Name__c =&apos;FP-ONOFF&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-C&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CL&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CLT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-L&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-T&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-LT&apos; ,TEXT((Vol_Rec__c)/1000),&apos;N/A&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Addtl Vol REC Charge CONTRACT PRICE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agent_Fee__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_Fee__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Agent Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Ancillary_Service__c</fullName>
+        <externalId>false</externalId>
+        <formula>ISO_ARR__c  +  ISO_Ancillaries__c  +  ISO_Losses__c  +  ISO_Op_Reserve_RSG__c  +  ISO_Cost_Recovery__c  +  ISO_Inadvertant__c  +  ISO_SSR_RMR__c  +  ISO_Admin__c  +  ISO_FTR__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ancillary Service</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Basis__c</fullName>
+        <externalId>false</externalId>
+        <label>Basis</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bill_Method__c</fullName>
+        <externalId>false</externalId>
+        <label>Bill Method</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DUAL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rate Ready</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bill Ready</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SBO/ESP</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BillingAddress</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Broker_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Fee</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Fee_divide__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_Fee__c  / 1000</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Fee divide</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CAPACITY_CONTRACT_PRICE__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Product_Name__c =&apos;FP-MULT&apos;|| Product_Name__c = &apos;FP-MULT-PT-L&apos;|| Product_Name__c =  &apos;FP-MULT-PT-T&apos;|| Product_Name__c =  &apos;FP-MULT-PT-LT&apos;|| Product_Name__c = &apos;FP-ONOFF&apos;|| Product_Name__c = &apos;FP-ONOFF-PT-T&apos;|| Product_Name__c = &apos;FP-ONOFF-PT-L&apos;|| Product_Name__c = &apos;FP-ONOFF-PT-LT&apos;,TEXT((Capacity__c)/1000),
+
+IF(Product_Name__c =&apos;FP-ONE-PT-C&apos;|| Product_Name__c =&apos;FP-MULT-PT-C&apos;|| Product_Name__c = &apos;FP-MULT-PT-CL&apos;|| Product_Name__c = &apos;FP-MULT-PT-CLT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CL&apos;|| Product_Name__c = &apos;FP-MULT-PT-CT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CLT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-C&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CT&apos;,&apos;pass thru&apos;,&apos;N/A&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CAPACITY CONTRACT PRICE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Capacity_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>Capacity__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Capacity Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capacity__c</fullName>
+        <externalId>false</externalId>
+        <label>Capacity</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CompanySignedDate</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>CompanySignedId</fullName>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContractTerm</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Contract_Broker_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Broker Fee</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Change__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Contract Change</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contract_Counter_Signed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Signed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Index_Margin__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Index Margin</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Margin__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Margin</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Marketing_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Marketing Cost</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Municipality_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Municipality Fee</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Price_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Price Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contract_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>Retail_Quote__r.Quote_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Fixed Price/MWH</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>UCBNONPOR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IEC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TIER_1_2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TIER_A</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UCBPOR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UCBPOR_BR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WESA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GFEC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Small Stable Contract - Evergreen</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Small Stable Contract - MTM Renewal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Large Stable Contract</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Large Stable PT-C Contract</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hybrid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Block and Index</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non Standard</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CustomerSignedDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>CustomerSignedId</fullName>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CustomerSignedTitle</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Customer_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account.RecordType.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Customer Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DISTRIBUTION_LOSSES_CONTRACT_PRICE__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Product_Name__c = &apos;FP-MULT&apos;|| Product_Name__c =  &apos;FP-MULT-PT-C&apos;|| Product_Name__c =  &apos;FP-MULT-PT-T&apos;|| Product_Name__c =  &apos;FP-MULT-PT-CT&apos;|| Product_Name__c = &apos;FP-ONOFF&apos;|| Product_Name__c = &apos;FP-ONOFF-PT-C&apos;|| Product_Name__c = &apos;FP-ONOFF-PT-T&apos;|| Product_Name__c = &apos;FP-ONOFF-PT-CT&apos;  ,TEXT((Utility_Loss__c)/1000),
+
+IF( Product_Name__c =&apos;FP-MULT-PT-L&apos;|| Product_Name__c =&apos;FP-MULT-PT-LT&apos;|| Product_Name__c =&apos;FP-MULT-PT-CL&apos;|| Product_Name__c =&apos;FP-MULT-PT-CLT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CL&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CLT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-L&apos;|| Product_Name__c = &apos;FP-ONOFF-PT-LT&apos;,&apos;pass thru&apos;, &apos;N/A&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DISTRIBUTION LOSSES CONTRACT PRICE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Default_Risk__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Risk</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Distribution_Loss__c</fullName>
+        <externalId>false</externalId>
+        <formula>Utility_Loss__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Distribution Loss</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ENERGY_PRICE_ADDER_CONTRACT_PRICE__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Product_Name__c = &apos;FP-MULT&apos;|| Product_Name__c =&apos;FP-MULT-PT-C&apos;|| Product_Name__c = &apos;FP-MULT-PT-L&apos;|| Product_Name__c = &apos;FP-MULT-PT-T&apos;|| Product_Name__c =&apos;FP-MULT-PT-CL&apos;|| Product_Name__c = &apos;FP-MULT-PT-CLT&apos;|| Product_Name__c = &apos;FP-MULT-PT-LT&apos;|| Product_Name__c =&apos;FP-MULT-PT-CT&apos;|| Product_Name__c =&apos;FP-ONOFF&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-L&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-T&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-C&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CL&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CLT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-LT&apos; ,TEXT((Capacity__c)/1000),&apos;N/A&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ENERGY PRICE ADDER CONTRACT PRICE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Signature__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Account.Supplier__r.Supplier_Code__c=&apos;IPH&apos;,
+(&apos;Confirmation:&apos;)
+
+
+&amp; BR() &amp;
+(&apos; THANK YOU for choosing Homefield Energy!&apos;)
+&amp; BR() &amp;
+
+(&apos;We have received your signed contract and it has been fully executed. Homefield Energy will now be coordinating your enrollment with your local utility to ensure a smooth transition for your organization.&apos;)
+&amp;BR() &amp;
+
+(&apos;Homefield Energy will begin or renew supplying your energy needs as of June 2017. The actual switch date will be determined by the utility and based on the day they read your meter for that month. You will receive your first invoice approximately one month later.&apos;) 
+&amp; BR() &amp;
+
+(&apos;If you have questions or concerns, please contact our Homefield Energy Customer Care Team at 888-451-3911 Option 3 or email us at BusinessCare@dynegy.com &apos;) &amp; BR() &amp;
+
+
+(&apos; Again, thank you for choosing Homefield Energy. We look forward to servicing your energy needs.&apos;) &amp; BR() &amp;
+
+(&apos;Customer Care Team&apos;) 
+&amp; BR() &amp;
+
+(&apos;T 888-451-3911x3 - F 888.354.9837 – businesscare@dynegy.com&apos;)&amp; BR() &amp;
+(&apos;www.Dynegy.com www.HOMEFIELDENERGY.com&apos;),
+
+
+IF(Account.Supplier__r.Supplier_Code__c=&apos;DES&apos;,
+(&apos;Confirmation:&apos;)
+&amp; BR() &amp;
+
+(&apos;THANK YOU for choosing Dynegy Energy Services!&apos;) 
+&amp; BR() &amp;
+
+(&apos;We have received your signed contract and it has been fully executed. Dynegy Energy Services will now be coordinating your enrollment with your local utility to ensure a smooth transition for your organization.&apos;)
+&amp; BR() &amp;
+
+(&apos;Dynegy Energy Services will begin supplying your energy needs as of Month YYYY. The actual switch date will be determined by the utility and based on the day they read your meter for that month. You will receive your first invoice approximately one month later.&apos;) 
+&amp; BR() &amp;
+
+(&apos;If you have questions or concerns, please contact our Dynegy Energy Services Customer Care Team at 844-441-0716 Option 3 or email us at DESBusinessCare@dynegy.com &apos;) &amp; BR() &amp;
+
+
+(&apos; Again, thank you for choosing Dynegy Energy Services.  We look forward to servicing your energy needs.&apos;) &amp; BR() &amp;
+
+(&apos;Customer Care Team&apos;) 
+&amp; BR() &amp;
+
+(&apos;DYNEGY ENERGY SERVICES w T 844-441-0716x3 w F 888.354.9837 w DESBusinesCare@dynegy.com w www.DYNEGYENERGYSERVICES.com&apos;) 
+&amp; BR() &amp;
+
+(&apos;Please update your records with the new contact information above!&apos;) 
+&amp; BR() &amp;
+
+(&apos;Please consider the environment before printing this e-mail.&apos;),
+
+&apos;No Value&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email-Signature</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EndDate</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>EndDate + 1</formula>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Energy_Contract_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Product_Name__c = &apos;FP-ONE&apos;,TEXT((Energy__c +Basis__c +Shaping__c +Swing__c +Margin__c +Index_Margin__c +Capacity__c +Utility_Loss__c +ISO_NITS__c 
++ISO_Other_Trans__c +ISO_ARR__c +ISO_Ancillaries__c +ISO_Losses__c +ISO_Op_Reserve_RSG__c +ISO_Cost_Recovery__c +ISO_Inadvertant__c +ISO_SSR_RMR__c 
++ISO_Admin__c +ISO_FTR__c +RPS__c +Vol_Rec__c +Broker_Fee__c +Municipality_Fee__c +Marketing_Cost__c +Default_Risk__c +UCB_POR__c +Holding_Cost__c 
++Tax__c)/1000) 
+
+,IF( Product_Name__c = &apos;FP-ONE-PT-C&apos;, TEXT((Energy__c +Basis__c +Shaping__c +Swing__c +Margin__c +Index_Margin__c +Utility_Loss__c +ISO_NITS__c +ISO_Other_Trans__c +ISO_ARR__c +ISO_Ancillaries__c +ISO_Losses__c +ISO_Op_Reserve_RSG__c +ISO_Cost_Recovery__c +ISO_Inadvertant__c +ISO_SSR_RMR__c +ISO_Admin__c +ISO_FTR__c +RPS__c +Vol_Rec__c +Broker_Fee__c +Municipality_Fee__c +Marketing_Cost__c +Default_Risk__c +UCB_POR__c 
++Holding_Cost__c +Tax__c)/1000), 
+
+IF( Product_Name__c =&apos;FP-MULT&apos;|| Product_Name__c =&apos;FP-MULT-PT-C&apos;|| Product_Name__c = &apos;FP-MULT-PT-L&apos;|| Product_Name__c = &apos;FP-MULT-PT-T&apos;|| Product_Name__c = &apos;FP-MULT-PT-CL&apos;|| Product_Name__c = &apos;FP-MULT-PT-CLT&apos;|| Product_Name__c = &apos;FP-MULT-PT-LT&apos;|| Product_Name__c =&apos;FP-MULT-PT-CT&apos;,TEXT((Energy__c +Basis__c +Shaping__c +Swing__c +Margin__c +Broker_Fee__c +Municipality_Fee__c +Marketing_Cost__c +Default_Risk__c +UCB_POR__c +Holding_Cost__c +Tax__c)/1000), &apos;N/A&apos;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Energy Contract Price</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Energy_On_Off_Peak__c</fullName>
+        <externalId>false</externalId>
+        <formula>Energy__c  +  Basis__c  +  Shaping__c  +  Swing__c  +  Default_Risk__c  +  Holding_Cost__c  +  Tax__c  +   Contract_Marketing_Cost__c  +  Contract_Margin__c  +  Contract_Index_Margin__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Energy (On/Off Peak)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Energy__c</fullName>
+        <externalId>false</externalId>
+        <label>Energy</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Enrollment_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Enrollment Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Enrollment_Request_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Enrollment Request Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Enrollment_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Enrollment Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Ready to Enroll</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Processed</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Evergreen_Renewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Evergreen Renewal</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Footer_Logo__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Supplier__r.Supplier_Code__c = &apos;DESE&apos;, &apos;/servlet/servlet.FileDownload?file=015150000058XJP&apos;, &apos;/servlet/servlet.FileDownload?file=015150000058XJQ&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Footer Logo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Header_Logo__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Supplier__r.Supplier_Code__c  = &apos;IPH&apos;, &apos;/servlet/servlet.FileDownload?file=015150000058XJQ&apos;, &apos;/servlet/servlet.FileDownload?file=015150000058XJP&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Header Logo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Holding_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Holding Cost</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_ARR__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-ARR</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Admin__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Admin</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Ancillaries__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Ancillaries</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Cost_Recovery__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Cost Recovery</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_FTR__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-FTR</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Inadvertant__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Inadvertant</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Losses__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Losses</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_NITS__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-NITS</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Op_Reserve_RSG__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Op Reserve-RSG</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Other_Trans__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Other Trans</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_SSR_RMR__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-SSR-RMR</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Index_Margin__c</fullName>
+        <externalId>false</externalId>
+        <label>Index Margin</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Interval_Usage__c</fullName>
+        <externalId>false</externalId>
+        <label>Interval Usage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Interval</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Summary</fullName>
+                    <default>true</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Legacy_Contract_Number__c</fullName>
+        <description>Contract number from Legacy Systems</description>
+        <externalId>true</externalId>
+        <label>Legacy Contract Number</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legacy_Contract_Type__c</fullName>
+        <description>This field is created during the iAve conversion</description>
+        <externalId>false</externalId>
+        <label>Legacy Contract Type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legal_Entity_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account.Legal_Entity_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Legal Entity Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legal_Notice_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Legal Notice Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Contact</relationshipLabel>
+        <relationshipName>Contact</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LodeStar_End_Date__c</fullName>
+        <description>The projected End Date of The LoadStar Billing</description>
+        <externalId>false</externalId>
+        <formula>DATE(
+    YEAR(StartDate) +
+    FLOOR((ContractTerm + MONTH(StartDate)) / 12) -
+    IF (MOD(MONTH(StartDate) + ContractTerm, 12) = 0,
+        1,
+        0),
+
+    MOD((ContractTerm + MONTH(StartDate) - 1), 12) + 1,
+
+    1
+) - 1</formula>
+        <inlineHelpText>The projected End Date of the LoadStar Billing.
+DATE(
+YEAR(StartDate) +
+FLOOR((ContractTerm + MONTH(StartDate)) / 12) -
+IF (MOD(MONTH(StartDate) + ContractTerm, 12) = 0,
+1,
+0),
+
+MOD((ContractTerm + MONTH(StartDate) - 1), 12) + 1,
+
+1
+) - 1</inlineHelpText>
+        <label>LodeStar End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LodeStar_Identifier__c</fullName>
+        <description>A unique Field for Lode Star to Identify the Contracts</description>
+        <externalId>false</externalId>
+        <label>LodeStar Identifier</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LodeStar_Start_Date__c</fullName>
+        <description>The projected Start Date of LodeStar Billing</description>
+        <externalId>false</externalId>
+        <formula>DATE(
+    /* YEAR */
+    IF(MONTH(StartDate) = 12, YEAR(StartDate)+1,YEAR(StartDate))
+    ,
+    /* MONTH */
+    IF(MONTH(StartDate) = 12,1,MONTH(StartDate)+1)
+    ,
+    /*DAY - THE FIRST - ALWAYS */
+    1
+)</formula>
+        <inlineHelpText>The projected Start Date of LodeStar Billing.</inlineHelpText>
+        <label>LodeStar Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lodestar_Sent_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lodestar Sent Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>MISO_PJM_Transmission_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>ISO_NITS__c  +  ISO_Other_Trans__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MISO/PJM Transmission Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Margin_Over_Market__c</fullName>
+        <externalId>false</externalId>
+        <formula>ROUND(Retail_Quote__r.Total_Quote_MWh__c*Retail_Quote__r.Contract_Margin__c, 5)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula field:  ROUND(Retail_Quote__r.Total_Quote_MWh__c*Retail_Quote__r.Contract_Margin__c, 5)</inlineHelpText>
+        <label>Margin / Market</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Margin__c</fullName>
+        <externalId>false</externalId>
+        <label>Margin</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Marketing_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Marketing Cost</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Muni_Fee__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract_Municipality_Fee__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Muni-Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Municipality_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Municipality Fee</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>OFF_PEAK_CONTRACT_PRICE__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Product_Name__c = &apos;FP-ONOFF&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-T&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-C&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CL&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CLT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-L&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-LT&apos;, TEXT( VALUE(SUBSTITUTE( Retail_Quote__r.Contract_Energy_Off_PK__c, &quot;$&quot;, &quot;&quot;))),&apos;N/A&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OFF PEAK CONTRACT PRICE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ON_PEAK_contract_price__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Product_Name__c = &apos;FP-ONOFF&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-T&apos;|| Product_Name__c = &apos;FP-ONOFF-PT-C&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CL&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CT&apos;|| Product_Name__c = &apos;FP-ONOFF-PT-CLT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-L&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-LT&apos;, TEXT( VALUE(SUBSTITUTE(Retail_Quote__r.Contract_Energy_On_PK__c, &quot;$&quot;, &quot;&quot;))),&apos;N/A&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ON PEAK contract price</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OPCO_Service_Territory__c</fullName>
+        <externalId>false</externalId>
+        <formula>Supplier__r.Supplier_DUNS__c +&apos;-&apos;+ text(Service_Territory__c)</formula>
+        <label>OPCO_Service_Territory_Conga</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Offer_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Offer Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Opportunity.AccountId</field>
+                <operation>equals</operation>
+                <valueField>$Source.AccountId</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opt_Out_Buffer_Days__c</fullName>
+        <externalId>false</externalId>
+        <label>Opt Out Buffer Days</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opt_Out_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  NOT(ISBLANK( Opt_Out_Start_Date__c ))  , Opt_Out_Start_Date__c + 21 +  Opt_Out_Buffer_Days__c , null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opt Out End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opt_Out_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Opt Out Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OwnerExpirationNotice</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Contract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Parent Contract for Amendment</description>
+        <externalId>false</externalId>
+        <label>Parent Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>ParentContracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Price_Option__c</fullName>
+        <externalId>false</externalId>
+        <label>Price Option</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pricebook2Id</fullName>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_Index_Adder_Total_Per_KWH__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Energy Adder</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_Index_Adder_Total__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Index Adder Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Index_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Index Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RENEWABLE_CHARGE_CONTRACT_PRICE__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Product_Name__c =&apos;FP-ONE-PT-C&apos;|| Product_Name__c = &apos;FP-MULT&apos;|| Product_Name__c = &apos;FP-MULT-PT-C&apos;|| Product_Name__c =&apos;FP-MULT-PT-L&apos;|| Product_Name__c = &apos;FP-MULT-PT-T&apos;|| Product_Name__c = &apos;FP-MULT-PT-CL&apos;|| Product_Name__c = &apos;FP-MULT-PT-CLT&apos;|| Product_Name__c = &apos;FP-MULT-PT-LT&apos;|| Product_Name__c = &apos;FP-MULT-PT-CT&apos;|| Product_Name__c =&apos;FP-ONOFF&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-C&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CL&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CLT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-L&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-T&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-CT&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-LT&apos; ,TEXT((RPS__c)/1000),&apos;N/A&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RENEWABLE CHARGE CONTRACT PRICE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RPS_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>RPS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RPS Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RPS__c</fullName>
+        <externalId>false</externalId>
+        <label>RPS</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Rate_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Rate Code</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rec_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Vol_Rec__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Rec Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Receive_Invoices_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Receive Invoices By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Mail</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Online Notice</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Email &amp; Mail</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Referral_Broker__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Referral Broker</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Resigned__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is created during the iAve Conversion.</description>
+        <externalId>false</externalId>
+        <label>Resigned</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Retail_Quote__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Retail Quote</label>
+        <referenceTo>Retail_Quote__c</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Territory__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Territory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Service_Territory</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Shaping__c</fullName>
+        <externalId>false</externalId>
+        <label>Shaping</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ShippingAddress</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Signature_Block__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Supplier__r.Supplier_Code__c  = &apos;DESE&apos;, &apos;/servlet/servlet.FileDownload?file=015150000058XJR&apos;, &apos;servlet/servlet.FileDownload?file=015150000058XJS&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Signature Block</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SpecialTerms</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>StartDate</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Supplier__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field is created to store the supplier information at contract level</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The legal retail entity selling to this customer (Dynegy Energy Services East, LLC)</inlineHelpText>
+        <label>Operating Company</label>
+        <referenceTo>Supplier__c</referenceTo>
+        <relationshipLabel>Contracts</relationshipLabel>
+        <relationshipName>Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Swing__c</fullName>
+        <externalId>false</externalId>
+        <label>Swing</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>TRANSMISSION_CHARGES_CONTRACT_PRICE__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Product_Name__c =&apos;FP-MULT&apos;||Product_Name__c =&apos;FP-MULT-PT-C&apos;|| Product_Name__c =&apos;FP-MULT-PT-L&apos;|| Product_Name__c=&apos;FP-MULT-PT-CL&apos;|| Product_Name__c = &apos;FP-ONOFF&apos;||Product_Name__c =&apos;FP-ONOFF-PT-CL&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-L&apos;|| Product_Name__c =&apos;FP-ONOFF-PT-C&apos;,TEXT((ISO_NITS__c)/1000),
+
+IF(Product_Name__c=&apos;FP-MULT-PT-T&apos;||Product_Name__c=&apos;FP-MULT-PT-CT&apos;||Product_Name__c =&apos;FP-MULT-PT-CLT&apos;||Product_Name__c =&apos;FP-MULT-PT-LT&apos;||Product_Name__c=&apos;FP-ONOFF-PT-T&apos;||Product_Name__c=&apos;FP-ONOFF-PT-CT&apos;||Product_Name__c=&apos;FP-ONOFF-PT-CLT&apos;||Product_Name__c=&apos;FP-ONOFF-PT-LT&apos;,&apos;pass thru&apos;,&apos;N/A&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>TRANSMISSION CHARGES CONTRACT PRICE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Priced_MWH__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Priced MWHrs</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UCB_POR1__c</fullName>
+        <externalId>false</externalId>
+        <formula>UCB_POR__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>UCB/POR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>UCB_POR__c</fullName>
+        <externalId>false</externalId>
+        <label>UCB-POR</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Unsync_Contract_LDCs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>To unsync all contract ldc&apos;s under that contract</inlineHelpText>
+        <label>Unsync Contract LDCs</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Utility_Loss__c</fullName>
+        <externalId>false</externalId>
+        <label>Utility Loss</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>Validation</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Validated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Return</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Modified</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Vol_Rec__c</fullName>
+        <externalId>false</externalId>
+        <label>Vol Rec</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Voluntary_Rec_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>Retail_Quote__r.Voluntary_REC__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Voluntary Rec %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>signature__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Supplier__r.Supplier_Code__c = &apos;DESE&apos;, 
+(&apos;Lauren Matson, Manager&apos;)&amp; BR() &amp; 
+(&apos;Broker and InsideSales&apos;)&amp; BR() &amp; 
+&apos;Dynegy Energy Services East, LLC&apos;, 
+IF(  Supplier__r.Supplier_Code__c =  &apos;IPH&apos; ||  Account.Supplier__r.Supplier_Code__c= &apos;DES&apos;, 
+(&apos;Michael grimes,Manager&apos;)&amp; BR() &amp; 
+(&apos;Broker and InsideSales&apos;)&amp; BR() &amp; 
+&apos;Homefield Energy&apos;, &apos;No value&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>signature</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>AllActivatedContracts</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>A</value>
+        </filters>
+        <label>All Activated Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>AllContracts</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>AllDraftContracts</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>D</value>
+        </filters>
+        <label>All Draft Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>AllInApprovalContracts</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>P</value>
+        </filters>
+        <label>All In Approval Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Draft_Contracts_After_May_6_2016</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>D</value>
+        </filters>
+        <filters>
+            <field>CONTRACT.START_DATE</field>
+            <operation>greaterThan</operation>
+            <value>5/6/2016</value>
+        </filters>
+        <filters>
+            <field>CONTRACT.START_DATE</field>
+            <operation>lessThan</operation>
+            <value>1/1/2017</value>
+        </filters>
+        <label>All Draft Contracts After 5/6/16</label>
+    </listViews>
+    <listViews>
+        <fullName>MyActivatedContracts</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>A</value>
+        </filters>
+        <label>My Activated Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>MyDraftContracts</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>D</value>
+        </filters>
+        <label>My Draft Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>MyInApprovalContracts</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CONTRACT.STATUS_CODE</field>
+            <operation>equals</operation>
+            <value>P</value>
+        </filters>
+        <label>My In Approval Contracts</label>
+    </listViews>
+    <searchLayouts>
+        <customTabListAdditionalFields>CONTRACT.CONTRACT_NUMBER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CONTRACT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SALES.ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CONTRACT.STATUS</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>CONTRACT.CONTRACT_NUMBER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CONTRACT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.USERS.ALIAS</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTRACT.CONTRACT_NUMBER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTRACT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>CONTRACT.CONTRACT_NUMBER</searchFilterFields>
+        <searchFilterFields>CONTRACT.NAME</searchFilterFields>
+        <searchFilterFields>LodeStar_Identifier__c</searchFilterFields>
+        <searchResultsAdditionalFields>CONTRACT.CONTRACT_NUMBER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CONTRACT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CONTRACT.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SALES.ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LodeStar_Identifier__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>APXTConga4__Conga_Composer_OAuth</fullName>
+        <availability>online</availability>
+        <description>*** DO NOT USE THIS BUTTON ON A PAGE LAYOUT *** 
+
+OAuth buttons require additional setup. Please see the Composer Installation Guide for more details.
+
+COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Composer Configuration Guide for details.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conga Composer (OAuth)</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/APXTConga4__Conga_Composer
+?id={!Contract.Id}</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
+        <fullName>APXTConga4__Conga_Mail_Merge</fullName>
+        <availability>online</availability>
+        <description>*** DO NOT USE THIS BUTTON ON A PAGE LAYOUT *** 
+
+COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Conga Configuration Guide for details.</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>false</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conga Composer</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Contract.Id}</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
+        <fullName>APXTConga4__Conga_Merge</fullName>
+        <availability>online</availability>
+        <description>*** DO NOT USE THIS BUTTON ON A PAGE LAYOUT *** 
+
+COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Conga Configuration Guide for details.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>false</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conga Composer</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Contract.Id}</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Broker_Confirm</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Broker Confirm</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Contract.Id}
+&amp;TemplateGroup=BrokerConfirm
+&amp;TemplateId=a0g15000005Xuf0
+&amp;ReportId=[Conga]00O1C000005upcf?pv0={!Contract.OPCO_Service_Territory__c}
+&amp;ReportId=[ContractLDC]00O15000007dGN8
+&amp;ReportId=[oppcontract]00O15000007dGNI
+&amp;DefaultPDF=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Contract_Fields</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Contract Fields</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Contract.Id}
+
+&amp;TemplateGroup=fields
+
+&amp;TemplateId=a0g15000006hu3n
+&amp;ReportId=[CTerm]00O15000006GtCD
+
+&amp;DefaultPDF=1
+&amp;DS7Preview=1
+&amp;DS7=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mark_for_Enrollment</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mark for Enrollment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+if(&apos;{!Contract.Status}&apos;!=&apos;Activated&apos;){
+   alert(&apos;{!$Label.Contract_Not_Active_MSG}&apos;);
+
+}
+else if(&apos;{!Contract.Enrollment_Stage__c}&apos;==&apos;Ready to Enroll&apos;){
+     
+    alert(&apos;{!$Label.Contract_RE_Mark_Enrollment_MSG}&apos;);
+}
+else if(&apos;{!Contract.Supplier__c}&apos; == &apos;&apos;){   
+   alert(&apos;{!$Label.Contract_Supplier}&apos;);
+}
+
+else if(&apos;{!Contract.Customer_Type__c}&apos;==&apos;Muni Agg Customer&apos; ){
+   
+     if(new Date(&apos;{!Contract.Opt_Out_End_Date__c}&apos;)&gt;Date.now())
+      alert(&apos;{!$Label.Muni_Agg_Enrollment_Opt_Out_MSG}&apos;);
+      else if(&apos;{!Contract.Opt_Out_End_Date__c}&apos;==&apos;&apos;)
+        alert(&apos;{!$Label.Opt_Out_End_Date_MSG}&apos;);
+     else
+       markEnrollment();
+    
+}
+else if(&apos;{!Contract.Customer_Type__c}&apos;==&apos;C&amp;I Customer&apos;){
+    markEnrollment();
+}
+else{
+     alert(&apos;{!$Label.Invalid_Contract_To_Enroll}&apos;);
+}
+
+function markEnrollment(){
+        var Cntrct = new sforce.SObject(&quot;Contract&quot;);
+        Cntrct.Id = &apos;{!Contract.Id}&apos;;
+        Cntrct.Enrollment_Stage__c=&apos;Ready to Enroll&apos;;
+        
+        var result = sforce.connection.update([Cntrct]);
+       var batchresult=sforce.apex.execute(&quot;EnrollmentHandler&quot;,&quot;SetContractToEnroll&quot;, {CntrctId:&quot;{!Contract.Id}&quot;}); 
+          //alert(batchresult);
+        if(result[0].getBoolean(&quot;success&quot;)){
+           alert(&apos;{!$Label.Contract_Mark_Enrollment_MSG}&apos;);
+           
+           window.location.reload();
+        }
+       else{
+          alert(&apos;Error : &apos;+result);
+
+        }
+}</url>
+    </webLinks>
+</CustomObject>

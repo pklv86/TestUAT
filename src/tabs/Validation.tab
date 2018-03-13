@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Validation</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom36: Train</motif>
+    <page>AG_Accounts</page>
+</CustomTab>

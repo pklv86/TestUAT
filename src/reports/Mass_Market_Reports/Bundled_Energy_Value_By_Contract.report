@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Short_Code__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>CONTRACT_NUMBER</field>
+    </columns>
+    <columns>
+        <field>Contract_Term__c.Term_Type__c</field>
+    </columns>
+    <columns>
+        <field>Contract_Term__c.Contract_Term_Value__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <description>Shows the bundled energy value by specific contracts</description>
+    <filter>
+        <criteriaItems>
+            <column>Contract_Term__c.Term_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>BUNDLED_ENERGY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CONTRACT_NUMBER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>C-00001094,C-00001359,C-00007958,C-00000386,C-00007966,C-00000387,C-00007968,C-00000761,C-00000158,C-00000548,C-00008087,C-00001486,C-00001124,C-00007970,C-00001146,C-00010387,C-00007960,C-00001129,C-00000170,C-00000397,C-00001128,C-00010391,C-00001353,C-00000161,C-00000957,C-00001567,C-00001137,C-00000377,C-00001342</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Bundled Energy Value By Contract</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContractCustomEntity$Contract_Term__c</reportType>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

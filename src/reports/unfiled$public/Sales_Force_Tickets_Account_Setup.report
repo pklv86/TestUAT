@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Tickets__c$Name</field>
+    </columns>
+    <columns>
+        <field>Tickets__c$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Tickets__c$Status_Date__c</field>
+    </columns>
+    <columns>
+        <field>Tickets__c$Status__c</field>
+    </columns>
+    <columns>
+        <field>Tickets__c$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Tickets__c$Owner</field>
+    </columns>
+    <columns>
+        <field>Tickets__c$Department__c</field>
+    </columns>
+    <columns>
+        <field>Tickets__c$Priority__c</field>
+    </columns>
+    <columns>
+        <field>Tickets__c$Bug__c</field>
+    </columns>
+    <columns>
+        <field>Tickets__c$Description__c</field>
+    </columns>
+    <columns>
+        <field>Tickets__c$Resolution__c</field>
+    </columns>
+    <columns>
+        <field>Tickets__c$Triage_Comments__c</field>
+    </columns>
+    <description>Shows all logged tickets that are assigned to the Account Setup Department</description>
+    <filter>
+        <criteriaItems>
+            <column>Tickets__c$Department__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Account Setup</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Sales Force Tickets  - Account Setup</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Tickets__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Tickets__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

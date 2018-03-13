@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>Contract.Service_Territory__c</field>
+    </columns>
+    <columns>
+        <field>Contract.Contract_Type__c</field>
+    </columns>
+    <columns>
+        <field>CONTRACT_NUMBER</field>
+    </columns>
+    <columns>
+        <field>Contract.Legacy_Contract_Number__c</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <columns>
+        <field>END_DATE</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>Contract.Rate_Code__c</field>
+    </columns>
+    <columns>
+        <field>Contract.Bill_Method__c</field>
+    </columns>
+    <columns>
+        <field>Account.Muni_Agg__c</field>
+    </columns>
+    <description>Links the SF agreement number to the agreement number that was in iAve</description>
+    <format>Tabular</format>
+    <name>SF=iAve Agreement</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContractList</reportType>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>START_DATE</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

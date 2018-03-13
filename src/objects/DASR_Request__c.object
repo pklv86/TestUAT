@@ -1,0 +1,3019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Junction object with many to many relationship between Contract and LDC Account to support communication with the utility.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Accepted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Accepted</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Address_Line_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Address Line 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_Line_2__c</fullName>
+        <description>This field is created for handling Utlity Initiated Changes</description>
+        <externalId>false</externalId>
+        <label>Address Line 2</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bill_Method__c</fullName>
+        <description>Rate Ready
+DUAL</description>
+        <externalId>false</externalId>
+        <label>Bill Method</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bill Ready</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DUAL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rate Ready</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SBO/ESP</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Billing_Entity__c</fullName>
+        <externalId>false</externalId>
+        <label>Billing Entity</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Billing_Entity</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CP_Node__c</fullName>
+        <description>This field is created during the iAve conversion.</description>
+        <externalId>false</externalId>
+        <label>CP Node</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Capacity_Obligation__c</fullName>
+        <externalId>false</externalId>
+        <label>Capacity Obligation Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Change_Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Change Effective Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Change_Reason_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Change Reason Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Change_Reason_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Change Reason Value</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Change_Reason__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Rate Ready LDC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bill Ready LDC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Separate Bills</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LDC Rate Codes specific to LDC</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Change Rate Ready ESP Bill Code</controllingFieldValue>
+                <valueName>LDC Rate Codes specific to LDC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>change Billing Type (Bill Presenter)</controllingFieldValue>
+                <controllingFieldValue>Change Party that Calculates the Bill</controllingFieldValue>
+                <valueName>Rate Ready LDC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>change Billing Type (Bill Presenter)</controllingFieldValue>
+                <controllingFieldValue>Change Party that Calculates the Bill</controllingFieldValue>
+                <valueName>Bill Ready LDC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>change Billing Type (Bill Presenter)</controllingFieldValue>
+                <controllingFieldValue>Change Party that Calculates the Bill</controllingFieldValue>
+                <valueName>Separate Bills</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Change_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Change Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Billing_Entity__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Change Billing Type (Billing Option)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change ESP Rate Code</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Service Indicator (Summary or Detail Interval Data)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Aggregation Category</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>change Billing Type (Bill Presenter)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Consumers Tax Rate</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change E/M Fixed Charge</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change of ESP Rate Amount</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Party that Calculates the Bill</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change ESP Account Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change of Interval Status</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Percentage of Service Tax Exempt</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Rate Ready ESP Bill Code</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change in Mailing Address</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tax Exemption Percent</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Dynegy</controllingFieldValue>
+                <valueName>Change Billing Type (Billing Option)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dynegy</controllingFieldValue>
+                <valueName>Change ESP Rate Code</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dynegy</controllingFieldValue>
+                <valueName>Change Service Indicator (Summary or Detail Interval Data)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dynegy</controllingFieldValue>
+                <valueName>Change Aggregation Category</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dynegy</controllingFieldValue>
+                <valueName>Tax Exemption Percent</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CES</controllingFieldValue>
+                <valueName>change Billing Type (Bill Presenter)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CES</controllingFieldValue>
+                <valueName>Change Consumers Tax Rate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CES</controllingFieldValue>
+                <valueName>Change E/M Fixed Charge</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CES</controllingFieldValue>
+                <valueName>Change of ESP Rate Amount</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CES</controllingFieldValue>
+                <valueName>Change Party that Calculates the Bill</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CES</controllingFieldValue>
+                <valueName>Change ESP Account Number</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CES</controllingFieldValue>
+                <valueName>Change of Interval Status</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CES</controllingFieldValue>
+                <valueName>Change Percentage of Service Tax Exempt</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CES</controllingFieldValue>
+                <valueName>Change Rate Ready ESP Bill Code</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CES</controllingFieldValue>
+                <valueName>Change in Mailing Address</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>City_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>City Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contract_BillMethod__c</fullName>
+        <description>This field is created to store the bill method</description>
+        <externalId>false</externalId>
+        <label>Contract Bill Method</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DUAL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rate Ready</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bill Ready</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SBO/ESP</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_Bill_Method__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Contract__r.Bill_Method__c)</formula>
+        <label>Contract Bill Method (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_CounterSigned_Date__c</fullName>
+        <description>This field is created to store Contract Counter Signed Date</description>
+        <externalId>false</externalId>
+        <label>Contract Counter Signed Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Counter_Signed_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract__r.Contract_Counter_Signed_Date__c</formula>
+        <label>Contract Counter Signed Date (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Contract_EndDate__c</fullName>
+        <description>This field is created to store the contract end date</description>
+        <externalId>false</externalId>
+        <label>Contract End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract__r.End_Date__c</formula>
+        <label>Contract End Date (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_IntervalUsage__c</fullName>
+        <description>This field is created to store the contract interval usage</description>
+        <externalId>false</externalId>
+        <label>Contract Interval Usage</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Interval_Usage__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Contract__r.Interval_Usage__c)</formula>
+        <label>Contract Interval Usage (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_RateCode__c</fullName>
+        <description>This field is created to store contract rate code</description>
+        <externalId>false</externalId>
+        <label>Contract Rate Code</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Rate_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract__r.Rate_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Rate Code (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_StartDate__c</fullName>
+        <description>This field is created to store the contract start date</description>
+        <externalId>false</externalId>
+        <label>Contract Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contract__r.StartDate</formula>
+        <label>Contract Start Date (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>DASR Requests</relationshipLabel>
+        <relationshipName>DASR_Requests</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Country_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Country Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>County__c</fullName>
+        <description>This field is added to store the County information for PA</description>
+        <externalId>false</externalId>
+        <label>County</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CustomerID__c</fullName>
+        <description>This field is to store the customer id</description>
+        <externalId>false</externalId>
+        <label>Customer ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>LDC_Account__r.Account__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Customer Id (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Identification_Number__c</fullName>
+        <description>This field is added to store the Customer_Identification_Number for PA</description>
+        <externalId>false</externalId>
+        <label>Customer_Identification_Number</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DASR_Activated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>DASR Activated</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DASR_Submit_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>DASR Submit Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DASR_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>DASR Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>GAAC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAAE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAAH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAAD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAAR</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DROP_Transaction_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>DROP Transaction Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>EC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DR</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Days_between__c</fullName>
+        <externalId>false</externalId>
+        <formula>Change_Effective_Date__c -  DATEVALUE(DASR_Submit_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days between</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drop_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Drop Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Drop_Reason_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Drop Reason Code</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drop_Reason_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Drop Reason Description</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Drop_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Drop Reason</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alleged Slam</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Contract Expired</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer Changed to another Service Provider</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer Enrolled In An Arrearage Crediting Program - PAC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer Enrolled In Utility Percent of Income Payment Plan - PIPP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer is on Credit Hold</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer Moved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dropped</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dropped by Customer Request</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Government Aggregated customer has opted out</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service Terminated at the ESP&apos;s Option</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service Terminated Or Customer dropped due to nonpayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Withdrawn</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dropped - dropped by supplier for reasons other than nonpayment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PA-Dropped by Customer Request</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Dynegy_Initiated__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Dynegy Initiated</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ESB_Transaction_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>ESB Transaction Id</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ESP_Account_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>ESP Account Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Eligible_Load_Percentage__c</fullName>
+        <description>This field is added to store the Eligible Load Percentage  for PA</description>
+        <externalId>false</externalId>
+        <label>Eligible Load Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Eligible_Switch_Date__c</fullName>
+        <description>This field is created during the iAve conversion</description>
+        <externalId>false</externalId>
+        <label>Eligible Switch Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Equipment_Output_Rating__c</fullName>
+        <description>This field is added to store the Equipment Output Rating for PA - PPL only</description>
+        <externalId>false</externalId>
+        <label>Equipment Output Rating</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Exception_Type_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Exception Type Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ID_18__c</fullName>
+        <externalId>false</externalId>
+        <formula>UPPER(CASESAFEID(Id))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ID 18</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Integration_Message__c</fullName>
+        <externalId>false</externalId>
+        <label>Integration Message</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Integration_Send_Date__c</fullName>
+        <description>Date to be sent to utility</description>
+        <externalId>false</externalId>
+        <label>Integration Send Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Integration_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Integration Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Failed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>In-Process</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Validation Failed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Waiting For Response</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Manually Fulfilled</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TEST</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Interval_Level_Indicator__c</fullName>
+        <description>This field is created during the iAve Conversion.</description>
+        <externalId>false</externalId>
+        <label>Interval Level Indicator</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Daily AMI Data</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Monthly AMI Data</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Interval_Usage__c</fullName>
+        <externalId>false</externalId>
+        <label>Interval Usage</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Interval</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Summary</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LDC_Account_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>LDC Account Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LDC_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>LDC Account</label>
+        <referenceTo>LDC_Account__c</referenceTo>
+        <relationshipName>DASRs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LDC_Bill_Cycle__c</fullName>
+        <externalId>false</externalId>
+        <label>LDC Bill Cycle</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LDC_Budget_Billing_Status__c</fullName>
+        <description>This field is created during iAve Conversion.</description>
+        <externalId>false</externalId>
+        <label>LDC Budget Billing Status</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_EDI_Update_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last EDI Update Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Line_Transaction_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Line Transaction Id</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_Exception_Reason_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Meter Exception Reason Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_Exception_Reason_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Meter Exception Reason Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_Exception_Type_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Meter Exception Type Code</label>
+        <length>5</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Meter Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Most_Recent_GAAD__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is created to Check whether the DASR is most recent one or not</description>
+        <externalId>false</externalId>
+        <label>Most Recent DASR</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Name_Qualifier__c</fullName>
+        <externalId>false</externalId>
+        <label>Name Qualifier</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Net_Meter_Type__c</fullName>
+        <description>This field is created during the iAve conversion for storing the net metering indicator.</description>
+        <externalId>false</externalId>
+        <label>Net Meter Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BMG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KQ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NM-BI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NM-GG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NM-GL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>XY</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>New_Customer_Indicator__c</fullName>
+        <description>This field is created to capture the New_Customer_Indicator from GAAE response</description>
+        <externalId>false</externalId>
+        <inlineHelpText>N=Not an Instant Connect / Y=Instant Connect</inlineHelpText>
+        <label>New_Customer_Indicator</label>
+        <length>2</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_Of_Months_Usage_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Number Of Months Usage Quantity</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OFF_Cycle_Enrollment__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is created during the iAve Conversion for the Off cycle Enrollments which would be done manually</description>
+        <externalId>false</externalId>
+        <label>OFF Cycle Enrollment</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Old_LDC_Account_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Old LDC Account Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originating_DUNS__c</fullName>
+        <description>Field to store the Origination DUNS</description>
+        <externalId>false</externalId>
+        <label>Originating DUNS</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originating_Name__c</fullName>
+        <description>This field is to store the originating name</description>
+        <externalId>false</externalId>
+        <label>Originating Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originator_DUNS__c</fullName>
+        <externalId>false</externalId>
+        <formula>LDC_Account__r.Account__r.Supplier__r.Supplier_DUNS__c</formula>
+        <label>Originator DUNS (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originator_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>LDC_Account__r.Account__r.Supplier__r.Name</formula>
+        <label>Originator Name (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POR_Group__c</fullName>
+        <description>This field is created during the iAve conversion</description>
+        <externalId>false</externalId>
+        <label>POR Group</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Participating_Interest_Percent__c</fullName>
+        <defaultValue>1</defaultValue>
+        <description>This field is added to store the Participating Interest Percent  for PA</description>
+        <externalId>false</externalId>
+        <label>Participating Interest Percent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payment_Arrangement_Code__c</fullName>
+        <description>This field is created during the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>Payment Arrangement Code</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Peak_Demand__c</fullName>
+        <description>This field is created during the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>Peak Demand</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone_Number__c</fullName>
+        <description>This field is created while handling Utility Initiated Changes GAAC</description>
+        <externalId>false</externalId>
+        <label>Phone Number</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Postal_Code_Zip__c</fullName>
+        <externalId>false</externalId>
+        <label>Postal Code Zip</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rate_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Rate Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_Rejected_Desc__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason Rejected Desc</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_Rejected__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason Rejected</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account not found or invalid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Action Code Invalid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change reason missing or invalid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer is not the customer of the Requestor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer on Credit Hold</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DUNS Number Invalid or Not Found</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ESI ID/Account exists but not active</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ESP acct invalid/missing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Invalid Bill Type</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Invalid Service Delivery Point Identifier</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Invalid Source of Information/does not provide requested service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Maintenance Code Invalid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Number Invalid or Not found</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Participating Interest Invalid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Requested Rate Not Found</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>021</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>A91</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ANE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ANL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ANQ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>APA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>API</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>B33</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CAP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CMP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>D30</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DIV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FRC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LSI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NCB</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NEB</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NFI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NLC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NLI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RCF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TEI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UND</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UNE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>A84</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>008</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ABN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>W06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IPO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>A13</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>A85</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>A76</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ANK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>A74</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>W05</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RecipientDUNS__c</fullName>
+        <description>This field is created to store the Recipient DUNS</description>
+        <externalId>false</externalId>
+        <label>Recipient DUNS</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecipientName__c</fullName>
+        <description>This field is created to store the Recipient Name</description>
+        <externalId>false</externalId>
+        <label>Recipient Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recipient_DUNS__c</fullName>
+        <externalId>false</externalId>
+        <formula>LDC_Account__r.LDC_Vendor__r.DUNS__c</formula>
+        <label>Recipient DUNS (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recipient_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>LDC_Account__r.LDC_Vendor__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Recipient Name (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rejected__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Rejected</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sender_Transaction_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Sender Transaction Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Service End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Service_Point__c</fullName>
+        <description>This field is created for the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>Service Point</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Relationship__c</fullName>
+        <description>This field is created during the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>Service Relationship</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Special_Meter_Configuration__c</fullName>
+        <description>This field is created to handle the net metering</description>
+        <externalId>false</externalId>
+        <label>Special Meter Configuration</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Y</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>N</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NETMETER</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Standard_Point_Location_Code__c</fullName>
+        <description>This field is created during the iAve conversion.</description>
+        <externalId>false</externalId>
+        <label>Standard Point Location Code</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StateMapPLI__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(ISPICKVAL(LDC_Account__r.Service_Territory__c, &apos;DEOHIO&apos;),ISPICKVAL(LDC_Account__r.Service_Territory__c, &apos;DAYTON&apos;), ISPICKVAL(LDC_Account__r.Service_Territory__c, &apos;AEPOHIO&apos;), ISPICKVAL(LDC_Account__r.Service_Territory__c, &apos;FEOHIO&apos;)) , &apos;OH&apos;, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>StateMapPLI</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State_Province_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>State Province Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Reason Desc</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SupplierID__c</fullName>
+        <description>This field is to store the Supplier ID</description>
+        <externalId>false</externalId>
+        <label>Supplier ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Supplier_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>LDC_Account__r.Account__r.Supplier__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Supplier ID (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Supply_Group__c</fullName>
+        <description>This field is created during the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>Supply Group</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_Exemption_Percentage__c</fullName>
+        <description>This field is created to store PA Tax_Exemption_Percentage</description>
+        <externalId>false</externalId>
+        <label>Tax Exemption Percentage</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_KWH_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Total KWH Quantity</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Transaction_JSON__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction JSON</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Transmission_Obligation_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Transmission Obligation Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Utility_Initiated_Change_Reason_Activity__c</fullName>
+        <externalId>false</externalId>
+        <label>Utility Initiated Change Reason Activity</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Assigned Service End Date</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Assigned Service Start Date</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bill Calculator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Budget Bill Amount</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Budget Bill Status</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change AEP&apos;s SDP Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Aggregation Category</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Billing Type (Billing Option)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Bill Presenter</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Customer Billing Period (Bimonthly/Monthly)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Distribution Loss Factor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Energy Supplier Budget Billing Status (First Energy Only)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change in Bill/Mail Name and/or Address</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change in Customer Name and/or Service Address</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change in party to receive copy of bills</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change in party to receive copy of notices</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change LDC Account Number for Customer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change LDC Billing Cycle</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change LDC Rate Class</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change LDC Rate Subclass Code</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Meter Cycle</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Meter Multiplier</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Meter Type</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Network Service Peak Load</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Number of Dials</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Peak Load Contribution</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Scheduling Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Special Meter Configuration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Strata or Load Profile</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change Supply Voltage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Duplicate Request Received</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Eligible Load Percent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ESP Rate Sub Class</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Invalid Source of Information/does not provide requested service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LDC Store Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Life Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MDMA Attributes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Addition</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Attributes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Billing Option</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Change Notification</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Exchange</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Installer Attributes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Owner Attributes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Reader Attributes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Removal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Service Delivery Point</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Miscellaneous Update</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MSA Delete</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MSA Establish</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MSP Attributes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Participating Interest</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Renewable Energy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service Location</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Supplier Account Number</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tax Exemption</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Terminate Transfer Request</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Use Time of Day</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Validation_Failed__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Integration_Status__c,&quot;Validation Failed&quot;),true,false)</formula>
+        <label>Validation Failed?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Validation_Message__c</fullName>
+        <externalId>false</externalId>
+        <label>Validation Message</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>VendorID__c</fullName>
+        <description>This field is created to store vendor id</description>
+        <externalId>false</externalId>
+        <label>Vendor ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>LDC_Account__r.LDC_Vendor__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Vendor Id (old)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>XML_File_Name__c</fullName>
+        <description>This field is created to store the XML file name of DASR Request</description>
+        <externalId>false</externalId>
+        <label>XML File Name</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>DASR Request</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>Rate_Code__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <columns>Contract__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Change_Reason_Blank</fullName>
+        <columns>NAME</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>Change_Reason__c</columns>
+        <columns>Change_Reason_Code__c</columns>
+        <columns>Contract__c</columns>
+        <columns>Validation_Message__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Integration_Send_Date__c</columns>
+        <columns>Reason_Rejected__c</columns>
+        <columns>Reason_Rejected_Desc__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAC</value>
+        </filters>
+        <filters>
+            <field>Change_Reason__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Dynegy_Initiated__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Change Reason Blank</label>
+    </listViews>
+    <listViews>
+        <fullName>DASR_Request_Queue</fullName>
+        <columns>NAME</columns>
+        <columns>Customer_Name__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LDC_Account_Number__c</columns>
+        <columns>DASR_Type__c</columns>
+        <filterScope>Queue</filterScope>
+        <label>DASR Request Queue</label>
+        <queue>DASR_Request_Queue</queue>
+    </listViews>
+    <listViews>
+        <fullName>DASRs_Pending</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </filters>
+        <filters>
+            <field>DASR_Submit_Date__c</field>
+            <operation>lessThan</operation>
+            <value>6/21/2016 12:00 AM</value>
+        </filters>
+        <label>DASRs Pending</label>
+    </listViews>
+    <listViews>
+        <fullName>DASRs_Pending_Today</fullName>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <columns>Recipient_Name__c</columns>
+        <columns>Rate_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </filters>
+        <filters>
+            <field>DASR_Submit_Date__c</field>
+            <operation>lessThan</operation>
+            <value>NEXT_N_DAYS:2</value>
+        </filters>
+        <filters>
+            <field>OWNER.ALIAS</field>
+            <operation>equals</operation>
+            <value>kmuck</value>
+        </filters>
+        <label>DASRs Pending Today</label>
+    </listViews>
+    <listViews>
+        <fullName>DASRs_Pending_kmuck</fullName>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </filters>
+        <filters>
+            <field>OWNER.ALIAS</field>
+            <operation>equals</operation>
+            <value>kmuck</value>
+        </filters>
+        <filters>
+            <field>DASR_Submit_Date__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>DASRs Pending KMuck</label>
+    </listViews>
+    <listViews>
+        <fullName>DASRs_Waiting_for_Response</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting For Response</value>
+        </filters>
+        <label>DASRs Waiting for Response</label>
+    </listViews>
+    <listViews>
+        <fullName>Dynegy_Initiated_Change_Pending</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>Change_Effective_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAC</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </filters>
+        <label>Dynegy Initiated - Change - Pending</label>
+    </listViews>
+    <listViews>
+        <fullName>Dynegy_Initiated_Change_Waiting_Response</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>Change_Effective_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAC</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting For Response</value>
+        </filters>
+        <label>Dynegy Initiated - Change - Wtng Rsp</label>
+    </listViews>
+    <listViews>
+        <fullName>Dynegy_Initiated_Drop_DASR</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>Change_Reason__c</columns>
+        <columns>Change_Effective_Date__c</columns>
+        <columns>Drop_Reason__c</columns>
+        <columns>Drop_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Dynegy_Initiated__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAD</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Manually Fulfilled</value>
+        </filters>
+        <label>Dynegy Initiated - Drop DASR</label>
+    </listViews>
+    <listViews>
+        <fullName>Dynegy_Initiated_Enrollment_DASR</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>Change_Effective_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Dynegy_Initiated__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAE</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Manually Fulfilled</value>
+        </filters>
+        <label>Dynegy Initiated - Enrollment DASR</label>
+    </listViews>
+    <listViews>
+        <fullName>Dynegy_Initiated_Enrollment_DASR_Pending_Waiting</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>Change_Effective_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Dynegy_Initiated__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAE</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending,Waiting For Response</value>
+        </filters>
+        <label>Dynegy Initiated - Enroll DASR - Waiting</label>
+    </listViews>
+    <listViews>
+        <fullName>Dynegy_Initiated_Enrollment_Pending</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>Change_Effective_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAE</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </filters>
+        <label>Dynegy Initiated - Enrollment - Pending</label>
+    </listViews>
+    <listViews>
+        <fullName>Dynegy_Initiated_Enrollment_Waiting_Response</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>Change_Effective_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAE</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting For Response</value>
+        </filters>
+        <label>Dynegy Initiated - Enrollment - Wtng Rsp</label>
+    </listViews>
+    <listViews>
+        <fullName>Failed_DASR_Requests</fullName>
+        <booleanFilter>1</booleanFilter>
+        <columns>NAME</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>Validation_Message__c</columns>
+        <columns>Integration_Send_Date__c</columns>
+        <columns>Reason_Rejected__c</columns>
+        <columns>Reason_Rejected_Desc__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Failed</value>
+        </filters>
+        <label>Failed DASR Requests (Rejects)</label>
+    </listViews>
+    <listViews>
+        <fullName>Ready_For_Integration</fullName>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5 AND 6 AND 7 AND 8</booleanFilter>
+        <columns>NAME</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>Change_Reason__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <columns>Contract__c</columns>
+        <columns>Contract_Start_Date__c</columns>
+        <columns>Contract_Counter_Signed_Date__c</columns>
+        <columns>Contract_Rate_Code__c</columns>
+        <columns>Validation_Failed__c</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>Integration_Message__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAE,GAAD,GAAC</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Failed,Pending,Validation Failed</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>DASR_Submit_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Contract__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Contract_Counter_Signed_Date__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Contract_Start_Date__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Contract_Rate_Code__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Ready For Integration</label>
+    </listViews>
+    <listViews>
+        <fullName>Success_Message_For_Today</fullName>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <columns>Contract__c</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>Integration_Message__c</columns>
+        <columns>Integration_Send_Date__c</columns>
+        <columns>Last_EDI_Update_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting For Response,Complete</value>
+        </filters>
+        <filters>
+            <field>Integration_Send_Date__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Last_EDI_Update_Date__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Success Message For Today</label>
+    </listViews>
+    <listViews>
+        <fullName>Utility_Initiated_Change_DASR</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>Change_Reason__c</columns>
+        <columns>Change_Effective_Date__c</columns>
+        <columns>Drop_Reason__c</columns>
+        <columns>Drop_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>Change_Reason_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Dynegy_Initiated__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAC</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Manually Fulfilled</value>
+        </filters>
+        <filters>
+            <field>Change_Reason_Code__c</field>
+            <operation>notEqual</operation>
+            <value>AMTKC</value>
+        </filters>
+        <label>Utility Initiated - Change  DASR No PLC</label>
+    </listViews>
+    <listViews>
+        <fullName>Utility_Initiated_Change_DASR_PLC</fullName>
+        <columns>NAME</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>LDC_Account_Number__c</columns>
+        <columns>Capacity_Obligation__c</columns>
+        <columns>Change_Reason__c</columns>
+        <columns>Change_Effective_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>Change_Reason_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Dynegy_Initiated__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAC</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Manually Fulfilled</value>
+        </filters>
+        <filters>
+            <field>Change_Reason_Code__c</field>
+            <operation>equals</operation>
+            <value>AMTKC</value>
+        </filters>
+        <label>Utility Initiated - Change  DASR PLC</label>
+    </listViews>
+    <listViews>
+        <fullName>Utility_Initiated_Drop_DASR</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>Change_Reason__c</columns>
+        <columns>Change_Effective_Date__c</columns>
+        <columns>Drop_Reason__c</columns>
+        <columns>Drop_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Dynegy_Initiated__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAD</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Manually Fulfilled</value>
+        </filters>
+        <filters>
+            <field>DASR_Submit_Date__c</field>
+            <operation>lessThan</operation>
+            <value>12/12/2016 12:00 AM</value>
+        </filters>
+        <label>Utility Initiated - Drop DASR</label>
+    </listViews>
+    <listViews>
+        <fullName>Utility_Initiated_Meter_Info_Change</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>Change_Reason__c</columns>
+        <columns>Change_Effective_Date__c</columns>
+        <columns>Drop_Reason__c</columns>
+        <columns>Drop_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>Change_Reason_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Dynegy_Initiated__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAC</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Manually Fulfilled</value>
+        </filters>
+        <filters>
+            <field>Change_Reason_Code__c</field>
+            <operation>startsWith</operation>
+            <value>NM</value>
+        </filters>
+        <label>Utility Initiated - Meter Info Change</label>
+    </listViews>
+    <listViews>
+        <fullName>Utility_Initiated_Reinstate_DASR</fullName>
+        <columns>NAME</columns>
+        <columns>Dynegy_Initiated__c</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>LDC_Account__c</columns>
+        <columns>Change_Reason__c</columns>
+        <columns>Change_Effective_Date__c</columns>
+        <columns>Drop_Reason__c</columns>
+        <columns>Drop_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>StateMapPLI__c</columns>
+        <columns>Supplier_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Dynegy_Initiated__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>DASR_Type__c</field>
+            <operation>equals</operation>
+            <value>GAAR</value>
+        </filters>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Manually Fulfilled</value>
+        </filters>
+        <label>Utility Initiated - Reinstate DASR</label>
+    </listViews>
+    <listViews>
+        <fullName>Validation_Failed_DASR_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>DASR_Type__c</columns>
+        <columns>Integration_Status__c</columns>
+        <columns>Validation_Message__c</columns>
+        <columns>Integration_Send_Date__c</columns>
+        <columns>DASR_Submit_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Integration_Status__c</field>
+            <operation>equals</operation>
+            <value>Validation Failed</value>
+        </filters>
+        <label>Validation Failed DASR Requests</label>
+    </listViews>
+    <nameField>
+        <displayFormat>DASR-{0}</displayFormat>
+        <label>DASR</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>DASR Requests</pluralLabel>
+    <searchLayouts>
+        <searchFilterFields>ID_18__c</searchFilterFields>
+        <searchResultsAdditionalFields>ID_18__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DASR_Submit_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DASR_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LDC_Account_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Reason_Rejected_Desc__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Contract_value_can_not_be_null</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( Contract__c = NULL,Dynegy_Initiated__c = true)</errorConditionFormula>
+        <errorMessage>Contract value can not be NULL</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Drop_Date_Is_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF((ISPICKVAL(LDC_Account__r.LDC_Vendor__r.Service_State__c,&quot;IL&quot;)), AND(ISPICKVAL(DASR_Type__c,&quot;GAAD&quot;),ISNULL(Drop_Date__c )),AND(ISPICKVAL(DASR_Type__c,&quot;GAAD&quot;),OR(ISNULL(Drop_Date__c ),ISPICKVAL(Drop_Reason__c,&quot;&quot; ))))</errorConditionFormula>
+        <errorDisplayField>Drop_Date__c</errorDisplayField>
+        <errorMessage>Drop date is required if DASR Type of GAAD is selected. LDC Account Service State has to be IL.  Reason needs to be filled.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Drop_Reason_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT(ISPICKVAL(LDC_Account__r.LDC_Vendor__r.Service_State__c,&apos;IL&apos;)), 
+NOT(ISNEW()), 
+ISPICKVAL(DASR_Type__c,&quot;GAAD&quot;), 
+OR(ISPICKVAL(Drop_Reason__c,&apos;&apos;),ISNULL( Drop_Date__c )))</errorConditionFormula>
+        <errorDisplayField>Drop_Reason__c</errorDisplayField>
+        <errorMessage>Please provide a valid drop reason and drop date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Drop_Reason_description_cannot_be_blank</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(Drop_Reason__c  , &apos;Other&apos;)  &amp;&amp;  ISBLANK( Drop_Reason_Description__c ) &amp;&amp; NOT(ISPICKVAL(LDC_Account__r.LDC_Vendor__r.Service_State__c,&apos;IL&apos;))</errorConditionFormula>
+        <errorMessage>Drop Reason description cannot be blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Invalid_Contract_Counter_Signed_Date</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(OR(Contract__r.Contract_Counter_Signed_Date__c = null,Contract__r.Contract_Counter_Signed_Date__c &gt; NOW()), OR(ISPICKVAL( DASR_Type__c,&quot;GAAE&quot;),ISPICKVAL( DASR_Type__c,&quot;GAAC&quot;)))</errorConditionFormula>
+        <errorDisplayField>Contract__c</errorDisplayField>
+        <errorMessage>Counter signed date on contract is required for enrollment. The date must be in past. Please enter a valid contract and make sure it has valid counter signed date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Invalid_DASR_Change_Type</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+NOT(ISPICKVAL(DASR_Type__c,&quot;GAAC&quot;)), 
+NOT(ISPICKVAL(Change_Reason__c,&quot;&quot;)),
+ISNULL(Drop_Date__c),
+ISPICKVAL(Drop_Reason__c,&quot;&quot;)
+)</errorConditionFormula>
+        <errorDisplayField>DASR_Type__c</errorDisplayField>
+        <errorMessage>Invalid DASR change type. Please select a valid DASR Type.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Invalid_DASR_Drop_Type</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+NOT(ISPICKVAL(DASR_Type__c,&quot;GAAD&quot;)), 
+OR(NOT(ISPICKVAL(Drop_Reason__c,&quot;&quot;)),NOT(ISNULL( Drop_Date__c) )))</errorConditionFormula>
+        <errorDisplayField>DASR_Type__c</errorDisplayField>
+        <errorMessage>Invalid DASR drop type. Please select a valid DASR Type.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Required_DASR_Type_For_Submit</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( ISPICKVAL(DASR_Type__c,&quot;&quot;), NOT(ISNULL( DASR_Submit_Date__c)))</errorConditionFormula>
+        <errorMessage>DASR type is required if submit date is provided. Please select DASR Type.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Required_Submit_Date_For_Submit</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT(ISPICKVAL(DASR_Type__c,&quot;&quot;)),ISNULL( DASR_Submit_Date__c))</errorConditionFormula>
+        <errorMessage>Submit date is required if DASR Type is selected. Please enter submit date.</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This email footer logo is used in letterheads for new ticket email</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>Email Footer Logo.png</name>
+    <public>true</public>
+</Document>

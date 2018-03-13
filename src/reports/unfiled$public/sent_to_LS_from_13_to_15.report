@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LDC_Account__c$Name</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c$LDC_Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c$Service_Territory__c</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c$Id</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c$LDC_Vendor__c</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c$LastSent_to_Lodestar__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>LDC_Account__c$LastSent_to_Lodestar__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>10/13/2017 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LDC_Account__c$LastSent_to_Lodestar__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>10/15/2017 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>sent to LS from 13 to 15</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LDC_Accounts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>LDC_Account__c$Alert_Expires__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

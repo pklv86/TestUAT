@@ -1,0 +1,1620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayoutAssignment>SYSTEMPersonAccount</compactLayoutAssignment>
+    <enableHistory>true</enableHistory>
+    <recordTypes>
+        <fullName>Mass_Market_Individual_Customer</fullName>
+        <active>true</active>
+        <description>Used to create a Mass Market Individual Customer (Person Account)</description>
+        <label>Mass Market Individual Customer</label>
+        <picklistValues>
+            <picklist>AccountSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Affinity Group</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call Center Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DYN Website Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show%2FEvent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Billing_Entity</picklist>
+            <values>
+                <fullName>CES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dynegy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contracting_Entity__c</picklist>
+            <values>
+                <fullName>DES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DES-EAST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Homefield Energy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Product__c</picklist>
+            <values>
+                <fullName>Block and Index</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Index</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pass Through</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percentage Energy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Supplier__c</picklist>
+            <values>
+                <fullName>AEP Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ameren Energy Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ameren Illinois</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atmos Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BP Canada Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BlueStar Energy Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital Energy Ohio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Champion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Champion Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chose Not To Participate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cleveland Electric Illuminating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Columbia Gas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Columbus Southern Power</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ComEd</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commerce Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consolidated Edison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Constellation NewEnergy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DPL Energy Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DPL Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DTE Energy Supply</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dayton Power and Light</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delta Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demand Response Partners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Energy Business%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Energy Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dominion East</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dominion Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dominion Retail%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duke Energy Ohio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dynegy Energy Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Edison Mission Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EnerNOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy Curtailment Specialists</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy ME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy Plus Holdings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EnergyConnect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exelon Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exelon Energy Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FirstEnergy Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FirstEnergy Solutions Corp%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GDF Suez Energy Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gexa Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Glacial Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Glacial Energy of Illinois</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guttman Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hess Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hudson Energy Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IGS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integrys Energy Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integrys Energy Services%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Liberty Power Holdings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lower Electric</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MC Squared Energy Serv</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MXenergy Electric</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MidAmerican Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NextEra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NextEra Energy Services IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Noble Americas Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nordic Energy Services LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North American Power Partners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ohio Edison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ohio Power</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pepco Energy Services Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ProLiance Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spark Energy%2C L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stand Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tiger Natural Gas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toledo Edison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vanguard Power Services%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vectren Energy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_Type__c</picklist>
+            <values>
+                <fullName>C%26I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mass-Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni-Agg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Industry</picklist>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto Dealers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking%2FFinance%2FInsurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemicals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College%2FUniversity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Beverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lodging%2FLeisure%2FEntertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Metal Fabrication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not For Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paper%2FPrinting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Religious Organizations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restaurant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warehousing%2FWholesalers%2FDistributors</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Source_2__c</picklist>
+            <values>
+                <fullName>Barrington Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAIC %28Calumet Area Ind Comm%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chicago Southland Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Elgin Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Evanston Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GFEC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hoffman Estates Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mount Prospect Chamber</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Source__c</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call Center Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LodeStar_Integration_Status__c</picklist>
+            <values>
+                <fullName>Not Synchronized</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Processing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synchronized</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Synchronized</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Muni_Agg_Type__c</picklist>
+            <values>
+                <fullName>AGG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GAG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GAX</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ownership</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Subsidiary</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rating</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Return_Reason__c</picklist>
+            <values>
+                <fullName>Name %3E 39</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Address</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Name</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sales_Region__c</picklist>
+            <values>
+                <fullName>East</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Territory</picklist>
+            <values>
+                <fullName>AEPOHIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ameren-IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ComEd-IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DAYTON</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEOHIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duquesne - PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FEOHIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MetEd - PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PECO - PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Penelec - PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WPENN-PA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source_Type__c</picklist>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Press</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Validation__c</picklist>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Validated</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Muni_Agg_Individual_Customer</fullName>
+        <active>true</active>
+        <description>Used to create a Muni Agg Individual Customer (Person Account)</description>
+        <label>Muni Agg Individual Customer</label>
+        <picklistValues>
+            <picklist>AccountSource</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Affinity Group</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call Center Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DYN Website Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show%2FEvent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Billing_Entity</picklist>
+            <values>
+                <fullName>CES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dynegy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contracting_Entity__c</picklist>
+            <values>
+                <fullName>DES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DES-EAST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Homefield Energy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Product__c</picklist>
+            <values>
+                <fullName>Block and Index</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Index</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pass Through</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percentage Energy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Supplier__c</picklist>
+            <values>
+                <fullName>AEP Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ameren Energy Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ameren Illinois</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atmos Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BP Canada Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BlueStar Energy Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital Energy Ohio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Champion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Champion Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chose Not To Participate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cleveland Electric Illuminating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Columbia Gas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Columbus Southern Power</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ComEd</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commerce Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consolidated Edison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Constellation NewEnergy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DPL Energy Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DPL Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DTE Energy Supply</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dayton Power and Light</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delta Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demand Response Partners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Energy Business%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Energy Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dominion East</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dominion Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dominion Retail%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duke Energy Ohio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dynegy Energy Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Edison Mission Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EnerNOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy Curtailment Specialists</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy ME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy Plus Holdings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EnergyConnect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exelon Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exelon Energy Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FirstEnergy Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FirstEnergy Solutions Corp%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GDF Suez Energy Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gexa Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Glacial Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Glacial Energy of Illinois</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guttman Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hess Corporation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hudson Energy Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IGS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integrys Energy Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integrys Energy Services%2C Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Liberty Power Holdings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lower Electric</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MC Squared Energy Serv</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MXenergy Electric</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MidAmerican Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NextEra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NextEra Energy Services IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Noble Americas Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nordic Energy Services LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North American Power Partners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ohio Edison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ohio Power</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pepco Energy Services Inc%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ProLiance Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spark Energy%2C L%2EP%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stand Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tiger Natural Gas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toledo Edison</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vanguard Power Services%2C LLC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vectren Energy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_Type__c</picklist>
+            <values>
+                <fullName>C%26I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mass-Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Muni-Agg</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Industry</picklist>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto Dealers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking%2FFinance%2FInsurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemicals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College%2FUniversity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Beverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lodging%2FLeisure%2FEntertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Metal Fabrication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not For Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paper%2FPrinting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Religious Organizations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restaurant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warehousing%2FWholesalers%2FDistributors</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Source_2__c</picklist>
+            <values>
+                <fullName>Barrington Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAIC %28Calumet Area Ind Comm%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chicago Southland Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Elgin Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Evanston Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GFEC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hoffman Estates Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mount Prospect Chamber</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Source__c</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call Center Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chamber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LodeStar_Integration_Status__c</picklist>
+            <values>
+                <fullName>Not Synchronized</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Processing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synchronized</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Synchronized</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Muni_Agg_Type__c</picklist>
+            <values>
+                <fullName>AGG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GAG</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>GAX</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ownership</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Subsidiary</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rating</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Return_Reason__c</picklist>
+            <values>
+                <fullName>Name %3E 39</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Address</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Name</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sales_Region__c</picklist>
+            <values>
+                <fullName>East</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Territory</picklist>
+            <values>
+                <fullName>AEPOHIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ameren-IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ComEd-IL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DAYTON</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEOHIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duquesne - PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FEOHIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MetEd - PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PECO - PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Penelec - PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WPENN-PA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Source_Type__c</picklist>
+            <values>
+                <fullName>TBD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Press</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Validation__c</picklist>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Validated</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

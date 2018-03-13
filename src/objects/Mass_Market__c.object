@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Staging object to load Mass Market Person Accounts from csv file</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account_Email__c</fullName>
+        <description>This Field is created during the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>Account Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Account_Type_Code__c</fullName>
+        <description>This field is added during the iave Conversion</description>
+        <externalId>false</externalId>
+        <label>Account Type Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>FLOW_THROUGH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RETAIL_FRIEND</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RETAIL_STANDALONE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RETAIL_SUBACCT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UCBNONPOR_RR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UCBPOR_BR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UCBPOR_RR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WHOLESALE</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Bill_Cycle__c</fullName>
+        <externalId>false</externalId>
+        <label>Bill Cycle</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Blank</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Billing_Address_Line_2__c</fullName>
+        <description>This field is created during the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>Billing Address Line 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Address_Line_3__c</fullName>
+        <description>This field is created during the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>Billing Address Line 3 (ICO)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Billing Country</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_State_Province__c</fullName>
+        <externalId>false</externalId>
+        <label>Billing State/Province</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Billing Street</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Zip_Postal_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Billing Zip/Postal code</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing__c</fullName>
+        <externalId>false</externalId>
+        <label>Billing City</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enrollment_Start_Date__c</fullName>
+        <description>The Date a customer contacted Dynegy to Begin Enrollment Process. Obtained from Data Load of Customers.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Date a customer contacted Dynegy to Begin Enrollment Process.</inlineHelpText>
+        <label>Enrollment Request Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Enrollment_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Enrollment Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Phone</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Web</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Manual Entry</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Error_Message__c</fullName>
+        <externalId>false</externalId>
+        <label>Error Message</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Grace_CD__c</fullName>
+        <description>This field is created during the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>Grace CD</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>PCX</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Has_Error__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Has Error</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LDC_Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>LDC Account Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LDC_Account_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>LDC Account Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LDC_Receive_Invoices_By__c</fullName>
+        <description>This field is created during the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>LDC Receive Invoices By</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Mail</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Online Notice</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EMail &amp; Mail</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LDC_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>LDC Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Commercial</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Flow Through</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Governmental</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Industrial</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Residential</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LDC_Vendor__c</fullName>
+        <externalId>false</externalId>
+        <label>LDC Vendor</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_Address_Line_2__c</fullName>
+        <description>This field is created during the iAve conversion</description>
+        <externalId>false</externalId>
+        <label>Mailing Address Line 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_Address_Line_3__c</fullName>
+        <description>This field is created during the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>Mailing Address Line 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_City__c</fullName>
+        <description>This field is created to store the Mailing City for Person customer during iAve Conversion.</description>
+        <externalId>false</externalId>
+        <label>Mailing City</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_Country__c</fullName>
+        <description>This field is created to store the mailing country for Person customer during iAve Conversion.</description>
+        <externalId>false</externalId>
+        <label>Mailing Country</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_State_Province__c</fullName>
+        <description>This field is created to store the mailing State for Person customer during iAve Conversion.</description>
+        <externalId>false</externalId>
+        <label>Mailing State/Province</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_Street__c</fullName>
+        <description>This field is created to store the mailing street for Person customer during iAve Conversion.</description>
+        <externalId>false</externalId>
+        <label>Mailing Street</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_Website__c</fullName>
+        <description>This field is add during the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>Mailing Website</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Mailing_Zip_Postal_Code__c</fullName>
+        <description>This field is created to store the mailing postal code for Person customer during iAve Conversion.</description>
+        <externalId>false</externalId>
+        <label>Mailing Zip/Postal Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Offer_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Offer Code</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Processed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Processed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Promo_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Promo Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rate_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Rate Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_City__c</fullName>
+        <externalId>false</externalId>
+        <label>Service City</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_County__c</fullName>
+        <externalId>false</externalId>
+        <label>Service County</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Postal_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Postal Code</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Service State</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Street_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Street 1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Street_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Street 2</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Territory__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Territory</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Utility_Unique_ID__c</fullName>
+        <description>This field is created during iAve Conversion to store Utility Unique Id</description>
+        <externalId>false</externalId>
+        <label>Utility Unique ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Mass Market</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>LDC_Account_Number__c</columns>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Offer_Code__c</columns>
+        <columns>Service_Territory__c</columns>
+        <columns>Processed__c</columns>
+        <columns>Has_Error__c</columns>
+        <columns>Error_Message__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Has_Errors</fullName>
+        <columns>NAME</columns>
+        <columns>LDC_Account_Number__c</columns>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Offer_Code__c</columns>
+        <columns>Service_Territory__c</columns>
+        <columns>Processed__c</columns>
+        <columns>Has_Error__c</columns>
+        <columns>Error_Message__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Has_Error__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Has Errors</label>
+    </listViews>
+    <listViews>
+        <fullName>Not_Processed</fullName>
+        <columns>NAME</columns>
+        <columns>LDC_Account_Number__c</columns>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Offer_Code__c</columns>
+        <columns>Service_Territory__c</columns>
+        <columns>Processed__c</columns>
+        <columns>Has_Error__c</columns>
+        <columns>Error_Message__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Processed__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Not Processed</label>
+    </listViews>
+    <listViews>
+        <fullName>Not_Processed_Today</fullName>
+        <columns>NAME</columns>
+        <columns>LDC_Account_Number__c</columns>
+        <columns>LDC_Vendor__c</columns>
+        <columns>Offer_Code__c</columns>
+        <columns>Service_Territory__c</columns>
+        <columns>Processed__c</columns>
+        <columns>Has_Error__c</columns>
+        <columns>Error_Message__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Processed__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Not Processed_Today</label>
+    </listViews>
+    <nameField>
+        <displayFormat>M-{00000}</displayFormat>
+        <label>Mass Market Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Mass Market</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Last_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LDC_Account_Number__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Offer_Code__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Service_Territory__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LDC_Vendor__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Bill_Cycle__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Processed__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Has_Error__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Error_Message__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Offer_Code__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

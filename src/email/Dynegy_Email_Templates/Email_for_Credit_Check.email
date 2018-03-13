@@ -1,0 +1,8 @@
+Credit Department,
+  The follow customer requires a credit check. 
+
+{!Opportunity.Account}
+
+{!Opportunity.Name}
+Click here to go to the opportunity record 
+{!Opportunity.Link}

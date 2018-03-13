@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>EA Opt Out Summary</description>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>Account.Business_Account__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>City of Cincinnati Aggregation,Whitewater Township Aggregation,WEST CHESTER AGG 5.69 DEC18,UNION TWP (CLER CO) AGGREGATION,UNION TOWNSHIP,SYMMES TWP AGGREGATION,SYCAMORE TWP AGGREGATION,SPRINGFIELD TWP AGGREGATION,CITY OF READING AGGREGATION,NEWTOWN AGGREGATION,Hanover Township (Butler Co) Aggregation,Green Township Hamilton Co Agg,GOLF MANOR AGG 5.89 DEC17,Fairfield Township Aggregation,EVENDALE AGG 5.89 DEC17,City of Deer Park Aggregation,Colerain Township Aggregation,CLEARCREEK TWP AGGREGATION,MIAMI TWP (HAM CO) AGGREGATION</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Business_Account__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>GOLF MANOR AGG 5.89 DEC17,DELHI TWP AGGREGATION,Colerain Township Aggregation</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>LDC_Account__c.Opt_out__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>LDC_Account__c.LDC_Account_Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LDC_Account__c.Service_Territory__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Business_Account__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>EA Opt Out Summary</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$LDC_Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

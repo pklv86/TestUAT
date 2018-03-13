@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email template is created to send email for every new ticket in salesforce</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>New_Ticket</letterhead>
+    <name>New Ticket</name>
+    <style>freeForm</style>
+    <subject>New Ticket Created - {!Tickets__c.Name} - {!Tickets__c.Status__c} - {!Tickets__c.Summary__c}</subject>
+    <textOnly>{!Today}
+Hello,
+
+New ticket is created in salesforce {!Tickets__c.Name}. Please find the details below.
+
+System : {!Tickets__c.System__c}
+Ticket URL : {!Tickets__c.Link}
+Status : {!Tickets__c.Status__c}
+Urgency : {!Tickets__c.Urgency__c}
+Department : {!Tickets__c.Department__c}
+Created By : {!Tickets__c.CreatedBy}
+Owner : {!Tickets__c.OwnerFullName}
+Affected User : {!Tickets__c.Affected_User__c}
+Assigned To : {!Tickets__c.Assigned_Developer__c}
+Last modified By : {!Tickets__c.LastModifiedBy}
+
+Summary : {!Tickets__c.Summary__c}
+
+Description : {!Tickets__c.Description__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

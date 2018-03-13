@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LDC_Account__c$LDC_Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c$Account__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Contract__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>C-00012130,C-00012129</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>LDC_Account__c$Id</primaryTableColumn>
+        <relatedTable>Contract_LDC__c</relatedTable>
+        <relatedTableJoinColumn>LDC_Account__c</relatedTableJoinColumn>
+    </crossFilters>
+    <format>Tabular</format>
+    <name>Template Contract LDCs Not Created</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LDC_Accounts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>LDC_Account__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,5 @@
+<apex:page readOnly="true">
+    <apex:listViews type="case"/>
+    <apex:sectionHeader title="Frm View"/>
+    <apex:listViews type="FRM_Report__c"/>
+</apex:page>

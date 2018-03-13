@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Peak_Load_Information__c.Load_Type__c</field>
+    </columns>
+    <columns>
+        <field>Peak_Load_Information__c.Load_Value__c</field>
+    </columns>
+    <columns>
+        <field>Peak_Load_Information__c.Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Peak_Load_Information__c.EndDate__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.LDC_Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.Service_Territory__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CUST_LAST_UPDATE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2/27/2018 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_CREATED_DATE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>2/27/2018 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Peak Load Update</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Peak_Load_Information__c@Peak_Load_Information__c.LDC_Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>FK_$LDC_Account__c.LDC_Account_Number__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Peak_Load_Information__c.End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

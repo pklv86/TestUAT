@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LDC_Account__c$Name</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c.Contract_LDCS__r$Name</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c$LDC_Account_Status__c</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c.Contract_LDCS__r$Active__c</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c$LDC_Account_Number__c</field>
+    </columns>
+    <description>LDC account status = final; Contract LDCS Active &amp; true</description>
+    <filter>
+        <criteriaItems>
+            <column>LDC_Account__c$LDC_Account_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>FINAL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LDC_Account__c.Contract_LDCS__r$Active__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LDC_Account__c$Service_Territory__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>AEPOHIO,DAYTON,DEOHIO,FEOHIO</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LDC_Account__c$Service_Territory__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>LDC Acct Final but Contract LDC Active</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LDC_Accounts_with_Contract_LDC__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>LDC_Account__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

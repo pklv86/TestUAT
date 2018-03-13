@@ -1,0 +1,87 @@
+<messaging:emailTemplate relatedToType="Opportunity"
+  subject="Credit Check Required : {!relatedTo.Account.Name}"
+ >
+  <messaging:htmlEmailBody >
+    <html>
+      <body>
+        <STYLE type="text/css">
+          TH {font-size: 12px; font-face: arial;background: #CCCCCC;
+               border-width: 1;  text-align: center } 
+          TD  {font-size: 12px; font-face: verdana } 
+          TABLE {border: solid #CCCCCC; border-width: 1}
+          TR {border: solid #CCCCCC; border-width: 1}
+        </STYLE>
+        <font face="arial" size="2">
+          Credit Department ,<br/><br/> 
+The following customer requires a credit check.<br/> 
+
+<b>{!relatedTo.Account.name}</b><br/> <br/> 
+
+{!relatedTo.Name} <br/> 
+Click here to go to the opportunity record <br/> 
+"https://dynegy.my.salesforce.com/{!relatedTo.id}"
+          <p>Below is a list of Quotes related to the Opportunity: {!relatedTo.name}.</p>
+          <table border="0" >
+            <tr > 
+               <th>Action</th>
+               <th>Quote Number</th>
+               <th>Start Term</th>
+               <th>End Term</th>
+               <th>Term(Whole Months)</th>               
+               <th>Notional Value</th>
+               <th>60 Day Max Exposure</th>
+               <th>Total Quote MWh</th>
+               <th>Tier Level</th>
+               
+            </tr>
+            <apex:repeat var="cx" value="{!relatedTo.Dynagy_Quotes__r}">
+              <tr>
+                <td><a href="https://dynegy.my.salesforce.com/{!cx.id}">View</a></td>
+                <td>{!cx.Name}</td>
+                <td>{!month(cx.Start_Term__c)}/{!day(cx.Start_Term__c)}/{!year(cx.Start_Term__c)}</td>
+                <td>{!month(cx.End_Term__c)}/{!day(cx.End_Term__c)}/{!year(cx.End_Term__c)}</td>
+                <td>{!FLOOR(cx.Term__c)}</td>                
+                <td><apex:outputText value="${0, number,###,###,###,##0}">
+                      <apex:param value="{!cx.Notional_Value__c}" />
+                      </apex:outputText></td>
+                <td><apex:outputText value="${0, number,###,###,###,##0}">
+                      <apex:param value="{!cx.X60_Day_Max_Exposure__c}" />
+                      </apex:outputText></td>
+                <td><apex:outputText value="{0, number,###,###,###,##0}">
+                      <apex:param value="{!cx.Total_Quote_MWh__c}" />
+                      </apex:outputText></td>
+                <td>{!cx.Tier_Level__c}</td>
+     
+                
+              </tr>
+            </apex:repeat>                 
+          </table>
+          <p />
+        </font>
+      </body>
+    </html>
+  </messaging:htmlEmailBody> 
+  <messaging:plainTextEmailBody >
+    Dear Credit Department,
+    
+    The following customer requires a credit check.
+
+    {!relatedTo.Account.name}
+    
+    Below is a list of Quotes related to the Opportunity: {!relatedTo.Name}
+    
+    [ Quote Number ] - [ Start Term] - [ End Term ]-[ Term(Whole Months) ] - [ Notional Value ]- [60 Day Max Exposure]- [ Total Quote MWh ]- [ Tier Level ]
+    
+    <apex:repeat var="cx" value="{!relatedTo.Dynagy_Quotes__r}">
+      [ {!cx.Name} ] - [ {!month(cx.Start_Term__c)}/{!day(cx.Start_Term__c)}/{!year(cx.Start_Term__c)} ] - [ {!month(cx.End_Term__c)}/{!day(cx.End_Term__c)}/{!year(cx.End_Term__c)} ]- [ {!FLOOR(cx.Term__c)} ]- [ <apex:outputText value="${0, number,###,###,###,##0}">
+                      <apex:param value="{!cx.Notional_Value__c}" />
+                      </apex:outputText> ]- [ <apex:outputText value="${0, number,###,###,###,##0}">
+                      <apex:param value="{!cx.X60_Day_Max_Exposure__c}" />
+                      </apex:outputText> ]- [ <apex:outputText value="{0, number,###,###,###,##0}">
+                      <apex:param value="{!cx.Total_Quote_MWh__c}" />
+                      </apex:outputText>]- [ {!cx.Tier_Level__c} ]
+    </apex:repeat>
+    
+    For more information login to https://mysalesforce.dynegy.com
+  </messaging:plainTextEmailBody>    
+</messaging:emailTemplate>

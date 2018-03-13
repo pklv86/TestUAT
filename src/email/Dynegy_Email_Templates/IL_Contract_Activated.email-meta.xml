@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>IL sales team receives Email Notification when Contract status is Activated</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>IL Contract Activated</name>
+    <style>none</style>
+    <subject>Contract for {!Contract.Account} has been processed</subject>
+    <type>text</type>
+</EmailTemplate>

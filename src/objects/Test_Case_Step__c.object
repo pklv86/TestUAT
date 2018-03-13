@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This Object is created to store the each step of test case for better reporting and auditing purporse</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_Result__c</fullName>
+        <description>This field is created to store the Actual Result for test case step</description>
+        <externalId>false</externalId>
+        <label>Actual Result</label>
+        <length>131072</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Call_Sequence__c</fullName>
+        <description>This field is created to store the call sequence for test case step which users will enter upon creating</description>
+        <externalId>false</externalId>
+        <label>Call Sequence</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>This field is created to store the Comments for test case step</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expected_Results__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The results that expected.  Enter up to 255 characters.</inlineHelpText>
+        <label>Expected Results</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Post_Condition__c</fullName>
+        <description>This field is created to store the Post condition result for test case step</description>
+        <externalId>false</externalId>
+        <label>Post Condition</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>This field is created to store the Status for test case step</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pass</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fail</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Test_Case_Summary__c</fullName>
+        <description>This field is created to show the test case summary</description>
+        <externalId>false</externalId>
+        <formula>Test_Case__r.Test_Case_Summary__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Test Case Summary</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Test_Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field is created to relate Test case step with test case</description>
+        <externalId>false</externalId>
+        <label>Test Case</label>
+        <referenceTo>Test_Case__c</referenceTo>
+        <relationshipLabel>Test Case Steps</relationshipLabel>
+        <relationshipName>Test_Case_Steps</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Test_Step_Data__c</fullName>
+        <description>This field is created to store the test step data</description>
+        <externalId>false</externalId>
+        <label>Test Step Data</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Test_Step_Summary__c</fullName>
+        <description>This field is created to store the test step summary</description>
+        <externalId>false</externalId>
+        <label>Test Step Summary</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Test_Step_Tester__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field is created to relate the user testing this test step</description>
+        <externalId>false</externalId>
+        <label>Test Step Tester</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Test_Case_Steps</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Test Case Step</label>
+    <nameField>
+        <displayFormat>TCS-{0000000}</displayFormat>
+        <label>Test Case Step Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Test Case Steps</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Call_Sequence__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Test_Case__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Test_Step_Tester__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Call_Sequence__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Test_Case__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Test_Step_Tester__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Call_Sequence__c</searchFilterFields>
+        <searchFilterFields>Test_Case__c</searchFilterFields>
+        <searchFilterFields>Test_Step_Tester__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

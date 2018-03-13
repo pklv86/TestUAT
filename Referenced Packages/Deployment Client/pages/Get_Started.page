@@ -1,0 +1,81 @@
+<apex:page >
+
+<style>
+Header {  style="font-family:verdana;" size:"10"; align : "left"; fontWeight:"bold"; color:black;}
+bodyText {color:blue;}
+</style>
+
+<br></br>
+<br></br>
+
+<h1 align ="Center"><font size="5" color="black">Deployment Client </font></h1>
+ <hr></hr>
+<p style="font-family:verdana;" align = "left"><font size="3" color="black"> Release Management System consist of two installation, Release Management Server and Deployment Client.  This package installs Deployment Client. Complete the install by clicking the set up Tab</font></p>
+  <br></br>
+ <p style="font-family:verdana;" align = "left"><font size="3" color="black"> Ensure <a><b>Release Manager</b> </a> is installed on Sandbox pro</font> </p>
+ <br></br>
+ <p style="font-family:verdana;"  align = "left"><font size="3" color="black">Please click the below links to understand the concept and setup of the application </font></p>
+
+ <hr></hr>
+ 
+ 
+
+ 
+ 
+<table ALIGN="center" border="0" cellspacing="30" cellpadding="2" width="65%">
+
+<tr>
+<td  width="25%" align="center"  bgcolor="#AED6F1">
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+        <a href="http://letscreate.biz/centralized-release-management/" target="_blank">
+       <Header ><font size="5"><b>Step </b></font>
+       <font size="5" color="red">1</font></Header >
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;  <br></br>  
+       <font size="4" color="white"> Client Server concept</font>
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+ </td>
+<td  width="25%" align="center"  bgcolor="#AED6F1">
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+        <a href="http://letscreate.biz/how_to/#SetupClient" target="_blank">
+       <Header ><font size="5"><b>Step </b></font>
+        <font size="5" color="red">2</font></Header >
+        </a>
+         &nbsp;&nbsp;&nbsp;&nbsp;  <br></br>  
+       <font size="4" color="white"> Configure Deployment Client </font>
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br>
+ </td>
+    
+<td width="25%" align="center"  bgcolor="#AED6F1">
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+           &nbsp;&nbsp;&nbsp;&nbsp;  <br></br> 
+        <a href="http://letscreate.biz/how_to/#AddPackageClient" target="_blank">
+       <Header ><font size="5"><b>Step </b></font>
+        <font size="5" color="red">3</font></Header >
+        </a>
+         &nbsp;&nbsp;&nbsp;&nbsp;  <br></br>  
+      <p>  <font size="4" color="white"> Commit changes </font></p>
+      &nbsp;&nbsp;
+ </td>
+
+
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+</tr>
+    
+</table>
+
+</apex:page>

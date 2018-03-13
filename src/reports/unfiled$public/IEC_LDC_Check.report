@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_$LDC_Account__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.LDC_Type__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.Account_Type_Code__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.LDC_Account_Status__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.LDC_Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.Rate_Code__c</field>
+    </columns>
+    <columns>
+        <field>Contract_LDC__c.Contract__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.Service_Territory__c</field>
+    </columns>
+    <description>Barb request to check for IEC accounts</description>
+    <filter>
+        <criteriaItems>
+            <column>FK_$LDC_Account__c.Service_Territory__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Ameren-IL,ComEd-IL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$LDC_Account__c.Account_Type_Code__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>RETAIL_STANDALONE,RETAIL_SUBACCT,WHOLESALE,FLOW_THROUGH,UCBNONPOR_RR,UCBPOR_RR,RETAIL_FRIEND,UCBPOR_BR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$LDC_Account__c.LDC_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Commercial,Flow Through,Governmental,Industrial,Other</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>IEC LDC Check</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Contract_LDC__c@Contract_LDC__c.LDC_Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>FK_$LDC_Account__c.Account_Type_Code__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>FK_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

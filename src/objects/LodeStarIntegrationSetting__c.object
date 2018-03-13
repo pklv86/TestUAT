@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>The Integration settings for LodeStar</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>BatchAccountLimit__c</fullName>
+        <description>The maximum number of accounts that should be picked up in a single LodeStar integration process run.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The maximum number of accounts that should be picked up in a single LodeStar integration process run.</inlineHelpText>
+        <label>Batch Account Limit</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ErrorEndpoint__c</fullName>
+        <description>the Endpoint of the Webservice to check for LodeStar Integration Errors.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>the Endpoint of the Webservice to check for LodeStar Integration Errors.</inlineHelpText>
+        <label>Error Endpoint</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>IntegrationEndpoint__c</fullName>
+        <description>the URL of the Endpoint to post Webservice messages regarding the integration to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>the URL of the Endpoint to post Webservice messages regarding the integration to.</inlineHelpText>
+        <label>Integration Endpoint</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>NotificationEmail__c</fullName>
+        <description>Email address to send notifications to - such as errors or messages.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email address to send notifications to - such as errors or messages.</inlineHelpText>
+        <label>Notification Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PayloadSizeLimit__c</fullName>
+        <description>The limit to the size in MB a single Callout Transaction can be.  This is to avoid building a message too big to send in a single callout.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The limit to the size in MB a single Callout Transaction can be.  This is to avoid building a message too big to send in a single callout.</inlineHelpText>
+        <label>Payload Size Limit (MB)</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>LodeStar Integration Setting</label>
+    <visibility>Public</visibility>
+</CustomObject>

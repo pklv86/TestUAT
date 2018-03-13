@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>This email template is created to send email for ticket status change</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Ticket_Email</name>
+    <style>none</style>
+    <subject>{!Tickets__c.Name} - {!Tickets__c.Status__c} - {!Tickets__c.Summary__c}</subject>
+    <type>text</type>
+</EmailTemplate>

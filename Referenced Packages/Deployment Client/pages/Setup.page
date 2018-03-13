@@ -1,0 +1,58 @@
+<apex:page controller="OFSClient.AuthClient">
+    <apex:form id="dpForm"> 
+        
+        <apex:outputPanel id="dtlPnl" rendered="{! AND(NOT(ServerDisplay), NOT(RepositoryDisplay))}">
+            <!-- Begin Default Content REMOVE THIS -->
+            <H1>Set up System</H1>
+            <!-- End Default Content REMOVE THIS -->
+            <ol type="1">
+                <li>Authorize Heroku app to connect to this instance of Salesforce 
+                    <b>Status:</b> <apex:outPutText id="btnEditText" value="Completed"  rendered="{! SelfStatus =='Completed'}"/>  </li>
+                
+                
+                <BR></BR>
+                <apex:commandButton id="btnEditButton" value="Oauth"  action="{!AuthSetup}" rerender="dtlPnl,dtlPnlEnv,dtlPnlRepository" />
+                
+                &nbsp;<BR></BR>
+                <hr></hr>
+                <li>Authorize this instance of Salesforce to connect to the Salesforce instance where Release Management Server is installed 
+                     <b>Status:</b><apex:outPutText id="btnEditTextServer" value="Completed"  rendered="{! ServerStatus =='Completed'}"/> </li>
+                <BR></BR>
+                <apex:commandButton id="btnEditButtonServer" value="Oauth"  action="{!AuthSetupServer}" rerender="dpForm,dtlPnl,dtlPnlEnv,dtlPnlRepository"/>
+                <ol>  </ol>   
+                <BR></BR>
+                <hr></hr>
+                <BR></BR>
+                <li>Set up Version Control <b>Status:</b><apex:outPutText id="btnEditTextRepository" value="Completed"  rendered="{! RepositoryStatus =='Completed'}"/> </li>
+                <BR></BR>
+                <apex:commandButton id="btnEditButtonRepository" value="Repository"  action="{!AuthSetupRepository}" rerender="dpForm,dtlPnl,dtlPnlEnv,dtlPnlRepository"/>
+                <ol>    </ol>       
+                <hr></hr>     
+            </ol> 
+        </apex:outputPanel>
+        <apex:outputPanel id="dtlPnlEnv" rendered="{!ServerDisplay}">
+            <apex:pageBlock id="pb1" >
+                <apex:pageBlockButtons id="pbbInforemove" location="top">
+                    <apex:commandButton id="btnEditButton" value="Oauth"  action="{!AuthSetupServer}"  />
+                    <apex:commandButton id="btnDeleteButton" value="Cancel"  action="{!returnPageURLCancel}" immediate="true"/ >                   
+                </apex:pageBlockButtons>                       
+                <apex:pageBlockSection columns="2">
+                    <apex:inputField value="{!objPack.OFSClient__Auth_Type__c}" rendered="true"/>
+                    <apex:inputField value="{!objPack.OFSClient__Type__c}"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>            
+        </apex:outputPanel>         
+        <apex:outputPanel id="dtlPnlRepository" rendered="{! RepositoryDisplay}">
+            <apex:pageBlock id="pb2" >
+                <apex:pageBlockButtons id="pbbInfo" location="top">
+                    <apex:commandButton id="btnRepButton" value="Oauth"  action="{!AuthSetupRepository}"  />
+                    <apex:commandButton id="btnRepCancelButton" value="Cancel"  action="{!returnPageURLCancel}" immediate="true"/ >                   
+                </apex:pageBlockButtons> 
+                <apex:pageBlockSection columns="2">
+                    <apex:inputField value="{!objRep.OFSClient__Type__c}"/>
+                    <apex:inputField value="{!objRep.OFSClient__URL__c}"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock> 
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

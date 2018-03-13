@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Name</field>
+    </columns>
+    <description>Need to Mark for Enrollment Template file for list of Contract LDCs in an Aggregation</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.LDC_Accounts__r.Contract_LDCS__r$Contract__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>C-00012130</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Template Agg Contract LDC</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customers_w_LDC_Account_w_Contract_LDC__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

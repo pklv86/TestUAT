@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_82276255</developerName>
+        <masterLabel>Green</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Account.LDC_Accounts__r.Contract_LDCS__r$Contract__c.Name</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Cincinnati Agg 5.57 MAY17 - MAY18</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Green Twp Agg 100% Green 5.49 MAY20</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Miami Twp (Ham Co) AGG 100% Green 5.49 MAY20</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Anderson Twp 100% Renewable 5.49 Jun20</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Colerain Twp 100% Green 5.49 MAY20</sourceValue>
+            </sourceValues>
+            <value>Green</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Contract__c.Name</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.LDC_Accounts__r$Service_Territory__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>AEPOHIO,DAYTON,DEOHIO,FEOHIO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Business_Account__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>MA City of Cincinnati (Hamilton),MA Green Township (Hamilton),MA Union Township (Clermont),MA VIllage of North Bend (Hamilton),MA Miami Township (Hamilton),MA Colerain Township (Hamilton),MA City of Norwood (Hamilton),MA Anderson Township (Hamilton)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.LDC_Accounts__r$Opt_out__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>PersonAccount.Muni_Agg_Individual_Customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_82276255</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Green</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.LDC_Accounts__r$LDC_Account_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>ACTIVE,PENDING_ENROLLMENT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.LDC_Accounts__r.Contract_LDCS__r$Active__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_82276255</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Business_Account__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Contract__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>MA Ohio Active Green Contracts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customers_w_LDC_Account_w_Contract_LDC__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

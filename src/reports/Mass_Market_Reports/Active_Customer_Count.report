@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_98189219</developerName>
+        <masterLabel>State</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>LDC_Account__c.Service_Territory__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>AEPOHIO</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>DAYTON</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>DEOHIO</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FEOHIO</sourceValue>
+            </sourceValues>
+            <value>Ohio</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Ameren-IL</sourceValue>
+            </sourceValues>
+            <value>IL-MISO</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>CAMB - MA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>COMM - MA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>BECO - MA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>MAELEC - MA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>NAN - MA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>WMECO - MA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FGE - MA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>EVERE - MA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CEC</sourceValue>
+            </sourceValues>
+            <value>Massachusetts</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>UGI - PA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Pike County - PA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Penn Power - PA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PPL - PA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Penelec - PA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PECO - PA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>MetEd - PA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FEWP</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Duquesne - PA</sourceValue>
+            </sourceValues>
+            <value>Pennsylvania</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>ComEd-IL</sourceValue>
+            </sourceValues>
+            <value>IL-PJM</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_51637126</developerName>
+        <masterLabel>Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>LDC_Account__c.LDC_Account_Status__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>ACTIVE</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PENDING_FINAL</sourceValue>
+            </sourceValues>
+            <value>Active Billing</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>NEW_ACCOUNT</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PENDING_ENROLLMENT</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>DRAFT</sourceValue>
+            </sourceValues>
+            <value>Future Start</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>REJECTED</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FINAL</sourceValue>
+            </sourceValues>
+            <value>Dropped</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>LDC_Account__c.LDC_Account_Status__c</field>
+    </columns>
+    <columns>
+        <field>CUST_ID</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c.Service_Territory__c</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c.LDC_Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>LDC_Account__c.FRM_Profile__c</field>
+    </columns>
+    <crossFilters>
+        <operation>with</operation>
+        <primaryTableColumn>CUST_ID</primaryTableColumn>
+        <relatedTable>Contract_LDC__c</relatedTable>
+        <relatedTableJoinColumn>LDC_Account__c</relatedTableJoinColumn>
+    </crossFilters>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.CnI,PersonAccount.Mass_Market_Individual_Customer,PersonAccount.Muni_Agg_Individual_Customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_51637126</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active Billing,Future Start</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_98189219</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_51637126</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>RECORDTYPE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Active Customer Count</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$LDC_Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

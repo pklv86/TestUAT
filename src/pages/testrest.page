@@ -1,0 +1,9 @@
+<apex:page controller="getservice">
+    <apex:form >
+        <apex:commandButton action="{!Result}" value="Submit" >  </apex:commandButton>
+        <br/><br/>        {!myresponse}
+      <script>
+        //  alert("Clicked");
+      </script>
+    </apex:form>
+</apex:page>

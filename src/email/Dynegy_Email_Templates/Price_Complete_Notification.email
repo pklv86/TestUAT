@@ -1,0 +1,11 @@
+{!Retail_Quote__c.CreatedBy},
+
+     The following quote has been received from pricing and is in the status of {!Retail_Quote__c.Request_Status__c}. 
+
+{!Opportunity.Name}
+Click here to go to the opportunity record
+{!Opportunity.Link}
+
+{!Retail_Quote__c.Name}
+Click here to go to the Retail Quote record
+{!Retail_Quote__c.Link}

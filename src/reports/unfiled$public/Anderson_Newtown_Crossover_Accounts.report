@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.LDC_Accounts__r$LDC_Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Business_Account__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$LDC_Account_Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$Opt_out__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.LDC_Accounts__r$LDC_Account_Number__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>9220055244,9240055226,9930206627,8720055224,0290069236,0340206628,1640206625,6570221915,1040358104,5530207525,0740206631,4670208237,7140206632,3140206650,2170208224,2870208227,7280055023</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Anderson-Newtown Crossover Accounts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customers_w_LDC_Account_w_Contract_LDC__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

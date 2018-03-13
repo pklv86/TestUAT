@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Custom Object for Meter</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>By_Pass_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>By Pass Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Change_Reason_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Change Reason Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Change_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Change Reason</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ESP Rate Code</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ESP Rate Sub Class</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LDC Rate Code</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LDC Rate Sub Class</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LDC Read Cycle</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Load Profile</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MDMA Attributes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Addition</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Attributes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Billing Option</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Change Notification</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Exchange</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Installer Attributes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Multiplier</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Number of Dials</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Owner Attributes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Reader Attributes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Removal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Service Delivery Point</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Type</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MSP Attributes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Cogeneration_Capability_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Cogeneration Capability Code</label>
+        <length>1</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Delivery_Voltage__c</fullName>
+        <description>This field is created during the iAve Conversion</description>
+        <externalId>false</externalId>
+        <label>Delivery Voltage</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Distribution_Loss_Factor__c</fullName>
+        <externalId>false</externalId>
+        <label>Distribution Loss Factor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ESP_Budget_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>ESP Budget Amount</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <description>End Date for Meter Object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter</inlineHelpText>
+        <label>Meter End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Interval__c</fullName>
+        <description>Interval Values for Meter Object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Object</inlineHelpText>
+        <label>Interval</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LDC_Account_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Service_Point__r.LDC_Account_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>LDC Account Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LDC_Meter_Cycle__c</fullName>
+        <externalId>false</externalId>
+        <label>LDC Meter Cycle</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LDC_Rate_Class__c</fullName>
+        <externalId>false</externalId>
+        <label>LDC Rate Class</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LDC_Rate_Subclass__c</fullName>
+        <externalId>false</externalId>
+        <label>LDC Rate Subclass</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legacy_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Legacy ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Load_Profile_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Load Profile Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Load_Profile__c</fullName>
+        <description>Load Profile for Meter object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Meter Object</inlineHelpText>
+        <label>Load Profile</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_Maintenance_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Meter Maintenance Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_Multiplier_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Meter Multiplier Quantity</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_Number__c</fullName>
+        <externalId>true</externalId>
+        <label>Meter Number</label>
+        <length>18</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_Service_Voltage__c</fullName>
+        <externalId>false</externalId>
+        <label>Meter Service Voltage</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meter_Type_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Meter Type Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_Of_Dials_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Number Of Dials Quantity</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Meter_Number__c</fullName>
+        <externalId>true</externalId>
+        <label>Old Meter Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Point_Number__c</fullName>
+        <description>This field is created during the iAve Conversion.</description>
+        <externalId>false</externalId>
+        <label>EDI Service Point Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Point__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Point</label>
+        <referenceTo>Service_Point__c</referenceTo>
+        <relationshipLabel>Meters</relationshipLabel>
+        <relationshipName>Meters</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>Start Date for Meter</description>
+        <externalId>false</externalId>
+        <label>Meter Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Time_Of_Use_Metering__c</fullName>
+        <externalId>false</externalId>
+        <label>Time Of Use Metering</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Unit</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CCF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dth</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>kVA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>kVAR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KVARD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>kVARh</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>kW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>kWh</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MCF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Megawatt Demand</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Megawatt House</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Therms</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Meter</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>M-{0000}</displayFormat>
+        <label>Meter</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Meters</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

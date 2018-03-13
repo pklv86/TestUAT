@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Dynagy_Quotes__r$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Dynagy_Quotes__r.Contracts__r$ContractNumber</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Dynagy_Quotes__r.Contracts__r$ContractTerm</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Dynagy_Quotes__r.Contracts__r$StartDate</field>
+    </columns>
+    <columns>
+        <field>Opportunity$StageName</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Pricing_Type__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Type</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Dynagy_Quotes__r.Contracts__r$Contract_Type__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Opportunity and Contract Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunities_w_Quotes_w_Contracts__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CloseDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

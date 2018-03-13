@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Dynagy_Quotes__r$select_quote__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Dynagy_Quotes__r$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Dynagy_Quotes__r$Quote_Price_KWH__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Dynagy_Quotes__r$Start_Term__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Dynagy_Quotes__r$End_Term__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity$Id</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Dynagy_Quotes__r$Request_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Pricing Complete</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Dynagy_Quotes__r$select_quote__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>quote 2,quote 3,quote 4,quote 5,quote 6,quote 7,quote 8,quote 9</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Dynagy_Quotes__r$RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Retail_Quote__c.Executable</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>opp Quote2-9 ind</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity_RetailQuote__c</reportType>
+    <rowLimit>9</rowLimit>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Opportunity.Dynagy_Quotes__r$select_quote__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_$LDC_Account__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.LDC_Account_Status__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.LDC_Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.Rate_Code__c</field>
+    </columns>
+    <columns>
+        <field>Contract_LDC__c.Contract__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.Service_Territory__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.LDC_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>FK_$LDC_Account__c.LDC_End_Date__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Contract LDC w/LDC Account - Lauren</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Contract_LDC__c@Contract_LDC__c.LDC_Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>FK_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

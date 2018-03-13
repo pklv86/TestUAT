@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$LDC_Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Contract__c.ContractNumber</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Contract__c.StartDate</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Contract__c.ContractTerm</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Contract__c.End_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Contract__c.Opportunity__c.Referral_Broker__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Upcoming Contract Expirations</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customer_w_LDCAccount_w_ContractLDC_w_Extras__c</reportType>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account.LDC_Accounts__r.Contract_LDCS__r$Contract__c.End_Date__c</dateColumn>
+        <interval>INTERVAL_CURNEXTQ</interval>
+    </timeFrameFilter>
+</Report>

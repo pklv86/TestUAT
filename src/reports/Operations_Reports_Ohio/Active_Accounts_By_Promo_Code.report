@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$LDC_Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Active__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Promo_Code__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.LDC_Accounts__r.Contract_LDCS__r$Promo_Code__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>FRIENDS,VIP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.LDC_Accounts__r.Contract_LDCS__r$Active__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Active Accounts By Promo Code</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customer_w_LDCAccount_w_ContractLDC_w_Extras__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

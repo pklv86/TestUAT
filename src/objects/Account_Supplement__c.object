@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object is created for generic purpose and it mainly tied to LDC Account</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Active__c</fullName>
+        <externalId>false</externalId>
+        <formula>AND( IF(Start_Date__c &lt;= TODAY(), True, false) , IF( End_Date__c &lt;= TODAY(), false, true) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Date__c</fullName>
+        <description>This field is added to track the approval/rejected date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will get auto populated when it is approved</inlineHelpText>
+        <label>Approval Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <description>This field is created to show the status of Approval requested</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Once tax department approves it will be auto populated with status</inlineHelpText>
+        <label>Approval Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Recalled</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Submitted for Approval</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Approved_By__c</fullName>
+        <description>This field is created to store the Name of person who approved</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Approved user name</inlineHelpText>
+        <label>Approved By</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <description>This field is created to store the end date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the End Date</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Exemption_Type__c</fullName>
+        <description>This Picklist is created to store Exemption type based on Type of  record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please select appropriate exemption type</inlineHelpText>
+        <label>Exemption Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A -- Instrumentality of the Commonwealth</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>B -- Political Subdivision of the Commonwealth</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C -- Municipal Authority created under the Municipality Authorities Act</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>D -- Electric cooperative corporations created under the Electric Cooperative Law of 1990</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>E -- Cooperative agricultural associations required to pay corporate net income tax under the Cooperative Agricultural Association Corporate Net Income Tax Act (exemption not valid for registered vehicles)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>F -- Credit Unions organized under Federal Credit Union Act or Commonwealth Credit Union Act</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>G -- U.S. Government, its agencies and instrumentalities</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>H -- Property and/or service will be resold or re-rented in the ordinary course of the purchasers business</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>I -- Religious Organization</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>J -- Volunteer Fireman&apos;s Organization</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>K -- Nonprofit Educational Organization</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>L -- Charitable Organization</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>M -- School District</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>N -- Direct Pay Permit Holder</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>O -- Individual Holding Diplomatic ID</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>P -- Keystone Opportunity Zone</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Q -- Tourist Promotion Agency</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>R -- Sales for Resale</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>A -- Gross receipts from the sale of electricity that are attributable to replacement energy costs, clean-up and decontamination costs, and investment write-off costs of a nuclear generating facility damaged as a result of an accident or natural disaster</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>O -- Gross receipts derived from business done inside the limits of a municipality which owns or operates a public utility or furnishes the public utility service.</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Tax_GRT_Exemption</controllingFieldValue>
+                <valueName>R -- Sales for Resale</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_GRT_Exemption</controllingFieldValue>
+                <valueName>A -- Gross receipts from the sale of electricity that are attributable to replacement energy costs, clean-up and decontamination costs, and investment write-off costs of a nuclear generating facility damaged as a result of an accident or natural disaster</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_GRT_Exemption</controllingFieldValue>
+                <valueName>O -- Gross receipts derived from business done inside the limits of a municipality which owns or operates a public utility or furnishes the public utility service.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>A -- Instrumentality of the Commonwealth</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>B -- Political Subdivision of the Commonwealth</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>C -- Municipal Authority created under the Municipality Authorities Act</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>D -- Electric cooperative corporations created under the Electric Cooperative Law of 1990</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>E -- Cooperative agricultural associations required to pay corporate net income tax under the Cooperative Agricultural Association Corporate Net Income Tax Act (exemption not valid for registered vehicles)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>F -- Credit Unions organized under Federal Credit Union Act or Commonwealth Credit Union Act</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>G -- U.S. Government, its agencies and instrumentalities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>H -- Property and/or service will be resold or re-rented in the ordinary course of the purchasers business</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>I -- Religious Organization</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>J -- Volunteer Fireman&apos;s Organization</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>K -- Nonprofit Educational Organization</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>L -- Charitable Organization</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>M -- School District</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>N -- Direct Pay Permit Holder</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>O -- Individual Holding Diplomatic ID</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>P -- Keystone Opportunity Zone</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Tax_Sales_Exemption</controllingFieldValue>
+                <valueName>Q -- Tourist Promotion Agency</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>GRT_Category__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Translated as a-K in the order of picklist</inlineHelpText>
+        <label>GRT Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A -- Residential Sales</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>B -- Commercial and Industrial Sales</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C -- Public Street and safety Lightning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>D -- Other Sales to Public Authorities</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>E -- Sales to Railroads &amp; Railways</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>F -- Sales for Resale</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>G -- Provisions for Rate Refunds</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>H -- Miscellaneous Service Revenues</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>I -- Other Electric Revenues</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>J -- Revenue from Transmission of Electricity of Others</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>K -- Regional Transmission Service Revenues</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LDC_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field is created to setup relationship between LDC account and Account Supplement</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select LDC Account</inlineHelpText>
+        <label>LDC Account</label>
+        <referenceTo>LDC_Account__c</referenceTo>
+        <relationshipLabel>Tax Exemptions</relationshipLabel>
+        <relationshipName>Account_Supplements1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Percentage__c</fullName>
+        <description>This field is created to store the percentage of the exemption record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Percentage</inlineHelpText>
+        <label>Percentage</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sale_Intrasate_Revenue__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Sale Intrasate Revenue defaulted to true</description>
+        <externalId>false</externalId>
+        <label>Sale Intrasate Revenue</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This picklist still needs to be defined as of now</inlineHelpText>
+        <label>Sales Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Deposit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Merchandise</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Appliances</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Installation Fees</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sales</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rental or Repair Costs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Testing Fees</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Line Extension Costs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Special Construction Charges</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Warranty Programs</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>This field is created to store the start date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the start date</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>This field is created to store the type of exemption</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the Type of exemption</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Tax_GRT_Exemption</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tax_Sales_Exemption</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>URL__c</fullName>
+        <description>This field is created to store the document URL</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the document URL for exemption</inlineHelpText>
+        <label>URL</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <label>Account Supplement</label>
+    <listViews>
+        <fullName>Tax_Approval_Queue_Account_Supplement</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Tax Approval Queue</label>
+        <queue>Tax_Approval_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>AS-{0000000}</displayFormat>
+        <label>AS Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Account Supplements</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>GRT</fullName>
+        <active>true</active>
+        <description>This record type is used to store GRT for PA</description>
+        <label>GRT</label>
+        <picklistValues>
+            <picklist>Approval_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Exemption_Type__c</picklist>
+            <values>
+                <fullName>Gross receipts derived from business done inside the limits of a municipality which owns or operates a public utility or furnishes the public utility service%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gross receipts from the sale of electricity that are attributable to replacement energy costs%2C clean-up and decontamination costs%2C and investment write-off costs of a nuclear generating facility damaged as a result of an accident or natural disaster</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales for Resale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GRT_Category__c</picklist>
+            <values>
+                <fullName>Commercial and Industrial Sales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellaneous Service Revenues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Electric Revenues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Sales to Public Authorities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Provisions for Rate Refunds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Street and safety Lightning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Transmission Service Revenues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Sales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revenue from Transmission of Electricity of Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales for Resale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales to Railroads %26 Railways</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Tax_GRT_Exemption</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Tax_Exemption</fullName>
+        <active>true</active>
+        <description>This record type is used to store Tax Exemptions for PA</description>
+        <label>Tax Exemption</label>
+        <picklistValues>
+            <picklist>Approval_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted for Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Exemption_Type__c</picklist>
+            <values>
+                <fullName>Charitable Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cooperative agricultural associations required to pay corporate net income tax under the Cooperative Agricultural Association Corporate Net Income Tax Act %28exemption not valid for registered vehicles%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Unions organized under Federal Credit Union Act or Commonwealth Credit Union Act</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Pay Permit Holder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electric cooperative corporations created under the Electric Cooperative Law of 1990</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual Holding Diplomatic ID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instrumentality of the Commonwealth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Keystone Opportunity Zone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Municipal Authority created under the Municipality Authorities Act</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nonprofit Educational Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Political Subdivision of the Commonwealth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Property and%2For service will be resold or re-rented in the ordinary course of the purchasers business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Religious Organization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School District</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tourist Promotion Agency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>U%2ES%2E Government%2C its agencies and instrumentalities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volunteer Fireman%27s Organization</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sales_Type__c</picklist>
+            <values>
+                <fullName>Appliances</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installation Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line Extension Costs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Merchandise</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meter Testing Fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rental or Repair Costs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Construction Charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warranty Programs</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Tax_Sales_Exemption</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>End_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Percentage__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LDC_Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Approval_Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Percent_is_Greater_than_1</fullName>
+        <active>true</active>
+        <errorConditionFormula>Percentage__c &gt;1</errorConditionFormula>
+        <errorMessage>Percentage cannot be greater than 1.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_GRT_Exemption</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New GRT Exemption</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a0x/e?CF00N1C00000B82t4={!LDC_Account__c.Name}&amp;CF00N1C00000B82t4_lkid={!LDC_Account__c.Id}&amp;retURL={!LDC_Account__c.Id}&amp;RecordType=0121C000001l9d0</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Tax_Exemption</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Tax Exemption</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a0x/e?CF00N1C00000B82t4={!LDC_Account__c.Name}&amp;CF00N1C00000B82t4_lkid={!LDC_Account__c.Id}&amp;retURL={!LDC_Account__c.Id}&amp;RecordType=0121C000001l9d1</url>
+    </webLinks>
+</CustomObject>

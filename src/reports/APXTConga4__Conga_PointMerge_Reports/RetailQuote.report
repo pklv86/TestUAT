@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.Dynagy_Quotes__r$Utility_Settlement_Zone__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Service_Territory__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity$Id</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0065C000001rgH9</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>RetailQuote</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity_RetailQuote__c</reportType>
+    <rowLimit>1</rowLimit>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Opportunity$Service_Territory__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

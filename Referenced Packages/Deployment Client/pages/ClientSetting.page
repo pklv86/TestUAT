@@ -1,0 +1,7 @@
+<apex:page standardController="OFSClient__PackageInformation__c" extensions="OFSClient.clsMetadataInformation" action="{!populateCustomSetting}" showHeader="false" sidebar="false">
+    <apex:form >
+        <apex:outputLabel >Populates Setting</apex:outputLabel>        
+        <apex:commandButton value="Execute" action="{!populateCustomSetting}"></apex:commandButton>
+        
+    </apex:form>
+</apex:page>

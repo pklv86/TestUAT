@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>An object describing an attribute that must be necessary to be stored for billing purposes.  Typically Sent to LodeStar for processing.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Contract_LDC__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contract LDC</label>
+        <referenceTo>Contract_LDC__c</referenceTo>
+        <relationshipLabel>Account Bill Determinates</relationshipLabel>
+        <relationshipName>Account_Bill_Determinates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Determinate_Value__c</fullName>
+        <description>The Value of the Entry - typically a number, but can be any data type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Value of the Entry - typically a number, but can be any data type.</inlineHelpText>
+        <label>Determinate Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LDC_Account__c</fullName>
+        <description>The LDC Account this billing determinate is related to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The LDC Account this billing determinate is related to.</inlineHelpText>
+        <label>LDC Account</label>
+        <referenceTo>LDC_Account__c</referenceTo>
+        <relationshipLabel>Account Bill Determinates</relationshipLabel>
+        <relationshipName>AccountBillDeterminates</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>StartDateTime__c</fullName>
+        <description>The Date/Time that the billing determinate will start to apply.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Date/Time that the billing determinate will start to apply.</inlineHelpText>
+        <label>Start Date/Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>StopDateTime__c</fullName>
+        <description>The Date/Time that this billing determinate will stop being applied to the LDC Account for billing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Date/Time that this billing determinate will stop being applied to the LDC Account for billing.</inlineHelpText>
+        <label>Stop Date/Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <label>Account Bill Determinate</label>
+    <nameField>
+        <displayFormat>BD-{000000}</displayFormat>
+        <label>Determinate Record</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Account Bill Determinates</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+</CustomObject>

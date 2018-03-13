@@ -1,0 +1,71 @@
+<apex:page controller="rpc1" sidebar="false">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Show Last Month" action="{!switchToDaily}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection id="pbs1" rendered="{!showpb}" >
+                <apex:panelGrid columns="3" id="YearGrid" border="2">
+                    <apex:repeat value="{!data1}" var="mkey">
+                        <apex:chart height="400" width="400"  data="{!oData[mkey]}">
+                            <apex:axis type="Numeric" position="left" fields="recCount" title="{!mkey} - Records" grid="true"/>
+                            <apex:axis type="Category" position="bottom" fields="Month" title="{!oData[mkey][0].Name} - Current Month by Month">
+                                <apex:chartLabel rotate="45"/>
+                            </apex:axis>
+                            <apex:lineSeries axis="left" fill="false" xField="Month" yField="recCount" markerType="circle" markerSize="4" markerFill="#FF0000"/>
+                        </apex:chart>
+                   </apex:repeat>
+                   <apex:repeat value="{!data2}" var="mkey">
+                        <apex:chart height="400" width="400"  data="{!oData[mkey]}">
+                            <apex:axis type="Numeric" position="left" fields="recCount" title="{!mkey} - Records" grid="true"/>
+                            <apex:axis type="Category" position="bottom" fields="Month" title="{!oData[mkey][0].Name} - Current Month by Month">
+                                <apex:chartLabel rotate="45"/>
+                            </apex:axis>
+                            <apex:lineSeries axis="left" fill="false" xField="Month" yField="recCount" markerType="circle" markerSize="4" markerFill="#FF0000"/>
+                        </apex:chart>
+                   </apex:repeat>
+                   <apex:repeat value="{!data3}" var="mkey">
+                        <apex:chart height="400" width="400"  data="{!oData[mkey]}">
+                            <apex:axis type="Numeric" position="left" fields="recCount" title="{!mkey} - Records" grid="true"/>
+                            <apex:axis type="Category" position="bottom" fields="Month" title="{!oData[mkey][0].Name} - Current Month by Month">
+                                <apex:chartLabel rotate="45"/>
+                            </apex:axis>
+                            <apex:lineSeries axis="left" fill="false" xField="Month" yField="recCount" markerType="circle" markerSize="4" markerFill="#FF0000"/>
+                        </apex:chart>
+                   </apex:repeat>
+               </apex:panelGrid>
+           </apex:pageBlockSection>
+           <apex:pageBlockSection id="pbs2" rendered="{!!showpb}">
+                <apex:panelGrid columns="3" id="MonthGrid" border="2">
+                    <apex:repeat value="{!data1}" var="mkey">
+                        <apex:chart height="400" width="400"  data="{!oData[mkey]}">
+                            <apex:axis type="Numeric" position="left" fields="recCount" title="{!mkey} - Records" grid="true"/>
+                            <apex:axis type="Category" position="bottom" fields="name" title="Created in Last 30 Days">
+                                <apex:chartLabel rotate="45"/>
+                            </apex:axis>
+                            <apex:lineSeries axis="left" fill="false" xField="name" yField="recCount" markerType="circle" markerSize="4" markerFill="#FF0000"/>
+                        </apex:chart>
+                   </apex:repeat>
+                   <apex:repeat value="{!data2}" var="mkey">
+                        <apex:chart height="400" width="400"  data="{!oData[mkey]}">
+                            <apex:axis type="Numeric" position="left" fields="recCount" title="{!mkey} - Records" grid="true"/>
+                            <apex:axis type="Category" position="bottom" fields="name" title="Created in Last 30 Days">
+                                <apex:chartLabel rotate="45"/>
+                            </apex:axis>
+                            <apex:lineSeries axis="left" fill="false" xField="name" yField="recCount" markerType="circle" markerSize="4" markerFill="#FF0000"/>
+                        </apex:chart>
+                   </apex:repeat>
+                   <apex:repeat value="{!data3}" var="mkey">
+                        <apex:chart height="400" width="400"  data="{!oData[mkey]}">
+                            <apex:axis type="Numeric" position="left" fields="recCount" title="{!mkey} - Records" grid="true"/>
+                            <apex:axis type="Category" position="bottom" fields="name" title="Created in Last 30 Days">
+                                <apex:chartLabel rotate="45"/>
+                            </apex:axis>
+                            <apex:lineSeries axis="left" fill="false" xField="name" yField="recCount" markerType="circle" markerSize="4" markerFill="#FF0000"/>
+                        </apex:chart>
+                   </apex:repeat>
+               </apex:panelGrid>
+           </apex:pageBlockSection>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

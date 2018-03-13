@@ -1,0 +1,1732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Custom Quote History Object for Retail</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Aggregate_PLC__c</fullName>
+        <externalId>false</externalId>
+        <label>Aggregate PLC</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Basis__c</fullName>
+        <externalId>false</externalId>
+        <label>Basis</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Fee_Allocation__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Fee Allocation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>$/Mwh</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Lump Sum</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Broker_Fee__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>Broker Fee</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capacity__c</fullName>
+        <externalId>false</externalId>
+        <label>Capacity</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ContractType__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>UCBNONPOR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IEC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TIER_1_2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TIER_A</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UCBPOR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UCBPOR_BR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WESA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GFEC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Small Stable Contract - Evergreen</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Small Stable Contract - MTM Renewal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Large Stable Contract</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Large Stable PT-C Contract</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hybrid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Block and Index</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non Standard</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_Ancillary_Services__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Ancillary Services</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Broker_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Broker Fee</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Capacity__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Capacity</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Energy_Off_PK__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Energy Off PK</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Energy_On_PK__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Energy On PK</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Energy__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract % Energy</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Index_Margin__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Index Margin</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Index_adder__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Index adder</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Margin__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Margin</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Marketing_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Marketing Cost</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Municipality_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Municipality Fee</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Off_PK_Block_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Off PK Block Size</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_On_PK_Block_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract On PK Block Size</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_RPS__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract RPS</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Transmission__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Transmission</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Utility_Loss__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Utility Loss</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Vol_Rec_Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Vol Rec Product</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Vol_Rec__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract % Vol Rec</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Voluntary_Rec__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Voluntary Rec</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_Check_Required__c</fullName>
+        <externalId>false</externalId>
+        <formula>OR(X60_Day_Max_Exposure__c &gt;= 375000, Aggregate_PLC__c &gt;= 5)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Credit Check Required</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Data_Utility_Link__c</fullName>
+        <externalId>false</externalId>
+        <label>Data Utility Link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Default_Broker_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Broker Fee</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Default_Index_Margin__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Index Margin</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Default_Margin__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Margin</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Default_Risk__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Risk</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>End_Term__c</fullName>
+        <externalId>false</externalId>
+        <formula>DATE(
+    YEAR(Start_Term__c) +
+    FLOOR((Term__c + MONTH(Start_Term__c)) / 12) -
+    IF (MOD(MONTH(Start_Term__c) + Term__c, 12) = 0,
+        1,
+        0),
+
+    MOD((Term__c + MONTH(Start_Term__c) - 1), 12) + 1,
+
+    DAY(Start_Term__c)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>End Term</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Energy_Fixed__c</fullName>
+        <externalId>false</externalId>
+        <label>% Energy Fixed</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Energy__c</fullName>
+        <externalId>false</externalId>
+        <label>Energy</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Holding_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Holding Cost</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Holding_Days__c</fullName>
+        <externalId>false</externalId>
+        <label>Holding Days</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ISO_ARR__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-ARR</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Admin__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Admin</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Ancillaries__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Ancillaries</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Cost_Recovery__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Cost Recovery</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_FTR__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-FTR</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Inadvertant__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Inadvertant</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Losses__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Losses</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_NITS__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-NITS</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Op_Reserve_RSG__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Op Reserve-RSG</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Other_Trans__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-Other Trans</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ISO_SSR_RMR__c</fullName>
+        <externalId>false</externalId>
+        <label>ISO-SSR-RMR</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Index_Margin_Allocation__c</fullName>
+        <externalId>false</externalId>
+        <label>Index Margin Allocation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>$/Mwh</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Lump Sum</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Index_Margin__c</fullName>
+        <externalId>false</externalId>
+        <label>Index Margin</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Legacy_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Legacy ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Margin_Allocation__c</fullName>
+        <externalId>false</externalId>
+        <label>Margin Allocation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>$/Mwh</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Lump Sum</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Margin__c</fullName>
+        <externalId>false</externalId>
+        <label>Margin</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Marketing_Cost_Allocation__c</fullName>
+        <externalId>false</externalId>
+        <label>Marketing Cost Allocation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>$/Mwh</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Lump Sum</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Marketing_Cost__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>Marketing Cost</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Municipality_Fee_Allocation__c</fullName>
+        <externalId>false</externalId>
+        <label>Municipality Fee Allocation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>$/Mwh</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Lump Sum</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Municipality_Fee__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>Municipality Fee</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Notional_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Notional Value</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Off_Peak_Block_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Off Peak Block Size</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>On_Peak_Block_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>On Peak Block Size</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>Dynagy_Quote_History</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Terms</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>20</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>30</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>45</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>60</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Price_Complete_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Price Complete Date-Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Pricing_Analyst__c</fullName>
+        <externalId>false</externalId>
+        <label>Pricing Analyst</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pricing_Method__c</fullName>
+        <externalId>false</externalId>
+        <label>Pricing Method</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pricing_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Pricing Notes</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Pricing_Valid_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Pricing Valid Date-Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Product2.IsActive</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Product2</referenceTo>
+        <relationshipName>Dynegy_Quote_History</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Number__c</fullName>
+        <description>Original Quote Number</description>
+        <externalId>false</externalId>
+        <label>Quote Number</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_Price_KWH__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Price KWH</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Price</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RPS__c</fullName>
+        <externalId>false</externalId>
+        <label>RPS</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Request_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Request Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Waiting on Load Data</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Manual Pricing in Process</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Request Rejected</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pricing Complete</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Error-Invalid Account</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Error Utility Web-Service Unresponsive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Error - Price Curve Invalid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Error - Invalid Term Selected</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Contract Signed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Expired</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Shaping__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>$/MWH</inlineHelpText>
+        <label>Shaping</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Start_Term__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Term</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Swing__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>$/MWH</inlineHelpText>
+        <label>Swing</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Tax__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Term__c</fullName>
+        <description>Term in Months</description>
+        <externalId>false</externalId>
+        <label>Term</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tier_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Tier Level</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UCB_POR__c</fullName>
+        <externalId>false</externalId>
+        <label>UCB-POR</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Utility_Loss__c</fullName>
+        <externalId>false</externalId>
+        <label>Utility Loss</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Vol_Rec_Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Vol Rec Product</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vol_Rec__c</fullName>
+        <externalId>false</externalId>
+        <label>Vol Rec</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Voluntary_REC_Generator_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Voluntary REC/Generator Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>National Green - E Wind</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Green-E - No Preference</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Green-E - Wind</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>State Qualified - No Preference</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>State Qualified - Wind</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Traditional - State Qualified</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Traditional - Wind</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Apple</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Voluntary_REC_Geographic_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Voluntary REC Geographic Location</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Illinois - Preferred</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ohio - Preferred</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pennsylvania - Preferred</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Voluntary_REC__c</fullName>
+        <externalId>false</externalId>
+        <label>Voluntary REC %</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>X60_Day_Max_Exposure__c</fullName>
+        <externalId>false</externalId>
+        <label>60 Day Max Exposure</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Retail Quote History</label>
+    <nameField>
+        <displayFormat>QH-{0000000}</displayFormat>
+        <label>Retail Quote History Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Retail Quotes History</pluralLabel>
+    <recordTypes>
+        <fullName>Executable</fullName>
+        <active>true</active>
+        <label>Executable</label>
+        <picklistValues>
+            <picklist>Broker_Fee_Allocation__c</picklist>
+            <values>
+                <fullName>%24%2FMwh</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lump Sum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ContractType__c</picklist>
+            <values>
+                <fullName>Block and Index</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GFEC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IEC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Stable Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Stable PT-C Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Stable Contract - Evergreen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Stable Contract - MTM Renewal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIER_1_2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIER_A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UCBNONPOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UCBPOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UCBPOR_BR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WESA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Index_Margin_Allocation__c</picklist>
+            <values>
+                <fullName>%24%2FMwh</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lump Sum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Margin_Allocation__c</picklist>
+            <values>
+                <fullName>%24%2FMwh</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lump Sum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Marketing_Cost_Allocation__c</picklist>
+            <values>
+                <fullName>%24%2FMwh</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lump Sum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Municipality_Fee_Allocation__c</picklist>
+            <values>
+                <fullName>%24%2FMwh</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lump Sum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Terms__c</picklist>
+            <values>
+                <fullName>20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Request_Status__c</picklist>
+            <values>
+                <fullName>Contract Signed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error - Invalid Term Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error - Price Curve Invalid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error Utility Web-Service Unresponsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error-Invalid Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual Pricing in Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pricing Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on Load Data</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Voluntary_REC_Generator_Type__c</picklist>
+            <values>
+                <fullName>Apple</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Green-E - No Preference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Green-E - Wind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Green - E Wind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Qualified - No Preference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Qualified - Wind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional - State Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional - Wind</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Voluntary_REC_Geographic_Location__c</picklist>
+            <values>
+                <fullName>Illinois - Preferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ohio - Preferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pennsylvania - Preferred</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Indicative</fullName>
+        <active>true</active>
+        <label>Indicative</label>
+        <picklistValues>
+            <picklist>Broker_Fee_Allocation__c</picklist>
+            <values>
+                <fullName>%24%2FMwh</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lump Sum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ContractType__c</picklist>
+            <values>
+                <fullName>Block and Index</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GFEC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IEC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Stable Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Large Stable PT-C Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Stable Contract - Evergreen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Stable Contract - MTM Renewal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIER_1_2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIER_A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UCBNONPOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UCBPOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UCBPOR_BR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WESA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Index_Margin_Allocation__c</picklist>
+            <values>
+                <fullName>%24%2FMwh</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lump Sum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Margin_Allocation__c</picklist>
+            <values>
+                <fullName>%24%2FMwh</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lump Sum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Marketing_Cost_Allocation__c</picklist>
+            <values>
+                <fullName>%24%2FMwh</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lump Sum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Municipality_Fee_Allocation__c</picklist>
+            <values>
+                <fullName>%24%2FMwh</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lump Sum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Terms__c</picklist>
+            <values>
+                <fullName>20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Request_Status__c</picklist>
+            <values>
+                <fullName>Contract Signed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error - Invalid Term Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error - Price Curve Invalid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error Utility Web-Service Unresponsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error-Invalid Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manual Pricing in Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pricing Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on Load Data</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Voluntary_REC_Generator_Type__c</picklist>
+            <values>
+                <fullName>Apple</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Green-E - No Preference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Green-E - Wind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Green - E Wind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Qualified - No Preference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>State Qualified - Wind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional - State Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Traditional - Wind</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Voluntary_REC_Geographic_Location__c</picklist>
+            <values>
+                <fullName>Illinois - Preferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ohio - Preferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pennsylvania - Preferred</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

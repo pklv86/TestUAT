@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Utility Vendor for LDC</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>165</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>County__c</fullName>
+        <externalId>false</externalId>
+        <label>County</label>
+        <length>165</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DUNS__c</fullName>
+        <description>Utility vendor DUNS</description>
+        <externalId>false</externalId>
+        <label>DUNS</label>
+        <length>12</length>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legacy_ID__c</fullName>
+        <externalId>true</externalId>
+        <label>Legacy ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Orientation__c</fullName>
+        <externalId>false</externalId>
+        <label>Orientation</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>External</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internal</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phone_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone Number</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Postal_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Postal Code</label>
+        <length>165</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recipient_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Recipient Name</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ESG</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Reciptent_DUNS__c</fullName>
+        <externalId>false</externalId>
+        <label>Reciptent DUNS</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>49050839</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Service_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Service State</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AK         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AL          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AR         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AZ          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CA         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CO         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CT          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DC         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DE          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FL           </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GA         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HI           </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IA           </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ID           </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IN          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KS          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KY          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LA          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MA        </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MD        </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ME         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MI          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MN        </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MO        </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MS         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MT         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NC         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ND         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NE         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NH         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NJ          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NM        </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NV         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NY         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OK         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OR         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SC          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SD          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TN         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TX          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UT          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VA         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VT          </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WA        </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WI         </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WV        </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WY        </fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Service_Territory__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Territory</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Service_Territory</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>165</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Street 1</label>
+        <length>165</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Street 2</label>
+        <length>165</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Time_Zone__c</fullName>
+        <description>Field needed for EDI integration.</description>
+        <externalId>false</externalId>
+        <label>Time Zone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CST</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EST</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MST</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PST</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Utility_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Utility Code</label>
+        <length>20</length>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Type__c</fullName>
+        <description>Types of LDC Vendor</description>
+        <externalId>false</externalId>
+        <label>Vendor Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ESP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LDC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MDMA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Installer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Owner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Meter Reader</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MSP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Registration Agent</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>LDC Vendor</label>
+    <nameField>
+        <label>LDC Vendor Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>LDC Vendors</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Utility_Code__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Service_Territory__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Service_Territory_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( ISBLANK(TEXT( Service_Territory__c )))</errorConditionFormula>
+        <errorDisplayField>Service_Territory__c</errorDisplayField>
+        <errorMessage>Service Territory is required</errorMessage>
+    </validationRules>
+</CustomObject>

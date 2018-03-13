@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Dynegy Billing Entity</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Agreement_Terms__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( State__c = &apos;OH&apos;,&apos;The validity, interpretation and performance of this Agreement shall be governed by and performed in accordance with the laws of the State of Ohio. Notwithstanding any language in this Agreement to the contrary, the electricity sold by Supplier to Customer is deemed to be “a good” for purposes of the Uniform Commercial Code of Ohio, and the parties agree that the provisions of the Uniform Commercial Code of Ohio shall apply to this Agreement.&apos;,
+
+IF( State__c = &apos;IL&apos;,&apos;The validity, interpretation and performance of this Agreement shall be governed by and performed in accordance with the laws of the State of Illinois, together with administrative and judicial decisions construing applicable provisions of the Illinois retail choice law, 220 ILCS 5/16-101 et al, and without regard to principles of conflicts of law.&apos;,null))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Agreement Terms</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alias_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Supplier_Code__c = &apos;DESE&apos;,  &apos;DYNEGY ENERGY SERVICES EAST, LLC&apos; ,  IF( Supplier_Code__c = &apos;DES&apos;, &apos;DYNEGY ENERGY SERVICES, LLC&apos;, &apos;ILLINOIS POWER MARKETING D/B/A HOMEFIELD ENERGY&apos;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Alias Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Care_E_Mail__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Supplier_Code__c = &apos;DESE&apos;, &apos;DynegyEnergyServicesOhio@Dynegy.com&apos; , 
+ IF( Supplier_Code__c = &apos;DES&apos;, &apos;DESContracts@dynegy.com &apos; ,
+ IF( Supplier_Code__c = &apos;IPH&apos;, &apos;HFEContracts@dynegy.com&apos;, &apos;No Value&apos;) ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Customer Care E-Mail</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Care_Telephone__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Supplier_Code__c = &apos;DESE&apos;, &apos;800-920-5032&apos; , 
+IF( Supplier_Code__c = &apos;DES&apos;, &apos;844-441-0716 Option-3&apos; , 
+IF( Supplier_Code__c = &apos;IPH&apos;, &apos;888-451-3911 Option-3&apos;, &apos;No Value&apos;) ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Customer Care Telephone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ESA_Agreement__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( State__c = &apos;OH&apos;,&apos;ELECTRIC SERVICE AGREEMENT EXHIBIT A – Standard Large Stable – Variable Pricing&apos;,
+
+IF( State__c = &apos;IL&apos;,&apos;ELECTRIC SERVICE AGREEMENT-EXHIBIT A&apos;,null))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ESA Agreement</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ESP_Account_Number__c</fullName>
+        <defaultValue>&quot;1871754&quot;</defaultValue>
+        <description>This is Dynergy number and will not change.</description>
+        <externalId>false</externalId>
+        <label>ESP Account Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Federal_Tax_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Supplier_Code__c = &apos;DESE&apos; || Supplier_Code__c = &apos;DES&apos;, &apos;90-0924805&apos; , 
+IF( Supplier_Code__c = &apos;IPH&apos;, &apos;37-1395583&apos;, &apos;No Value&apos;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Federal Tax ID #</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Footer_logo__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Supplier_Code__c = &apos;DESE&apos;, &apos;/servlet/servlet.FileDownload?file=015150000058XJP&apos;, &apos;/servlet/servlet.FileDownload?file=015150000058XJQ&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Footer logo</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Header_logo__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Supplier_Code__c = &apos;IPH&apos;, &apos;/servlet/servlet.FileDownload?file=015150000058XJQ&apos;, &apos;/servlet/servlet.FileDownload?file=015150000058XJP&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Header logo</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Language</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Legacy_ID__c</fullName>
+        <externalId>true</externalId>
+        <label>Legacy ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Master_DUNS__c</fullName>
+        <description>This is needed to support EDI integration</description>
+        <externalId>false</externalId>
+        <label>Master DUNS</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Organization_Identifier_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Organization Identifier Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payment_Act__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( State__c = &apos;OH&apos;,&apos;Check here if you are a local government entity subject to the Ohio Prompt Payment Requirements Act as defined by ORC 126.30/OAC 126-3- 01.&apos;,
+
+IF( State__c = &apos;IL&apos;,&apos;Check here if you are a local government entity as defined by 50 ILCS 505/Local Government Prompt Payment Act.&apos;,null))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Payment Act</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RPS_language__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( State__c = &apos;OH&apos;,null,
+
+IF( State__c = &apos;IL&apos;,&apos;Such RPS Charge imposed on alternative retail energy suppliers (“ARES”) are due to expire as of June 1, 2019 pursuant to the Future Energy Jobs Bill (SB 2814), as amended.  As of June 1, 2019, &apos;+Alias_Name__c +&apos; will no longer charge RPS Charge.&apos;,null))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RPS language</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Signature_Block__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Supplier_Code__c = &apos;DESE&apos;, &apos;/servlet/servlet.FileDownload?file=015150000058XJR&apos;, &apos;servlet/servlet.FileDownload?file=015150000058XJS&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Signature Block</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Supplier_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Supplier Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Supplier_Contact__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Supplier_Code__c  = &apos;DESE&apos;, 
+(&apos;312 Walnut Street, Ste 1500&apos;) &amp; BR() &amp; 
+(&apos;Cincinnati&apos; ) &amp; BR() &amp; 
+(&apos;OH 45202&apos;), 
+
+IF(Supplier_Code__c  = &apos;DES&apos;  || Supplier_Code__c  = &apos;IPH&apos;, 
+(&apos;1500 Eastport Plaza Dr&apos;)&amp; BR() &amp; 
+(&apos;Collinsville&apos;) &amp; BR() &amp; 
+(&apos;IL 62234&apos;), 
+
+&apos;No Value&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Supplier Contact</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Supplier_DUNS__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Supplier DUNS</label>
+        <length>20</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Supplier_Fax__c</fullName>
+        <description>This field is created for Template 11 for Conga Composer to store Supplier Fax</description>
+        <externalId>false</externalId>
+        <label>Supplier Fax</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Supplier_d_b_a__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Supplier_Code__c = &apos;DESE&apos;  ||  Supplier_Code__c = &apos;DES&apos;, &apos;Dynegy Energy Services&apos; , 
+IF( Supplier_Code__c = &apos;IPH&apos;, &apos;Homefield Energy&apos;, &apos;No Value&apos;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Supplier d/b/a</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Time_Zone__c</fullName>
+        <externalId>false</externalId>
+        <label>Time Zone</label>
+        <length>5</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Voluntary_Rec__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( State__c = &apos;OH&apos;, &apos;Renewable energy source shall be selected by Supplier from any source  provided for in ORC 4928.01(A)(37) &amp; OAC 4901:1-40-04, which may be amended from time to time.&apos;,  
+
+IF( State__c = &apos;IL&apos;, &apos;Renewable energy resource shall be selected by Supplier from any source provided for in 20 ILCS 687/6-3(f), which may be amended periodically.  &apos;, null) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Voluntary Rec</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>signature__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Supplier_Code__c = &apos;DESE&apos;,
+(&apos;Lauren Matson, Manager&apos;)&amp; BR() &amp;  
+(&apos;Broker and Inside Sales&apos;)&amp; BR() &amp; 
+&apos;Dynegy Energy Services East, LLC&apos;, 
+IF( Supplier_Code__c = &apos;IPH&apos; || Supplier_Code__c = &apos;DES&apos;,
+(&apos;Michael grimes,Manager&apos;)&amp; BR() &amp; 
+(&apos;Broker and Inside Sales&apos;)&amp; BR() &amp; 
+&apos;Homefield Energy&apos;, &apos;No value&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>signature</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Supplier</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Supplier_Code__c</columns>
+        <columns>Supplier_DUNS__c</columns>
+        <columns>Active__c</columns>
+        <columns>Master_DUNS__c</columns>
+        <columns>State__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Supplier Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Suppliers</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

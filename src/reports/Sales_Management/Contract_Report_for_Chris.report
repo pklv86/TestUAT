@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>Contract.Contract_Counter_Signed_Date__c</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <columns>
+        <field>Contract.End_Date__c</field>
+    </columns>
+    <columns>
+        <field>CONTRACT_NUMBER</field>
+    </columns>
+    <columns>
+        <field>Contract.Service_Territory__c</field>
+    </columns>
+    <columns>
+        <field>Contract.Contract_Type__c</field>
+    </columns>
+    <columns>
+        <field>Contract.Referral_Broker__c</field>
+    </columns>
+    <columns>
+        <field>Contract.Legacy_Contract_Type__c</field>
+    </columns>
+    <description>end dates= &gt; 6/1/17 signed before 1/13/17 Summit, Schneider, Brubaker</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Customer_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>C&amp;I,Small Business</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contracting_Entity__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>DES,Homefield Energy</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contract.Contract_Counter_Signed_Date__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>1/13/2017 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>START_DATE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>6/1/2017</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Contract Report for Chris</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContractList</reportType>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>START_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>DASR_Request__c.Contract__c</field>
+    </columns>
+    <description>accs that rejected due to Invalid Rate code for LDC rate class</description>
+    <filter>
+        <criteriaItems>
+            <column>DASR_Request__c.Rejected__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>DASR_Request__c.Reason_Rejected__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Requested Rate Code invalid for LDC Rate Class</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>DASR_Request__c.Recipient_Name__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>ComEd,Ameren Rate Zone III,Ameren Rate Zone II,Ameren Rate Zone I</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Rejected- Rate code invalid</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$DASR_Request__c@DASR_Request__c.LDC_Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DASR_Request__c.Change_Effective_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

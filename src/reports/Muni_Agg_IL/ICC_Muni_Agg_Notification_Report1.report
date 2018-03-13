@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contract.Contract_Counter_Signed_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Supplier__c</field>
+    </columns>
+    <columns>
+        <field>CONTRACT_NAME</field>
+    </columns>
+    <columns>
+        <field>Contract.Service_Territory__c</field>
+    </columns>
+    <columns>
+        <field>Contract.Rate_Code__c</field>
+    </columns>
+    <columns>
+        <field>Contract.Referral_Broker__c</field>
+    </columns>
+    <columns>
+        <field>START_DATE</field>
+    </columns>
+    <columns>
+        <field>Contract.End_Date__c</field>
+    </columns>
+    <columns>
+        <field>Contract.Contract_Price__c</field>
+    </columns>
+    <columns>
+        <field>Contract.Agent_Fee__c</field>
+    </columns>
+    <columns>
+        <field>Contract.Muni_Fee__c</field>
+    </columns>
+    <description>Used to report signed contracts within 5 days of contract signing</description>
+    <filter>
+        <criteriaItems>
+            <column>Contract.Customer_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Muni Agg Customer</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>ICC Muni Agg Notification Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContractCustomEntity$Contract_Term__c</reportType>
+    <showDetails>true</showDetails>
+    <sortColumn>Contract.Agent_Fee__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contract.Contract_Counter_Signed_Date__c</dateColumn>
+        <interval>INTERVAL_LAST7</interval>
+    </timeFrameFilter>
+</Report>

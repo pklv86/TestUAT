@@ -1,0 +1,9 @@
+This email is only for IL 
+
+{!Contract.CreatedBy}, 
+
+Contract Number: {!Contract.ContractNumber} 
+
+Contract is available here: {!Contract.Link} 
+
+If a Broker Confirmation is required, please create and archive upon receipt of signed copy from: {!Contract.Referral_Broker__c}

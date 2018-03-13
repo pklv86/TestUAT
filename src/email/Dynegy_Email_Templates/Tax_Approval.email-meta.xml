@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Approval_Process</letterhead>
+    <name>Tax Approval</name>
+    <style>freeForm</style>
+    <subject>Tax Record Approval Needed - {!Account_Supplement__c.Name}</subject>
+    <textOnly>{!Today}
+Hello,
+
+New GRT [{!Account_Supplement__c.Name}]Tax Record is submitted for Approval
+
+Please Check and Approve/Reject the record.
+
+AS Number: {!Account_Supplement__c.Name}
+Status: {!Account_Supplement__c.Approval_Status__c}
+Percentage : {!Account_Supplement__c.Percentage__c}
+Start Date : {!Account_Supplement__c.Start_Date__c}
+End Date : {!Account_Supplement__c.End_Date__c}
+Active : {!Account_Supplement__c.00N0t000000P6Xb}
+URL : {!Account_Supplement__c.URL__c}
+
+Thanks</textOnly>
+    <type>html</type>
+</EmailTemplate>

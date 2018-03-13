@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email template is created to send email for ticket status change</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>New_Ticket</letterhead>
+    <name>Ticket Status Update</name>
+    <style>freeForm</style>
+    <subject>{!Tickets__c.Name} - {!Tickets__c.Status__c} - {!Tickets__c.Summary__c}</subject>
+    <textOnly>{!Today}
+Hello,
+
+The status of the ticket [{!Tickets__c.Name}] has been updated. Please find the URL and details below.
+
+New Status: {!Tickets__c.Status__c}
+
+System : {!Tickets__c.System__c}
+Ticket URL :  {!Tickets__c.Link}
+Rank : {!Tickets__c.Rank__c}
+Triage Comments : {!Tickets__c.Triage_Comments__c}
+Created By : {!Tickets__c.CreatedBy}
+Owner : {!Tickets__c.OwnerFullName}
+Affected User : {!Tickets__c.Affected_User__c}
+Assigned To : {!Tickets__c.Assigned_Developer__c}
+Last modified By : {!Tickets__c.LastModifiedBy}
+
+
+Summary : {!Tickets__c.Summary__c}
+
+Description : {!Tickets__c.Description__c}
+
+Resolution : {!Tickets__c.Resolution__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

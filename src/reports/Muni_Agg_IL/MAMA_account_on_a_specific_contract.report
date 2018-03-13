@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.LDC_Accounts__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$LDC_Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r.Contract_LDCS__r$Rate_Code__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$LDC_Account_Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.LDC_Accounts__r$Opt_out__c</field>
+    </columns>
+    <description>post enrollment.  tells # of accounts for specific contract</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.LDC_Accounts__r$Contract__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>MAMA- account on a contract post enroll</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customers_w_LDC_Account_w_Contract_LDC__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$Competitive_End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
