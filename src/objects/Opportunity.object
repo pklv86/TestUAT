@@ -588,18 +588,6 @@ IF(AND( Account.Supplier__r.Name ==&apos;Dynegy Energy Services, LLC&apos;),
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
-        <fullName>OPCO_Service_Territory__c</fullName>
-        <externalId>false</externalId>
-        <formula>Account.Supplier__r.Supplier_DUNS__c +&apos;-&apos;+ text(Service_Territory__c)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>OPCO_Service_Territory_Conga</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Offer_Type__c</fullName>
         <externalId>false</externalId>
         <label>Offer Type</label>
