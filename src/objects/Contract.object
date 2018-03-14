@@ -1132,16 +1132,6 @@ MOD((ContractTerm + MONTH(StartDate) - 1), 12) + 1,
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>OPCO_Service_Territory__c</fullName>
-        <externalId>false</externalId>
-        <formula>Supplier__r.Supplier_DUNS__c +&apos;-&apos;+ text(Service_Territory__c)</formula>
-        <label>OPCO_Service_Territory_Conga</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Offer_Code__c</fullName>
         <externalId>false</externalId>
         <label>Offer Code</label>
